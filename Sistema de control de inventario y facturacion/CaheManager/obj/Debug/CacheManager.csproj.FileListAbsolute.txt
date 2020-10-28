@@ -1,0 +1,96 @@
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\SessionManager.dll
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\MySql.Data.dll
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\SessionManager.pdb
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\MySql.Data.xml
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\SessionManager.dll
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\SessionManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\MySql.Data.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\MySql.Data.xml
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\MySql.Data.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\MySql.Data.xml
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\MySql.Data.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\MySql.Data.xml
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb

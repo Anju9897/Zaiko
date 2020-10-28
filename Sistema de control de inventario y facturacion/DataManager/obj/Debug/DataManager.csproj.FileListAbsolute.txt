@@ -1,0 +1,61 @@
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Documentos\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\DataManager\bin\Debug\MySql.Data.dll
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\DataManager\bin\Debug\MySql.Data.xml
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\MG\Desktop\Anju9897-zaiko-642503421c23\Anju9897-zaiko-642503421c23\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\USO\Ciclo 01-20\DS2\Proyecto\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(2)\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\DataManager\bin\Debug\MySql.Data.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\DataManager\bin\Debug\MySql.Data.xml
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\MG\Desktop\Sistema de control de inventario y facturacion(3)\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Sistema de control de inventario y facturacion(5)\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb

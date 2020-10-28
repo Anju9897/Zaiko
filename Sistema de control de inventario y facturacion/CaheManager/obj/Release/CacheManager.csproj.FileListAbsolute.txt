@@ -1,0 +1,9 @@
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Release\CaheManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Release\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Release\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Release\SessionManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Release\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\bin\Release\SessionManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\obj\Release\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\obj\Release\CaheManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\CaheManager\obj\Release\CaheManager.pdb

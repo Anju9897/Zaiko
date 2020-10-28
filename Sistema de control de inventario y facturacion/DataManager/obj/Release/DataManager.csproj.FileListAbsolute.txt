@@ -1,0 +1,4 @@
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\DataManager\bin\Release\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\DataManager\bin\Release\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\DataManager\obj\Release\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\DataManager\obj\Release\DataManager.pdb

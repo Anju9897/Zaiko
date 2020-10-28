@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9F4ADB1-E1EC-4AB9-A5B0-3175CB85426F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>General</RootNamespace>
+    <AssemblyName>General</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLS\Categoria.cs" />
+    <Compile Include="CLS\Clasificacion.cs" />
+    <Compile Include="CLS\DetalleMovimiento.cs" />
+    <Compile Include="CLS\Empleado.cs" />
+    <Compile Include="CLS\Empresa.cs" />
+    <Compile Include="CLS\Inventario.cs" />
+    <Compile Include="CLS\Marca.cs" />
+    <Compile Include="CLS\Movimiento.cs" />
+    <Compile Include="CLS\Opcion.cs" />
+    <Compile Include="CLS\Permiso.cs" />
+    <Compile Include="CLS\Personas.cs" />
+    <Compile Include="CLS\Producto.cs" />
+    <Compile Include="CLS\Rol.cs" />
+    <Compile Include="CLS\Tiraje.cs" />
+    <Compile Include="CLS\Unidad.cs" />
+    <Compile Include="CLS\Usuario.cs" />
+    <Compile Include="GUI\CategoriasEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CategoriasEdicion.Designer.cs">
+      <DependentUpon>CategoriasEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ClienteInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ClienteInfo.Designer.cs">
+      <DependentUpon>ClienteInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DetalleMovimientoCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DetalleMovimientoCompras.Designer.cs">
+      <DependentUpon>DetalleMovimientoCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DetallesMovimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DetallesMovimiento.Designer.cs">
+      <DependentUpon>DetallesMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmpleadosEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmpleadosEdicion.Designer.cs">
+      <DependentUpon>EmpleadosEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionUnidades.Designer.cs">
+      <DependentUpon>GestionUnidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InfoClienteCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InfoClienteCompra.Designer.cs">
+      <DependentUpon>InfoClienteCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MarcaEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MarcaEdicion.Designer.cs">
+      <DependentUpon>MarcaEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MarcaGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MarcaGestion.Designer.cs">
+      <DependentUpon>MarcaGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Movimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Movimientos.Designer.cs">
+      <DependentUpon>Movimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MovimientosCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MovimientosCompras.Designer.cs">
+      <DependentUpon>MovimientosCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Permisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Permisos.Designer.cs">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProductoEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProductoEdicion.Designer.cs">
+      <DependentUpon>ProductoEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProductosGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProductosGestion.Designer.cs">
+      <DependentUpon>ProductosGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RolesGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RolesGestion.Designer.cs">
+      <DependentUpon>RolesGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmpleadosGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmpleadosGestion.Designer.cs">
+      <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UnidadesEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UnidadesEdicion.Designer.cs">
+      <DependentUpon>UnidadesEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UsuariosEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UsuariosEdicion.Designer.cs">
+      <DependentUpon>UsuariosEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\CategoriasEdicion.resx">
+      <DependentUpon>CategoriasEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ClienteInfo.resx">
+      <DependentUpon>ClienteInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DetalleMovimientoCompras.resx">
+      <DependentUpon>DetalleMovimientoCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DetallesMovimiento.resx">
+      <DependentUpon>DetallesMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmpleadosEdicion.resx">
+      <DependentUpon>EmpleadosEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GestionUnidades.resx">
+      <DependentUpon>GestionUnidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InfoClienteCompra.resx">
+      <DependentUpon>InfoClienteCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MarcaEdicion.resx">
+      <DependentUpon>MarcaEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MarcaGestion.resx">
+      <DependentUpon>MarcaGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Movimientos.resx">
+      <DependentUpon>Movimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MovimientosCompras.resx">
+      <DependentUpon>MovimientosCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Permisos.resx">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProductoEdicion.resx">
+      <DependentUpon>ProductoEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProductosGestion.resx">
+      <DependentUpon>ProductosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RolesGestion.resx">
+      <DependentUpon>RolesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmpleadosGestion.resx">
+      <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UnidadesEdicion.resx">
+      <DependentUpon>UnidadesEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UsuariosEdicion.resx">
+      <DependentUpon>UsuariosEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CaheManager\CacheManager.csproj">
+      <Project>{98d1cddd-7450-4f77-8353-a3a508e1e173}</Project>
+      <Name>CacheManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataManager\DataManager.csproj">
+      <Project>{9a1de6d3-e421-4d83-81b4-88280fce955e}</Project>
+      <Name>DataManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reportes\Reportes.csproj">
+      <Project>{74f29343-d1ae-4146-a3bf-6f28f139e1e1}</Project>
+      <Name>Reportes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SessionManager\SessionManager.csproj">
+      <Project>{3c7fad57-6014-49e5-a8a0-4097612d3969}</Project>
+      <Name>SessionManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
