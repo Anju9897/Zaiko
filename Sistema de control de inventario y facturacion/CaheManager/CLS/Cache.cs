@@ -151,6 +151,24 @@ namespace CacheManager.CLS
 
             return Resultado;
         }
+       
+        public static DataTable TODOS_LOS_CLIENTES()
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+            try
+            {
+                Consulta = @"select idPersonas,nombre, tipopersona, direccion,telefono,email from Personas";
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
 
         public static DataTable PERMISOS_DE_UN_ROL(String idRol)
         {

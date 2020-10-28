@@ -69,6 +69,18 @@
     <Compile Include="GUI\ClienteInfo.Designer.cs">
       <DependentUpon>ClienteInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ClientesEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ClientesEdicion.Designer.cs">
+      <DependentUpon>ClientesEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ClientesLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ClientesLista.Designer.cs">
+      <DependentUpon>ClientesLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DetalleMovimientoCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ClienteInfo.resx">
       <DependentUpon>ClienteInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ClientesLista.resx">
+      <DependentUpon>ClientesLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DetalleMovimientoCompras.resx">
       <DependentUpon>DetalleMovimientoCompras.cs</DependentUpon>

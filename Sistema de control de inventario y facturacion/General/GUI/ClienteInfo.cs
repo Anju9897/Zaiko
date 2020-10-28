@@ -21,6 +21,7 @@ namespace General.GUI
 
         private void btnDefault_Click(object sender, EventArgs e)
         {
+            txbIDCliente.Text = "1";
             txbCliente.Text = "CLIENTES VARIOS";
             cbbTipoDoc.SelectedIndex = 0;
             txbDocumento.Text = "N/A";
@@ -115,6 +116,13 @@ namespace General.GUI
             {
                 cbbFactura.SelectedIndex = 2;
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ClientesLista f = new ClientesLista();
+            f.ShowDialog();
+
         }
     }
 }

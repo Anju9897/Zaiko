@@ -67,6 +67,8 @@
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.cbbTransaccion = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txbIDCliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,7 +131,7 @@
             this.btnDefault.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDefault.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDefault.ForeColor = System.Drawing.Color.White;
-            this.btnDefault.Location = new System.Drawing.Point(515, 33);
+            this.btnDefault.Location = new System.Drawing.Point(461, 33);
             this.btnDefault.Name = "btnDefault";
             this.btnDefault.Size = new System.Drawing.Size(131, 33);
             this.btnDefault.TabIndex = 4;
@@ -172,10 +174,11 @@
             // 
             // txbCliente
             // 
+            this.txbCliente.Enabled = false;
             this.txbCliente.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCliente.Location = new System.Drawing.Point(461, 102);
+            this.txbCliente.Location = new System.Drawing.Point(513, 102);
             this.txbCliente.Name = "txbCliente";
-            this.txbCliente.Size = new System.Drawing.Size(251, 28);
+            this.txbCliente.Size = new System.Drawing.Size(199, 28);
             this.txbCliente.TabIndex = 5;
             // 
             // label5
@@ -479,6 +482,30 @@
             this.label18.TabIndex = 35;
             this.label18.Text = "Transaccion";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(622, 33);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(90, 33);
+            this.btnBuscar.TabIndex = 36;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txbIDCliente
+            // 
+            this.txbIDCliente.Enabled = false;
+            this.txbIDCliente.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIDCliente.Location = new System.Drawing.Point(461, 102);
+            this.txbIDCliente.Name = "txbIDCliente";
+            this.txbIDCliente.Size = new System.Drawing.Size(46, 28);
+            this.txbIDCliente.TabIndex = 37;
+            this.txbIDCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ClienteInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -486,6 +513,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(826, 586);
+            this.Controls.Add(this.txbIDCliente);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.cbbTransaccion);
             this.Controls.Add(this.lblTotal);
@@ -575,5 +604,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.ComboBox cbbTransaccion;
+        public System.Windows.Forms.TextBox txbIDCliente;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

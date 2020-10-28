@@ -50,12 +50,6 @@ namespace General.GUI
             }
         }
 
-
-
-
-
-
-
         public EmpleadosGestion()
         {
             InitializeComponent();
