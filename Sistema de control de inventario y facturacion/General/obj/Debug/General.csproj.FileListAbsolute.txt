@@ -397,6 +397,8 @@ C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de in
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.csprojResolveAssemblyReference.cache
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.CategoriasEdicion.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.ClienteInfo.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.ClientesEdicion.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.ClientesLista.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.DetalleMovimientoCompras.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.DetallesMovimiento.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.EmpleadosEdicion.resources

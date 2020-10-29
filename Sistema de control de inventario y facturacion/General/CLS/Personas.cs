@@ -57,13 +57,6 @@ namespace General.CLS
             set { _Email = value; }
         }
 
-        String _Frecuente;
-
-        public String Frecuente
-        {
-            get { return _Frecuente; }
-            set { _Frecuente = value; }
-        }
 
         public Boolean Guardar()
         {
@@ -72,13 +65,12 @@ namespace General.CLS
             DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
             try
             {
-                Sentencia = @"Insert into Personas(TipoPersona, Nombre, Direccion, Telefono, Email, Frecuente) Values(";
+                Sentencia = @"Insert into Personas(TipoPersona, Nombre, Direccion, Telefono, Email) Values(";
                 Sentencia += "'" + TPersona + "',";
                 Sentencia += "'" + Nombre + "',";
                 Sentencia += "'" + Direccion + "',";
                 Sentencia += "'" + Telefono + "',";
                 Sentencia += "'" + Email + "',";
-                Sentencia += "'" + Frecuente + "');";
                 if (Operacion.Insertar(Sentencia) > 0)
                 {
                     MessageBox.Show("Registro Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -91,9 +83,9 @@ namespace General.CLS
                 }
 
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Error al insertar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al insertar: " + ex.ToString() , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Guardado = false;
             }
             return Guardado;
@@ -112,7 +104,6 @@ namespace General.CLS
                 Sentencia += "Direccion='" + Direccion + "',";
                 Sentencia += "Telefono='" + Telefono + "',";
                 Sentencia += "Email='" + Email + "',";
-                Sentencia += "Frecuente='" + Frecuente + "'";
                 Sentencia += "Where IDPersona='" + IDPersona + "';";
 
                 if (Operacion.Actualizar(Sentencia) > 0)

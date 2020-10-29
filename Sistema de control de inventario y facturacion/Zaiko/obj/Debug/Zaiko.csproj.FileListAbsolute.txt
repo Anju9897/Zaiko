@@ -312,8 +312,6 @@ C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inve
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.exe
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.pdb
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\Zaiko.exe.config
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.exe
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.pdb
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\Zaiko.exe
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\Zaiko.pdb
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\CaheManager.dll
@@ -334,3 +332,5 @@ C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de in
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.GUI.Splash.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.Properties.Resources.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.csproj.GenerateResource.Cache
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.exe
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.pdb

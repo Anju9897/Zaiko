@@ -192,6 +192,9 @@
     <EmbeddedResource Include="GUI\ClienteInfo.resx">
       <DependentUpon>ClienteInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ClientesEdicion.resx">
+      <DependentUpon>ClientesEdicion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ClientesLista.resx">
       <DependentUpon>ClientesLista.cs</DependentUpon>
     </EmbeddedResource>

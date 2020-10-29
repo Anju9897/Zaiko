@@ -16,5 +16,19 @@ namespace General.GUI
         {
             InitializeComponent();
         }
+
+        private void ClientesEdicion_Load(object sender, EventArgs e)
+        {
+            cbbTipoPersona.SelectedIndex = 0;
+        }
+
+        private void ClientesEdicion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult salir = MessageBox.Show("¿Esta seguro que desea salir? los cambios no se aplicarán","Advertencia",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (salir == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
