@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesEdicion));
             this.lblCliente = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbIDCliente = new System.Windows.Forms.TextBox();
             this.cbbTipoPersona = new System.Windows.Forms.ComboBox();
             this.errorCliente = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblTIpo = new System.Windows.Forms.Label();
@@ -39,17 +39,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txbApellidos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbNIT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbDUI = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbGiro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbNRC = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txbDireccion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txbCategoria = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -67,26 +67,32 @@
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "ID";
             // 
-            // textBox1
+            // txbIDCliente
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(53, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbIDCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbIDCliente.Enabled = false;
+            this.txbIDCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIDCliente.Location = new System.Drawing.Point(53, 24);
+            this.txbIDCliente.Name = "txbIDCliente";
+            this.txbIDCliente.Size = new System.Drawing.Size(100, 26);
+            this.txbIDCliente.TabIndex = 1;
+            this.txbIDCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbbTipoPersona
             // 
             this.cbbTipoPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.errorCliente.SetError(this.cbbTipoPersona, "Debe seleccionar una opcion");
             this.cbbTipoPersona.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbTipoPersona.FormattingEnabled = true;
+            this.cbbTipoPersona.Items.AddRange(new object[] {
+            "-- Seleccione una opcion --",
+            "Persona Natural",
+            "Persona Juridica"});
             this.cbbTipoPersona.Location = new System.Drawing.Point(26, 90);
             this.cbbTipoPersona.Name = "cbbTipoPersona";
             this.cbbTipoPersona.Size = new System.Drawing.Size(226, 28);
             this.cbbTipoPersona.TabIndex = 2;
+            this.cbbTipoPersona.SelectedIndexChanged += new System.EventHandler(this.cbbTipoPersona_SelectedIndexChanged);
             // 
             // errorCliente
             // 
@@ -147,16 +153,16 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Apellidos";
             // 
-            // textBox2
+            // txbNIT
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(26, 367);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 26);
-            this.textBox2.TabIndex = 15;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbNIT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbNIT.Enabled = false;
+            this.txbNIT.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNIT.Location = new System.Drawing.Point(26, 367);
+            this.txbNIT.Name = "txbNIT";
+            this.txbNIT.Size = new System.Drawing.Size(226, 26);
+            this.txbNIT.TabIndex = 15;
+            this.txbNIT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -169,16 +175,16 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "NIT";
             // 
-            // textBox3
+            // txbDUI
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(26, 295);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 26);
-            this.textBox3.TabIndex = 13;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbDUI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbDUI.Enabled = false;
+            this.txbDUI.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDUI.Location = new System.Drawing.Point(26, 295);
+            this.txbDUI.Name = "txbDUI";
+            this.txbDUI.Size = new System.Drawing.Size(226, 26);
+            this.txbDUI.TabIndex = 13;
+            this.txbDUI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -191,16 +197,16 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "DUI";
             // 
-            // textBox4
+            // txbGiro
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(294, 90);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 65);
-            this.textBox4.TabIndex = 19;
+            this.txbGiro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbGiro.Enabled = false;
+            this.txbGiro.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbGiro.Location = new System.Drawing.Point(294, 90);
+            this.txbGiro.Multiline = true;
+            this.txbGiro.Name = "txbGiro";
+            this.txbGiro.Size = new System.Drawing.Size(226, 65);
+            this.txbGiro.TabIndex = 19;
             // 
             // label5
             // 
@@ -213,16 +219,16 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Giro";
             // 
-            // textBox5
+            // txbNRC
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(294, 31);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(226, 26);
-            this.textBox5.TabIndex = 17;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbNRC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbNRC.Enabled = false;
+            this.txbNRC.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNRC.Location = new System.Drawing.Point(294, 31);
+            this.txbNRC.Name = "txbNRC";
+            this.txbNRC.Size = new System.Drawing.Size(226, 26);
+            this.txbNRC.TabIndex = 17;
+            this.txbNRC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -235,16 +241,16 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "NRC";
             // 
-            // textBox6
+            // txbDireccion
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Enabled = false;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(294, 194);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(226, 76);
-            this.textBox6.TabIndex = 21;
+            this.txbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbDireccion.Enabled = false;
+            this.txbDireccion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDireccion.Location = new System.Drawing.Point(294, 194);
+            this.txbDireccion.Multiline = true;
+            this.txbDireccion.Name = "txbDireccion";
+            this.txbDireccion.Size = new System.Drawing.Size(226, 76);
+            this.txbDireccion.TabIndex = 21;
             // 
             // label7
             // 
@@ -257,16 +263,16 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Direccion";
             // 
-            // textBox7
+            // txbCategoria
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(294, 313);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(226, 81);
-            this.textBox7.TabIndex = 23;
+            this.txbCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbCategoria.Enabled = false;
+            this.txbCategoria.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCategoria.Location = new System.Drawing.Point(294, 313);
+            this.txbCategoria.Multiline = true;
+            this.txbCategoria.Name = "txbCategoria";
+            this.txbCategoria.Size = new System.Drawing.Size(226, 81);
+            this.txbCategoria.TabIndex = 23;
             // 
             // label8
             // 
@@ -314,17 +320,17 @@
             this.ClientSize = new System.Drawing.Size(556, 521);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txbCategoria);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txbDireccion);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txbGiro);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txbNRC);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbNIT);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txbDUI);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txbApellidos);
             this.Controls.Add(this.label2);
@@ -332,7 +338,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTIpo);
             this.Controls.Add(this.cbbTipoPersona);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbIDCliente);
             this.Controls.Add(this.lblCliente);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
@@ -352,7 +358,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbIDCliente;
         private System.Windows.Forms.ComboBox cbbTipoPersona;
         private System.Windows.Forms.ErrorProvider errorCliente;
         private System.Windows.Forms.Label lblTIpo;
@@ -360,17 +366,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbNombres;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txbCategoria;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txbDireccion;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txbGiro;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbNRC;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbNIT;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbDUI;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;

@@ -30,5 +30,18 @@ namespace General.GUI
                 this.Close();
             }
         }
+
+        private void cbbTipoPersona_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbTipoPersona.SelectedIndex == 0)
+            {
+               
+            } else if(cbbTipoPersona.SelectedIndex == 1){
+                //es Una persona natural
+                txbNRC.Enabled = false;
+                txbCategoria.Enabled = false;
+                txbGiro.Enabled = false;
+            }
+        }
     }
 }
