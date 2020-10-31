@@ -83,7 +83,33 @@ namespace General.GUI
         {
             if (validarCampos())
             {
+                try
+                {
+                    CLS.Personas oPersona = new CLS.Personas();
+                    oPersona.IDPersonas = txbIDCliente.Text;
+                    oPersona.Nombres = txbNombres.Text;
+                    oPersona.Apellidos = txbApellidos.Text;
+                    if (cbbTipoPersona.SelectedIndex == 1) { oPersona.TipoPersona = cbbTipoPersona.Text; }
+                    else if (cbbTipoPersona.SelectedIndex == 2) { oPersona.TipoPersona = cbbTipoPersona.Text; }
+                    oPersona.DUI = txbDUI.Text;
+                    oPersona.NIT = txbNIT.Text;
+                    oPersona.NRC = txbNRC.Text;
+                    oPersona.Giro = txbGiro.Text;
+                    oPersona.Direccion = txbDireccion.Text;
+                    oPersona.Categoria = txbCategoria.Text;
 
+                    if (txbIDCliente.Text.Length > 0)
+                    {
+                        oPersona.Actualizar();
+                    }
+                    else
+                    {
+                        oPersona.Guardar();
+                    }
+                }
+                catch
+                {
+                }
             }
         }
 
@@ -161,16 +187,19 @@ namespace General.GUI
                     errorCliente.SetError(txbNombres, "Este campo es requerido");
                     validado = false;
                 }
+                else { errorCliente.Clear(); }
                 if (txbGiro.Text.Equals(""))
                 {
                     errorCliente.SetError(txbGiro, "Este campo es requerido");
                     validado = false;
                 }
+                else { errorCliente.Clear(); }
                 if (txbDireccion.Text.Equals(""))
                 {
                     errorCliente.SetError(txbDireccion, "Este campo es requerido");
                     validado = false;
                 }
+                else { errorCliente.Clear(); }
                 if (txbNIT.Text.Equals(""))
                 {
                     errorCliente.SetError(txbNIT, "Este campo es requerido");
@@ -181,13 +210,14 @@ namespace General.GUI
                     errorCliente.SetError(txbCategoria, "Este campo es requerido");
                     validado = false;
                 }
+                else { errorCliente.Clear(); }
 
                 //---------------------------------------------- para el NRC
                 if (txbNRC.Text.Length > 0)
                 {
-                    char[] numeros = txbNIT.Text.ToCharArray();
-                    int[] numASCII = new int[txbNIT.Text.Length];
-                    if (txbDUI.Text.Length == 8)
+                    char[] numeros = txbNRC.Text.ToCharArray();
+                    int[] numASCII = new int[txbNRC.Text.Length];
+                    if (txbNRC.Text.Length == 8)
                     {
                         errorCliente.Clear();
                         for (int i = 0; i < numeros.Length; i++)
@@ -212,7 +242,7 @@ namespace General.GUI
                             }
                         }
                     }else{
-                        errorCliente.SetError(txbNRC, "Este campo requiere 17 digitos");
+                        errorCliente.SetError(txbNRC, "Este campo requiere 8 digitos");
                         validado = false;
                     }
                 }else{
@@ -226,7 +256,7 @@ namespace General.GUI
             {
                 char[] numeros = txbNIT.Text.ToCharArray();
                 int[] numASCII = new int[txbNIT.Text.Length];
-                if (txbDUI.Text.Length == 17)
+                if (txbNIT.Text.Length == 17)
                 {
                     errorCliente.Clear();
                     for (int i = 0; i < numeros.Length; i++)
@@ -241,6 +271,7 @@ namespace General.GUI
                                 errorCliente.SetError(txbNIT, "uno o mas de los valores ingresados no son numeros");
                                 validado = false;
                             }
+                            else { errorCliente.Clear(); }
                         }
                         else
                         {
@@ -267,6 +298,15 @@ namespace General.GUI
         {
             
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult salir = MessageBox.Show("¿Esta seguro que desea cancelar? los cambios no se aplicarán", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (salir == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

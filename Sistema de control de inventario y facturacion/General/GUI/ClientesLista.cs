@@ -13,16 +13,19 @@ namespace General.GUI
     public partial class ClientesLista : Form
     {
         BindingSource _DATOS = new BindingSource();
+        SessionManager.CLS.Sesion _Instancia = SessionManager.CLS.Sesion.Instancia;
 
         public ClientesLista()
         {
             InitializeComponent();
+            Cargar();
         }
 
         private void btnAgregarCLiente_Click(object sender, EventArgs e)
         {
             ClientesEdicion frm = new ClientesEdicion();
             frm.ShowDialog();
+            Cargar();
         }
 
 
@@ -44,7 +47,7 @@ namespace General.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = "Nombre LIKE '%" + txbFiltro.Text + "%' OR tipoPersona LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = "concat(nombres,apellidos) as 'Nombres' LIKE '%" + txbFiltro.Text + "%' OR tipoPersona LIKE '%" + txbFiltro.Text + "%'";
                 }
                 else
                 {

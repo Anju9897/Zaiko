@@ -159,7 +159,11 @@ namespace CacheManager.CLS
             DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
             try
             {
-                Consulta = @"select idPersonas,nombre, tipopersona, direccion,telefono,email from Personas";
+                Consulta = @"select idPersonas, concat(nombres,apellidos) as 'Nombres',TipoPersonas,
+                               ifnull(DUI,''), as 'DUI',
+                               ifnull(NIT,'') as NIT,
+                               ifnull(NRC,'') as NRC,
+                               Giro,Direccion,Categoria from Personas";
                 Resultado = oConsulta.Consultar(Consulta);
             }
             catch

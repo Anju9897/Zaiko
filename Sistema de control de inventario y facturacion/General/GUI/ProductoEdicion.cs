@@ -103,9 +103,7 @@ namespace General.GUI
                             oInventario.Actualizar();
                         }
                         Close();
-                    }
-                    else
-                    {
+                    }else{
                         oProducto.Guardar();
                         oInventario.IdProducto = oProducto.ObtenerID(txbCodigo.Text);
 

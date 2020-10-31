@@ -233,6 +233,7 @@
             // 
             // Direccion
             // 
+            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Direccion.DataPropertyName = "Direccion";
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.Name = "Direccion";
