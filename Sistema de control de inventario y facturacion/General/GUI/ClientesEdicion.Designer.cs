@@ -36,7 +36,7 @@
             this.errorCliente = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblTIpo = new System.Windows.Forms.Label();
             this.txbNombres = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.txbApellidos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txbNIT = new System.Windows.Forms.TextBox();
@@ -81,7 +81,6 @@
             // cbbTipoPersona
             // 
             this.cbbTipoPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.errorCliente.SetError(this.cbbTipoPersona, "Debe seleccionar una opcion");
             this.cbbTipoPersona.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbTipoPersona.FormattingEnabled = true;
             this.cbbTipoPersona.Items.AddRange(new object[] {
@@ -120,16 +119,16 @@
             this.txbNombres.TabIndex = 9;
             this.txbNombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Nombres";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(22, 135);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(74, 20);
+            this.lblNombre.TabIndex = 8;
+            this.lblNombre.Text = "Nombres";
             // 
             // txbApellidos
             // 
@@ -185,6 +184,7 @@
             this.txbDUI.Size = new System.Drawing.Size(226, 26);
             this.txbDUI.TabIndex = 13;
             this.txbDUI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbDUI.TextChanged += new System.EventHandler(this.txbDUI_TextChanged);
             // 
             // label4
             // 
@@ -297,6 +297,7 @@
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -335,7 +336,7 @@
             this.Controls.Add(this.txbApellidos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbNombres);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblTIpo);
             this.Controls.Add(this.cbbTipoPersona);
             this.Controls.Add(this.txbIDCliente);
@@ -365,7 +366,7 @@
         private System.Windows.Forms.TextBox txbApellidos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbNombres;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txbCategoria;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbDireccion;

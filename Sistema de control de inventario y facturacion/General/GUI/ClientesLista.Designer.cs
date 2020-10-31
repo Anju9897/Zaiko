@@ -30,22 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesLista));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.dtgClientes = new System.Windows.Forms.DataGridView();
             this.btnEliminarCliente = new System.Windows.Forms.ToolStripButton();
-            this.btnModificarCliente = new System.Windows.Forms.ToolStripButton();
-            this.btnAgregarCLiente = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnModificarCliente = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAgregarCLiente = new System.Windows.Forms.ToolStripButton();
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.dtgClientes = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            this.idPersonas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idpersonas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NRC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Giro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgClientes)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -69,29 +72,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // dtgClientes
-            // 
-            this.dtgClientes.AllowUserToAddRows = false;
-            this.dtgClientes.AllowUserToDeleteRows = false;
-            this.dtgClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idPersonas,
-            this.tipoPersona,
-            this.Nombre,
-            this.Direccion,
-            this.telefono,
-            this.email});
-            this.dtgClientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgClientes.Location = new System.Drawing.Point(0, 27);
-            this.dtgClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dtgClientes.Name = "dtgClientes";
-            this.dtgClientes.ReadOnly = true;
-            this.dtgClientes.RowHeadersVisible = false;
-            this.dtgClientes.RowTemplate.Height = 24;
-            this.dtgClientes.Size = new System.Drawing.Size(938, 552);
-            this.dtgClientes.TabIndex = 1;
-            // 
             // btnEliminarCliente
             // 
             this.btnEliminarCliente.BackColor = System.Drawing.Color.Maroon;
@@ -101,6 +81,11 @@
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(137, 24);
             this.btnEliminarCliente.Text = "Eliminar Cliente";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // btnModificarCliente
             // 
@@ -113,6 +98,11 @@
             this.btnModificarCliente.Size = new System.Drawing.Size(160, 24);
             this.btnModificarCliente.Text = "Modificar Cliente";
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
             // btnAgregarCLiente
             // 
             this.btnAgregarCLiente.BackColor = System.Drawing.Color.Maroon;
@@ -124,16 +114,6 @@
             this.btnAgregarCLiente.Size = new System.Drawing.Size(150, 24);
             this.btnAgregarCLiente.Text = "Agregar Cliente";
             this.btnAgregarCLiente.Click += new System.EventHandler(this.btnAgregarCLiente_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // txbFiltro
             // 
@@ -154,6 +134,32 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(67, 24);
             this.toolStripLabel1.Text = "Filtrar";
             // 
+            // dtgClientes
+            // 
+            this.dtgClientes.AllowUserToAddRows = false;
+            this.dtgClientes.AllowUserToDeleteRows = false;
+            this.dtgClientes.BackgroundColor = System.Drawing.Color.White;
+            this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idpersonas,
+            this.Nombres,
+            this.TipoPersona,
+            this.DUI,
+            this.NIT,
+            this.NRC,
+            this.Giro,
+            this.Direccion,
+            this.Categoria});
+            this.dtgClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgClientes.Location = new System.Drawing.Point(0, 27);
+            this.dtgClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtgClientes.Name = "dtgClientes";
+            this.dtgClientes.ReadOnly = true;
+            this.dtgClientes.RowHeadersVisible = false;
+            this.dtgClientes.RowTemplate.Height = 24;
+            this.dtgClientes.Size = new System.Drawing.Size(938, 552);
+            this.dtgClientes.TabIndex = 1;
+            // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -171,52 +177,74 @@
             this.lblRegistros.Size = new System.Drawing.Size(168, 20);
             this.lblRegistros.Text = "0 Registros Encontrados";
             // 
-            // idPersonas
+            // idpersonas
             // 
-            this.idPersonas.DataPropertyName = "idpersonas";
-            this.idPersonas.HeaderText = "ID";
-            this.idPersonas.Name = "idPersonas";
-            this.idPersonas.ReadOnly = true;
-            this.idPersonas.Width = 40;
+            this.idpersonas.HeaderText = "ID";
+            this.idpersonas.Name = "idpersonas";
+            this.idpersonas.ReadOnly = true;
+            this.idpersonas.Width = 40;
             // 
-            // tipoPersona
+            // Nombres
             // 
-            this.tipoPersona.DataPropertyName = "tipoPersona";
-            this.tipoPersona.HeaderText = "Tipo";
-            this.tipoPersona.Name = "tipoPersona";
-            this.tipoPersona.ReadOnly = true;
+            this.Nombres.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombres.DataPropertyName = "Nombres";
+            this.Nombres.HeaderText = "Nombre";
+            this.Nombres.Name = "Nombres";
+            this.Nombres.ReadOnly = true;
             // 
-            // Nombre
+            // TipoPersona
             // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.DataPropertyName = "nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
+            this.TipoPersona.DataPropertyName = "TipoPersona";
+            this.TipoPersona.HeaderText = "Tipo";
+            this.TipoPersona.Name = "TipoPersona";
+            this.TipoPersona.ReadOnly = true;
+            // 
+            // DUI
+            // 
+            this.DUI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DUI.DataPropertyName = "DUI";
+            this.DUI.HeaderText = "DUI";
+            this.DUI.Name = "DUI";
+            this.DUI.ReadOnly = true;
+            // 
+            // NIT
+            // 
+            this.NIT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NIT.DataPropertyName = "NIT";
+            this.NIT.HeaderText = "NIT";
+            this.NIT.Name = "NIT";
+            this.NIT.ReadOnly = true;
+            // 
+            // NRC
+            // 
+            this.NRC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NRC.DataPropertyName = "NRC";
+            this.NRC.HeaderText = "NRC";
+            this.NRC.Name = "NRC";
+            this.NRC.ReadOnly = true;
+            // 
+            // Giro
+            // 
+            this.Giro.DataPropertyName = "Giro";
+            this.Giro.HeaderText = "Giro";
+            this.Giro.Name = "Giro";
+            this.Giro.ReadOnly = true;
+            this.Giro.Visible = false;
             // 
             // Direccion
             // 
-            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Direccion.DataPropertyName = "direccion";
+            this.Direccion.DataPropertyName = "Direccion";
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
             // 
-            // telefono
+            // Categoria
             // 
-            this.telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.telefono.DataPropertyName = "telefono";
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
+            this.Categoria.DataPropertyName = "Categoria";
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            this.Categoria.Visible = false;
             // 
             // ClientesLista
             // 
@@ -259,11 +287,14 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPersonas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoPersona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpersonas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoPersona;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DUI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NIT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NRC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Giro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
     }
 }

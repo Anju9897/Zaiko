@@ -35,8 +35,6 @@ namespace General.GUI
             }
             catch
             {
-
-
             }
         }
 
