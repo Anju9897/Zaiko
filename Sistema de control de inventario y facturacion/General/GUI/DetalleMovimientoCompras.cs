@@ -430,25 +430,7 @@ namespace General.GUI
 
         private void DetallesMovimiento_FormClosed(object sender, FormClosedEventArgs e)
         {
-            try
-            {
-                if (MessageBox.Show("¿Desea Completar la Transaccion?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    CLS.Movimiento oMov = new CLS.Movimiento();
-                    oMov.IDMovimiento = lblIDMov.Text;
-                    oMov.Subtotal = Convert.ToString(Convert.ToDouble(lblsubtotalSuma.Text));
-                    oMov.IvaTotal = Convert.ToString(Convert.ToDouble(lblIVAsuma.Text));
-
-                    if (lblComprobante.Text.Equals("Comprobante de Credito fiscal"))
-                    {
-                        oMov.Total = Convert.ToString(Convert.ToDouble(lblsubtotalSuma.Text) + Convert.ToDouble(lblIVAsuma.Text));
-                    }
-                    oMov.Actualizar_Total();
-                }
-            }
-            catch
-            {
-            }
+            
         }
 
         private void dtgDetalle_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)

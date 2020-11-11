@@ -101,6 +101,7 @@
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(160, 24);
             this.btnModificarCliente.Text = "Modificar Cliente";
+            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // toolStripSeparator3
             // 
@@ -159,6 +160,8 @@
             // 
             this.dtgClientes.AllowUserToAddRows = false;
             this.dtgClientes.AllowUserToDeleteRows = false;
+            this.dtgClientes.AllowUserToResizeColumns = false;
+            this.dtgClientes.AllowUserToResizeRows = false;
             this.dtgClientes.BackgroundColor = System.Drawing.Color.White;
             this.dtgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -178,11 +181,14 @@
             this.dtgClientes.ReadOnly = true;
             this.dtgClientes.RowHeadersVisible = false;
             this.dtgClientes.RowTemplate.Height = 24;
+            this.dtgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgClientes.Size = new System.Drawing.Size(938, 552);
             this.dtgClientes.TabIndex = 1;
+            this.dtgClientes.DoubleClick += new System.EventHandler(this.dtgClientes_DoubleClick);
             // 
             // idpersonas
             // 
+            this.idpersonas.DataPropertyName = "idpersonas";
             this.idpersonas.HeaderText = "ID";
             this.idpersonas.Name = "idpersonas";
             this.idpersonas.ReadOnly = true;
@@ -308,6 +314,9 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btnSeleccionar;
+        public System.Windows.Forms.DataGridView dtgClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpersonas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoPersona;
@@ -317,8 +326,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Giro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton btnSeleccionar;
-        public System.Windows.Forms.DataGridView dtgClientes;
     }
 }

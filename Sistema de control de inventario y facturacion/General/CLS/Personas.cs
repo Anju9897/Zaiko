@@ -97,7 +97,7 @@ namespace General.CLS
                 Sentencia += "'" + NRC + "',";
                 Sentencia += "'" + Giro + "',";
                 Sentencia += "'" + Direccion + "',";
-                Sentencia += "'" + Categoria + "')";
+                Sentencia += "'" + Categoria + "');";
                 if (Operacion.Insertar(Sentencia) > 0)
                 {
                     MessageBox.Show("Cliente Registrado Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

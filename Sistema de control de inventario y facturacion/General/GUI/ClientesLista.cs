@@ -80,5 +80,37 @@ namespace General.GUI
         {
             this.Close();
         }
+
+        private void dtgClientes_DoubleClick(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnModificarCliente_Click(object sender, EventArgs e)
+        {
+            ClientesEdicion f = new ClientesEdicion();
+            f.txbIDCliente.Text = dtgClientes.CurrentRow.Cells["idpersonas"].Value.ToString();
+            if (dtgClientes.CurrentRow.Cells["tipopersona"].Value.ToString().ToUpper().Equals("PERSONA NATURAL")) {
+                String nombreCompleto = dtgClientes.CurrentRow.Cells["nombres"].Value.ToString();
+                String[] subnombres = nombreCompleto.Split(' ');
+                f.cbbTipoPersona.SelectedIndex = 1;
+                f.txbNombres.Text = subnombres[0];
+                f.txbApellidos.Text = subnombres[1];
+            }
+            else if (dtgClientes.CurrentRow.Cells["tipopersona"].Value.ToString().ToUpper().Equals("PERSONA JURIDICA"))
+            {
+                f.cbbTipoPersona.SelectedIndex = 2;
+                f.txbNombres.Text = dtgClientes.CurrentRow.Cells["nombres"].Value.ToString();
+            }
+            
+            f.txbDUI.Text = dtgClientes.CurrentRow.Cells["DUI"].Value.ToString();
+            f.txbNIT.Text = dtgClientes.CurrentRow.Cells["NIT"].Value.ToString();
+            f.txbNRC.Text = dtgClientes.CurrentRow.Cells["NRC"].Value.ToString();
+            f.txbDireccion.Text = dtgClientes.CurrentRow.Cells["Direccion"].Value.ToString();
+            f.txbCategoria.Text = dtgClientes.CurrentRow.Cells["Categoria"].Value.ToString();
+            f.txbGiro.Text = dtgClientes.CurrentRow.Cells["Giro"].Value.ToString();
+            f.ShowDialog();
+            Cargar();
+        }
     }
 }

@@ -42,15 +42,25 @@
             this.lblsubtotalSuma = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripLabel();
+            this.lblComprobante = new System.Windows.Forms.ToolStripLabel();
             this.lblIDMov = new System.Windows.Forms.ToolStripLabel();
             this.txbBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.lblComprobante = new System.Windows.Forms.ToolStripLabel();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dtgProductos = new System.Windows.Forms.DataGridView();
+            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idinventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciounitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.lblIDDetalle = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,9 +78,6 @@
             this.txbProducto = new System.Windows.Forms.TextBox();
             this.txbIDProducto = new System.Windows.Forms.TextBox();
             this.dtgDetalle = new System.Windows.Forms.DataGridView();
-            this.lblIDDetalle = new System.Windows.Forms.Label();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.dtsVentaConsumidorFinal1 = new Reportes.DAT.dtsVentaConsumidorFinal();
             this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,14 +90,7 @@
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idinventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preciounitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtsVentaConsumidorFinal1 = new Reportes.DAT.dtsVentaConsumidorFinal();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -116,9 +116,9 @@
             this.lblIVAsuma,
             this.toolStripStatusLabel2,
             this.lblsubtotalSuma});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 763);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 758);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(944, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1189, 26);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -170,7 +170,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(944, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(1189, 28);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -184,6 +184,17 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(31, 25);
             this.toolStripButton1.Text = "ID:";
+            // 
+            // lblComprobante
+            // 
+            this.lblComprobante.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.lblComprobante.ForeColor = System.Drawing.Color.White;
+            this.lblComprobante.Image = ((System.Drawing.Image)(resources.GetObject("lblComprobante.Image")));
+            this.lblComprobante.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lblComprobante.Name = "lblComprobante";
+            this.lblComprobante.Size = new System.Drawing.Size(130, 25);
+            this.lblComprobante.Text = "Comprobante";
+            this.lblComprobante.Visible = false;
             // 
             // lblIDMov
             // 
@@ -213,17 +224,6 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(99, 25);
             this.toolStripLabel2.Text = "Buscar (F1)";
             // 
-            // lblComprobante
-            // 
-            this.lblComprobante.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.lblComprobante.ForeColor = System.Drawing.Color.White;
-            this.lblComprobante.Image = ((System.Drawing.Image)(resources.GetObject("lblComprobante.Image")));
-            this.lblComprobante.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.lblComprobante.Name = "lblComprobante";
-            this.lblComprobante.Size = new System.Drawing.Size(130, 25);
-            this.lblComprobante.Text = "Comprobante";
-            this.lblComprobante.Visible = false;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
@@ -233,6 +233,16 @@
             this.btnEliminar.Size = new System.Drawing.Size(94, 25);
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(224, 25);
+            this.toolStripButton3.Text = "Concluir Transacciones";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton2
             // 
@@ -259,8 +269,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(944, 735);
-            this.splitContainer1.SplitterDistance = 259;
+            this.splitContainer1.Size = new System.Drawing.Size(1189, 730);
+            this.splitContainer1.SplitterDistance = 257;
             this.splitContainer1.TabIndex = 4;
             // 
             // dtgProductos
@@ -304,10 +314,70 @@
             this.dtgProductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProductos.RowTemplate.Height = 24;
             this.dtgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgProductos.Size = new System.Drawing.Size(944, 259);
+            this.dtgProductos.Size = new System.Drawing.Size(1189, 257);
             this.dtgProductos.TabIndex = 0;
             this.dtgProductos.DoubleClick += new System.EventHandler(this.dtgProductos_DoubleClick);
             this.dtgProductos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgProductos_KeyDown);
+            // 
+            // idproducto
+            // 
+            this.idproducto.DataPropertyName = "idproducto";
+            this.idproducto.HeaderText = "ID";
+            this.idproducto.Name = "idproducto";
+            this.idproducto.ReadOnly = true;
+            this.idproducto.Width = 40;
+            // 
+            // idinventario
+            // 
+            this.idinventario.DataPropertyName = "idinventario";
+            this.idinventario.HeaderText = "idinventario";
+            this.idinventario.Name = "idinventario";
+            this.idinventario.ReadOnly = true;
+            this.idinventario.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // mnombre
+            // 
+            this.mnombre.DataPropertyName = "mnombre";
+            this.mnombre.HeaderText = "Marca";
+            this.mnombre.Name = "mnombre";
+            this.mnombre.ReadOnly = true;
+            // 
+            // preciounitario
+            // 
+            this.preciounitario.DataPropertyName = "preciounitario";
+            this.preciounitario.HeaderText = "Precio";
+            this.preciounitario.Name = "preciounitario";
+            this.preciounitario.ReadOnly = true;
+            // 
+            // existencias
+            // 
+            this.existencias.DataPropertyName = "existencias";
+            this.existencias.HeaderText = "Existencias";
+            this.existencias.Name = "existencias";
+            this.existencias.ReadOnly = true;
+            // 
+            // unidad
+            // 
+            this.unidad.DataPropertyName = "unidad";
+            this.unidad.HeaderText = "Unidad";
+            this.unidad.Name = "unidad";
+            this.unidad.ReadOnly = true;
             // 
             // splitContainer2
             // 
@@ -342,9 +412,19 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dtgDetalle);
-            this.splitContainer2.Size = new System.Drawing.Size(944, 472);
-            this.splitContainer2.SplitterDistance = 148;
+            this.splitContainer2.Size = new System.Drawing.Size(1189, 469);
+            this.splitContainer2.SplitterDistance = 147;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // lblIDDetalle
+            // 
+            this.lblIDDetalle.AutoSize = true;
+            this.lblIDDetalle.Enabled = false;
+            this.lblIDDetalle.Location = new System.Drawing.Point(213, 37);
+            this.lblIDDetalle.Name = "lblIDDetalle";
+            this.lblIDDetalle.Size = new System.Drawing.Size(0, 17);
+            this.lblIDDetalle.TabIndex = 16;
+            this.lblIDDetalle.Visible = false;
             // 
             // label9
             // 
@@ -566,37 +646,12 @@
             this.dtgDetalle.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgDetalle.RowTemplate.Height = 24;
             this.dtgDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDetalle.Size = new System.Drawing.Size(944, 320);
+            this.dtgDetalle.Size = new System.Drawing.Size(1189, 318);
             this.dtgDetalle.TabIndex = 0;
             this.dtgDetalle.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dtgDetalle_RowsAdded);
             this.dtgDetalle.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dtgDetalle_RowsRemoved);
             this.dtgDetalle.DoubleClick += new System.EventHandler(this.dtgDetalle_DoubleClick);
             this.dtgDetalle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgProductos_KeyDown);
-            // 
-            // lblIDDetalle
-            // 
-            this.lblIDDetalle.AutoSize = true;
-            this.lblIDDetalle.Enabled = false;
-            this.lblIDDetalle.Location = new System.Drawing.Point(213, 37);
-            this.lblIDDetalle.Name = "lblIDDetalle";
-            this.lblIDDetalle.Size = new System.Drawing.Size(0, 17);
-            this.lblIDDetalle.TabIndex = 16;
-            this.lblIDDetalle.Visible = false;
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.ForeColor = System.Drawing.Color.White;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(224, 25);
-            this.toolStripButton3.Text = "Concluir Transacciones";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // dtsVentaConsumidorFinal1
-            // 
-            this.dtsVentaConsumidorFinal1.DataSetName = "dtsVentaConsumidorFinal";
-            this.dtsVentaConsumidorFinal1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // iddetalle
             // 
@@ -687,71 +742,16 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
-            // idproducto
+            // dtsVentaConsumidorFinal1
             // 
-            this.idproducto.DataPropertyName = "idproducto";
-            this.idproducto.HeaderText = "ID";
-            this.idproducto.Name = "idproducto";
-            this.idproducto.ReadOnly = true;
-            this.idproducto.Width = 40;
-            // 
-            // idinventario
-            // 
-            this.idinventario.DataPropertyName = "idinventario";
-            this.idinventario.HeaderText = "idinventario";
-            this.idinventario.Name = "idinventario";
-            this.idinventario.ReadOnly = true;
-            this.idinventario.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcion.DataPropertyName = "descripcion";
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // mnombre
-            // 
-            this.mnombre.DataPropertyName = "mnombre";
-            this.mnombre.HeaderText = "Marca";
-            this.mnombre.Name = "mnombre";
-            this.mnombre.ReadOnly = true;
-            // 
-            // preciounitario
-            // 
-            this.preciounitario.DataPropertyName = "preciounitario";
-            this.preciounitario.HeaderText = "Precio";
-            this.preciounitario.Name = "preciounitario";
-            this.preciounitario.ReadOnly = true;
-            // 
-            // existencias
-            // 
-            this.existencias.DataPropertyName = "existencias";
-            this.existencias.HeaderText = "Existencias";
-            this.existencias.Name = "existencias";
-            this.existencias.ReadOnly = true;
-            // 
-            // unidad
-            // 
-            this.unidad.DataPropertyName = "unidad";
-            this.unidad.HeaderText = "Unidad";
-            this.unidad.Name = "unidad";
-            this.unidad.ReadOnly = true;
+            this.dtsVentaConsumidorFinal1.DataSetName = "dtsVentaConsumidorFinal";
+            this.dtsVentaConsumidorFinal1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DetalleMovimientoCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 789);
+            this.ClientSize = new System.Drawing.Size(1189, 784);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);

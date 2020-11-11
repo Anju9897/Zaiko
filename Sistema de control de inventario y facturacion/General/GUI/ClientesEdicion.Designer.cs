@@ -162,6 +162,7 @@
             this.txbNIT.Size = new System.Drawing.Size(226, 26);
             this.txbNIT.TabIndex = 15;
             this.txbNIT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbNIT.TextChanged += new System.EventHandler(this.txbNIT_TextChanged);
             // 
             // label3
             // 
@@ -360,27 +361,27 @@
         #endregion
 
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox txbIDCliente;
-        private System.Windows.Forms.ComboBox cbbTipoPersona;
         private System.Windows.Forms.ErrorProvider errorCliente;
         private System.Windows.Forms.Label lblTIpo;
-        private System.Windows.Forms.TextBox txbApellidos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbNombres;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txbCategoria;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txbDireccion;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txbGiro;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txbNRC;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txbNIT;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbDUI;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.TextBox txbIDCliente;
+        public System.Windows.Forms.ComboBox cbbTipoPersona;
+        public System.Windows.Forms.TextBox txbApellidos;
+        public System.Windows.Forms.TextBox txbNombres;
+        public System.Windows.Forms.TextBox txbCategoria;
+        public System.Windows.Forms.TextBox txbDireccion;
+        public System.Windows.Forms.TextBox txbGiro;
+        public System.Windows.Forms.TextBox txbNRC;
+        public System.Windows.Forms.TextBox txbNIT;
+        public System.Windows.Forms.TextBox txbDUI;
     }
 }

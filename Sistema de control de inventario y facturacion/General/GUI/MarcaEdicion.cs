@@ -36,19 +36,18 @@ namespace General.GUI
                 if (VerificarDatos())
                 {
                     CLS.Marca oMarca = new CLS.Marca();
+                    oMarca.IDMarca = txbIDMarca.Text;
                     oMarca.Nombre = txbNombre.Text;
-                    
 
-                    oMarca.Guardar();
-                    if (MessageBox.Show("¿Desea Agregar otra marca?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (txbIDMarca.Text.Length > 0)
                     {
-                        txbNombre.Clear();
-                        pbMarca = null;
+                        oMarca.Actualizar();
                     }
                     else
                     {
-                        Close();
+                        oMarca.Guardar();
                     }
+                    Close();
                 }
             }
             catch
@@ -65,29 +64,7 @@ namespace General.GUI
 
         private void btnExaminar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                OpenFileDialog seleccionar = new OpenFileDialog();
-                seleccionar.Filter = "Imagen (*.jpg,*.png) | *.jpg; *.png";
-                seleccionar.Title = "Selecciona Imagen";
-                seleccionar.InitialDirectory = @"C:\Marcas";
-                seleccionar.RestoreDirectory = true;
-                DialogResult resultado = seleccionar.ShowDialog();
-
-
-                if (resultado == DialogResult.OK)
-                {
-                    pbMarca.Image = Image.FromFile(seleccionar.FileName);
-                }
-                else
-                {
-
-                }
-            }
-            catch
-            {
-
-            }
+           
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

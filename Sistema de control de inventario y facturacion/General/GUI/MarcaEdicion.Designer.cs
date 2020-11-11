@@ -30,48 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarcaEdicion));
-            this.btnExaminar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pbMarca = new System.Windows.Forms.PictureBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txbIDMarca = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMarca)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnExaminar
-            // 
-            this.btnExaminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.btnExaminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExaminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExaminar.ForeColor = System.Drawing.Color.White;
-            this.btnExaminar.Location = new System.Drawing.Point(61, 189);
-            this.btnExaminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(100, 34);
-            this.btnExaminar.TabIndex = 1;
-            this.btnExaminar.Text = "Examinar";
-            this.btnExaminar.UseVisualStyleBackColor = false;
-            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(357, 259);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(152, 53);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -79,7 +47,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(184, 259);
+            this.btnAceptar.Location = new System.Drawing.Point(77, 240);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(148, 53);
@@ -91,7 +59,7 @@
             // txbNombre
             // 
             this.txbNombre.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNombre.Location = new System.Drawing.Point(184, 96);
+            this.txbNombre.Location = new System.Drawing.Point(78, 164);
             this.txbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(324, 30);
@@ -102,7 +70,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(57, 96);
+            this.label3.Location = new System.Drawing.Point(74, 138);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 22);
@@ -114,39 +82,53 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(221, 49);
+            this.label1.Location = new System.Drawing.Point(114, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 30);
             this.label1.TabIndex = 19;
             this.label1.Text = "DATOS DE MARCA";
             // 
+            // Notificador
+            // 
+            this.Notificador.ContainerControl = this;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(250, 240);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(152, 53);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txbIDMarca
+            // 
+            this.txbIDMarca.Enabled = false;
+            this.txbIDMarca.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIDMarca.Location = new System.Drawing.Point(78, 94);
+            this.txbIDMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.txbIDMarca.Name = "txbIDMarca";
+            this.txbIDMarca.Size = new System.Drawing.Size(147, 30);
+            this.txbIDMarca.TabIndex = 21;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(57, 163);
+            this.label2.Location = new System.Drawing.Point(74, 68);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 22);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Imagen";
-            // 
-            // Notificador
-            // 
-            this.Notificador.ContainerControl = this;
-            // 
-            // pbMarca
-            // 
-            this.pbMarca.Enabled = false;
-            this.pbMarca.Location = new System.Drawing.Point(184, 143);
-            this.pbMarca.Name = "pbMarca";
-            this.pbMarca.Size = new System.Drawing.Size(324, 96);
-            this.pbMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMarca.TabIndex = 27;
-            this.pbMarca.TabStop = false;
-            this.pbMarca.Click += new System.EventHandler(this.pbMarca_Click);
+            this.label2.Size = new System.Drawing.Size(29, 22);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "ID";
             // 
             // MarcaEdicion
             // 
@@ -154,10 +136,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(558, 325);
-            this.Controls.Add(this.pbMarca);
+            this.ClientSize = new System.Drawing.Size(470, 325);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnExaminar);
+            this.Controls.Add(this.txbIDMarca);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txbNombre);
@@ -170,7 +151,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MarcaEdicion";
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMarca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,14 +158,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnExaminar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ErrorProvider Notificador;
-        private System.Windows.Forms.PictureBox pbMarca;
         public System.Windows.Forms.TextBox txbNombre;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txbIDMarca;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

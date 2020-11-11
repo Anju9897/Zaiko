@@ -59,13 +59,13 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btneditar = new System.Windows.Forms.ToolStripDropDownButton();
-            this.transaccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btneditar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -357,6 +357,8 @@
             this.toolStripSeparator1,
             this.btneditar,
             this.toolStripSeparator2,
+            this.toolStripButton1,
+            this.toolStripSeparator3,
             this.btnAgregar,
             this.txbFiltro,
             this.toolStripLabel1});
@@ -382,39 +384,6 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
-            // 
-            // btneditar
-            // 
-            this.btneditar.AutoSize = false;
-            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.btneditar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.transaccionToolStripMenuItem,
-            this.clienteToolStripMenuItem});
-            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Image = ((System.Drawing.Image)(resources.GetObject("btneditar.Image")));
-            this.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(92, 25);
-            this.btneditar.Text = "Editar";
-            // 
-            // transaccionToolStripMenuItem
-            // 
-            this.transaccionToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.transaccionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.transaccionToolStripMenuItem.Name = "transaccionToolStripMenuItem";
-            this.transaccionToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.transaccionToolStripMenuItem.Text = "Productos";
-            this.transaccionToolStripMenuItem.Click += new System.EventHandler(this.transaccionToolStripMenuItem_Click);
-            // 
-            // clienteToolStripMenuItem
-            // 
-            this.clienteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.clienteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.clienteToolStripMenuItem.Text = "Informacion";
-            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -450,8 +419,38 @@
             this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(107, 25);
+            this.toolStripLabel1.Size = new System.Drawing.Size(107, 21);
             this.toolStripLabel1.Text = "Filtrar (F1)";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.AutoSize = false;
+            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(200, 25);
+            this.toolStripButton1.Text = "Editar Movimientos";
+            this.toolStripButton1.Click += new System.EventHandler(this.transaccionToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            // 
+            // btneditar
+            // 
+            this.btneditar.AutoSize = false;
+            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.ForeColor = System.Drawing.Color.White;
+            this.btneditar.Image = ((System.Drawing.Image)(resources.GetObject("btneditar.Image")));
+            this.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(150, 25);
+            this.btneditar.Text = "Editar Cliente";
+            this.btneditar.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // MovimientosCompras
             // 
@@ -492,9 +491,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripDropDownButton btneditar;
-        private System.Windows.Forms.ToolStripMenuItem transaccionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnAgregar;
         private System.Windows.Forms.ToolStripTextBox txbFiltro;
@@ -516,6 +512,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn IVATOTAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.ToolStripButton btneditar;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 
     }
 }

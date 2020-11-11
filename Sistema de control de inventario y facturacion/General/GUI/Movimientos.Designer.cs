@@ -63,14 +63,14 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btneditar = new System.Windows.Forms.ToolStripDropDownButton();
-            this.transaccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.dtsCompras1 = new Reportes.DAT.dtsCompras();
+            this.btnEditarProductos = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btneditar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -418,6 +418,8 @@
             this.toolStripSeparator1,
             this.btneditar,
             this.toolStripSeparator2,
+            this.btnEditarProductos,
+            this.toolStripSeparator3,
             this.btnAgregar,
             this.txbFiltro,
             this.toolStripLabel1});
@@ -443,39 +445,6 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
-            // 
-            // btneditar
-            // 
-            this.btneditar.AutoSize = false;
-            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.btneditar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.transaccionToolStripMenuItem,
-            this.clienteToolStripMenuItem});
-            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Image = ((System.Drawing.Image)(resources.GetObject("btneditar.Image")));
-            this.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(92, 25);
-            this.btneditar.Text = "Editar";
-            // 
-            // transaccionToolStripMenuItem
-            // 
-            this.transaccionToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.transaccionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.transaccionToolStripMenuItem.Name = "transaccionToolStripMenuItem";
-            this.transaccionToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
-            this.transaccionToolStripMenuItem.Text = "Productos";
-            this.transaccionToolStripMenuItem.Click += new System.EventHandler(this.transaccionToolStripMenuItem_Click);
-            // 
-            // clienteToolStripMenuItem
-            // 
-            this.clienteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.clienteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
-            this.clienteToolStripMenuItem.Text = "Cliente";
-            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -518,6 +487,36 @@
             // 
             this.dtsCompras1.DataSetName = "dtsCompras";
             this.dtsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnEditarProductos
+            // 
+            this.btnEditarProductos.AutoSize = false;
+            this.btnEditarProductos.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarProductos.ForeColor = System.Drawing.Color.White;
+            this.btnEditarProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarProductos.Image")));
+            this.btnEditarProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditarProductos.Name = "btnEditarProductos";
+            this.btnEditarProductos.Size = new System.Drawing.Size(200, 25);
+            this.btnEditarProductos.Text = "Editar Movimientos";
+            this.btnEditarProductos.Click += new System.EventHandler(this.transaccionToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            // 
+            // btneditar
+            // 
+            this.btneditar.AutoSize = false;
+            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.ForeColor = System.Drawing.Color.White;
+            this.btneditar.Image = ((System.Drawing.Image)(resources.GetObject("btneditar.Image")));
+            this.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(150, 25);
+            this.btneditar.Text = "Editar Cliente";
+            this.btneditar.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // Movimientos
             // 
@@ -570,9 +569,6 @@
         private System.Windows.Forms.ToolStripTextBox txbFiltro;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
-        private System.Windows.Forms.ToolStripDropDownButton btneditar;
-        private System.Windows.Forms.ToolStripMenuItem transaccionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private Reportes.DAT.dtsCompras dtsCompras1;
         private System.Windows.Forms.ComboBox cbbTransaccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmovimiento;
@@ -592,5 +588,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.Label lblfiltro3;
         private System.Windows.Forms.Button btnEmitirCotizacion;
+        private System.Windows.Forms.ToolStripButton btnEditarProductos;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btneditar;
     }
 }

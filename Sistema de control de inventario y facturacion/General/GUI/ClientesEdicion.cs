@@ -15,20 +15,17 @@ namespace General.GUI
         public ClientesEdicion()
         {
             InitializeComponent();
+            cbbTipoPersona.SelectedIndex = 0;
         }
 
         private void ClientesEdicion_Load(object sender, EventArgs e)
         {
-            cbbTipoPersona.SelectedIndex = 0;
+            
         }
 
         private void ClientesEdicion_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DialogResult salir = MessageBox.Show("¿Esta seguro que desea salir? los cambios no se aplicarán","Advertencia",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (salir == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            this.Close();
         }
 
         private void cbbTipoPersona_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,6 +33,7 @@ namespace General.GUI
             if (cbbTipoPersona.SelectedIndex == 0)
             {
                 errorCliente.SetError(cbbTipoPersona,"Debe seleccionar una opcion valida");
+                setDefault();
             } else if(cbbTipoPersona.SelectedIndex == 1){
                 //es Una persona natural
                 lblNombre.Text = "Nombres";
@@ -64,7 +62,7 @@ namespace General.GUI
                 errorCliente.Clear();
             }
 
-            setDefault();
+            
         }
 
         private void setDefault()
@@ -91,21 +89,28 @@ namespace General.GUI
                     oPersona.Apellidos = txbApellidos.Text;
                     if (cbbTipoPersona.SelectedIndex == 1) { oPersona.TipoPersona = cbbTipoPersona.Text; }
                     else if (cbbTipoPersona.SelectedIndex == 2) { oPersona.TipoPersona = cbbTipoPersona.Text; }
-                    oPersona.DUI = txbDUI.Text;
-                    oPersona.NIT = txbNIT.Text;
-                    oPersona.NRC = txbNRC.Text;
-                    oPersona.Giro = txbGiro.Text;
-                    oPersona.Direccion = txbDireccion.Text;
-                    oPersona.Categoria = txbCategoria.Text;
+                    if(txbDUI.Text.Length > 0) {oPersona.DUI = txbDUI.Text;} else {oPersona.DUI = "N/A" ;}
+                    if(txbNIT.Text.Length > 0) { oPersona.NIT = txbNIT.Text;} else{ oPersona.NIT = "N/A";}
+                    if(txbNRC.Text.Length > 0) {oPersona.NRC = txbNRC.Text;} else {oPersona.NRC = "N/A";}
+                    if(txbGiro.Text.Length > 0) { oPersona.Giro = txbGiro.Text; } else { oPersona.Giro = ""; }
+                    if(txbDireccion.Text.Length > 0) { oPersona.Direccion = txbDireccion.Text; } else { oPersona.Direccion = ""; }
+                    if (txbCategoria.Text.Length > 0) { oPersona.Categoria = txbCategoria.Text; } else { oPersona.Categoria = ""; }
 
                     if (txbIDCliente.Text.Length > 0)
                     {
-                        oPersona.Actualizar();
+                        if (oPersona.Actualizar())
+                        {
+                            Close();
+                        }
                     }
                     else
                     {
-                        oPersona.Guardar();
+                        if (oPersona.Guardar())
+                        {
+                            Close();
+                        }
                     }
+
                 }
                 catch
                 {
@@ -251,6 +256,36 @@ namespace General.GUI
                 }
                 //---------------------------------------------- terminar el NRC
             }
+            
+            return validado;
+        }
+
+        private void txbDUI_TextChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult salir = MessageBox.Show("¿Esta seguro que desea cancelar? los cambios no se aplicarán", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (salir == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void txbNIT_TextChanged(object sender, EventArgs e)
+        {
+            if (txbNIT.Text.Length > 0 && txbNIT.Text.Length <= 17)
+            {
+                validarNIT();
+            }
+        }
+
+        private bool validarNIT()
+        {
+            bool validado = true;
             //-------------------------------------------------------------Verificar valores del NIT
             if (txbNIT.Text.Length > 0)
             {
@@ -291,22 +326,8 @@ namespace General.GUI
                 }
             }
             //------------------------------------------------------------Termina verificacion del NIT
+
             return validado;
-        }
-
-        private void txbDUI_TextChanged(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            DialogResult salir = MessageBox.Show("¿Esta seguro que desea cancelar? los cambios no se aplicarán", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (salir == DialogResult.Yes)
-            {
-                this.Close();
-            }
         }
     }
 }

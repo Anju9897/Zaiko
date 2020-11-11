@@ -50,7 +50,16 @@
             this.lblsubtotalSuma = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dtgProductos = new System.Windows.Forms.DataGridView();
+            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idinventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciounitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.lblIDDetalle = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,15 +77,6 @@
             this.txbProducto = new System.Windows.Forms.TextBox();
             this.txbIDProducto = new System.Windows.Forms.TextBox();
             this.dtgDetalle = new System.Windows.Forms.DataGridView();
-            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idinventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preciounitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblIDDetalle = new System.Windows.Forms.Label();
             this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,7 +118,7 @@
             this.btnConfirmar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(929, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(1235, 28);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -202,9 +202,9 @@
             this.lblIVAsuma,
             this.toolStripStatusLabel2,
             this.lblsubtotalSuma});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 679);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 716);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(929, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1235, 26);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -255,8 +255,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(929, 651);
-            this.splitContainer1.SplitterDistance = 230;
+            this.splitContainer1.Size = new System.Drawing.Size(1235, 688);
+            this.splitContainer1.SplitterDistance = 243;
             this.splitContainer1.TabIndex = 2;
             // 
             // dtgProductos
@@ -300,10 +300,70 @@
             this.dtgProductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgProductos.RowTemplate.Height = 24;
             this.dtgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgProductos.Size = new System.Drawing.Size(929, 230);
+            this.dtgProductos.Size = new System.Drawing.Size(1235, 243);
             this.dtgProductos.TabIndex = 0;
             this.dtgProductos.DoubleClick += new System.EventHandler(this.dtgProductos_DoubleClick);
             this.dtgProductos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgProductos_KeyDown);
+            // 
+            // idproducto
+            // 
+            this.idproducto.DataPropertyName = "idproducto";
+            this.idproducto.HeaderText = "ID";
+            this.idproducto.Name = "idproducto";
+            this.idproducto.ReadOnly = true;
+            this.idproducto.Width = 40;
+            // 
+            // idinventario
+            // 
+            this.idinventario.DataPropertyName = "idinventario";
+            this.idinventario.HeaderText = "IDINVENTARIO";
+            this.idinventario.Name = "idinventario";
+            this.idinventario.ReadOnly = true;
+            this.idinventario.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // mnombre
+            // 
+            this.mnombre.DataPropertyName = "mnombre";
+            this.mnombre.HeaderText = "Marca";
+            this.mnombre.Name = "mnombre";
+            this.mnombre.ReadOnly = true;
+            // 
+            // preciounitario
+            // 
+            this.preciounitario.DataPropertyName = "preciounitario";
+            this.preciounitario.HeaderText = "Precio";
+            this.preciounitario.Name = "preciounitario";
+            this.preciounitario.ReadOnly = true;
+            // 
+            // existencias
+            // 
+            this.existencias.DataPropertyName = "existencias";
+            this.existencias.HeaderText = "Existencias";
+            this.existencias.Name = "existencias";
+            this.existencias.ReadOnly = true;
+            // 
+            // unidad
+            // 
+            this.unidad.DataPropertyName = "unidad";
+            this.unidad.HeaderText = "Unidad";
+            this.unidad.Name = "unidad";
+            this.unidad.ReadOnly = true;
             // 
             // splitContainer2
             // 
@@ -338,9 +398,19 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dtgDetalle);
-            this.splitContainer2.Size = new System.Drawing.Size(929, 417);
-            this.splitContainer2.SplitterDistance = 131;
+            this.splitContainer2.Size = new System.Drawing.Size(1235, 441);
+            this.splitContainer2.SplitterDistance = 138;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // lblIDDetalle
+            // 
+            this.lblIDDetalle.AutoSize = true;
+            this.lblIDDetalle.Enabled = false;
+            this.lblIDDetalle.Location = new System.Drawing.Point(199, 31);
+            this.lblIDDetalle.Name = "lblIDDetalle";
+            this.lblIDDetalle.Size = new System.Drawing.Size(0, 17);
+            this.lblIDDetalle.TabIndex = 16;
+            this.lblIDDetalle.Visible = false;
             // 
             // label9
             // 
@@ -562,82 +632,12 @@
             this.dtgDetalle.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgDetalle.RowTemplate.Height = 24;
             this.dtgDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDetalle.Size = new System.Drawing.Size(929, 282);
+            this.dtgDetalle.Size = new System.Drawing.Size(1235, 299);
             this.dtgDetalle.TabIndex = 0;
             this.dtgDetalle.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dtgDetalle_RowsAdded);
             this.dtgDetalle.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dtgDetalle_RowsRemoved);
             this.dtgDetalle.DoubleClick += new System.EventHandler(this.dtgDetalle_DoubleClick);
             this.dtgDetalle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgProductos_KeyDown);
-            // 
-            // idproducto
-            // 
-            this.idproducto.DataPropertyName = "idproducto";
-            this.idproducto.HeaderText = "ID";
-            this.idproducto.Name = "idproducto";
-            this.idproducto.ReadOnly = true;
-            this.idproducto.Width = 40;
-            // 
-            // idinventario
-            // 
-            this.idinventario.DataPropertyName = "idinventario";
-            this.idinventario.HeaderText = "IDINVENTARIO";
-            this.idinventario.Name = "idinventario";
-            this.idinventario.ReadOnly = true;
-            this.idinventario.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcion.DataPropertyName = "descripcion";
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // mnombre
-            // 
-            this.mnombre.DataPropertyName = "mnombre";
-            this.mnombre.HeaderText = "Marca";
-            this.mnombre.Name = "mnombre";
-            this.mnombre.ReadOnly = true;
-            // 
-            // preciounitario
-            // 
-            this.preciounitario.DataPropertyName = "preciounitario";
-            this.preciounitario.HeaderText = "Precio";
-            this.preciounitario.Name = "preciounitario";
-            this.preciounitario.ReadOnly = true;
-            // 
-            // existencias
-            // 
-            this.existencias.DataPropertyName = "existencias";
-            this.existencias.HeaderText = "Existencias";
-            this.existencias.Name = "existencias";
-            this.existencias.ReadOnly = true;
-            // 
-            // unidad
-            // 
-            this.unidad.DataPropertyName = "unidad";
-            this.unidad.HeaderText = "Unidad";
-            this.unidad.Name = "unidad";
-            this.unidad.ReadOnly = true;
-            // 
-            // lblIDDetalle
-            // 
-            this.lblIDDetalle.AutoSize = true;
-            this.lblIDDetalle.Enabled = false;
-            this.lblIDDetalle.Location = new System.Drawing.Point(199, 31);
-            this.lblIDDetalle.Name = "lblIDDetalle";
-            this.lblIDDetalle.Size = new System.Drawing.Size(0, 17);
-            this.lblIDDetalle.TabIndex = 16;
-            this.lblIDDetalle.Visible = false;
             // 
             // iddetalle
             // 
@@ -734,7 +734,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(929, 705);
+            this.ClientSize = new System.Drawing.Size(1235, 742);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
