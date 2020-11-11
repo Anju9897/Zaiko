@@ -37,7 +37,9 @@ namespace DataManager.CLS
             }
             catch 
             {
+                Comando.Transaction.Rollback();
                 FilasAfectadas = -1;
+
             }
             return FilasAfectadas;
         }

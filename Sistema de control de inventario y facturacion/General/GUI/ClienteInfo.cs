@@ -23,10 +23,10 @@ namespace General.GUI
         {
             txbIDCliente.Text = "1";
             txbCliente.Text = "CLIENTES VARIOS";
-            cbbTipoDoc.SelectedIndex = 0;
-            txbDocumento.Text = "N/A";
+            txbDUI.Text = "N/A";
+            txbNIT.Text = "N/A";
+            txbNRC.Text = "N/A";
             txbDireccion.Text = "N/A";
-            txbGiro.Text = "N/A";
             cbbCondPago.SelectedIndex = 0;
             cbbEstado.SelectedIndex = 0;
         }
@@ -43,11 +43,10 @@ namespace General.GUI
             oMovimiento.IDUsuario = SessionManager.CLS.Sesion.Instancia.Informacion.IDUsuario;
             oMovimiento.Fecha = dtpFecha.Text;
             oMovimiento.Cliente = txbCliente.Text;
-            oMovimiento.Direccion = txbDireccion.Text;
+            oMovimiento.Direccion = txbNRC.Text;
             oMovimiento.CondPago = cbbCondPago.Text;
-            oMovimiento.TDoc = cbbTipoDoc.Text;
-            oMovimiento.NDoc = txbDocumento.Text;
-            oMovimiento.Giro = txbGiro.Text;
+            oMovimiento.NDoc = txbNIT.Text;
+            oMovimiento.Giro = txbDireccion.Text;
             oMovimiento.TComprobante = cbbFactura.Text;
             oMovimiento.NComprobante = txbNFactura.Text;
             oMovimiento.Transaccion = cbbTransaccion.Text;
@@ -60,12 +59,14 @@ namespace General.GUI
             {
                 oMovimiento.Actualizar();
                 oMovimiento.Actualizar_Total();
+                
             }
             else
             {
                 oMovimiento.Guardar();
             }
             Close();
+            
         }
 
         private void cbbFactura_SelectedIndexChanged(object sender, EventArgs e)
@@ -122,7 +123,75 @@ namespace General.GUI
         {
             ClientesLista f = new ClientesLista();
             f.ShowDialog();
+            try
+            {
+                txbIDCliente.Text = f.dtgClientes.CurrentRow.Cells["idpersonas"].Value.ToString();
+                txbCliente.Text = f.dtgClientes.CurrentRow.Cells["Nombres"].Value.ToString();
 
+                if (!f.dtgClientes.CurrentRow.Cells["DUI"].Value.ToString().Equals(""))
+                {
+                    txbDUI.Text = f.dtgClientes.CurrentRow.Cells["DUI"].Value.ToString();
+                }
+                else
+                {
+                    txbDUI.Text = "N/A";
+                }
+
+                if (!f.dtgClientes.CurrentRow.Cells["NIT"].Value.ToString().Equals(""))
+                {
+                    txbNIT.Text = f.dtgClientes.CurrentRow.Cells["NIT"].Value.ToString();
+                }
+                else
+                {
+                    txbNIT.Text = "N/A";
+                }
+
+                if (!f.dtgClientes.CurrentRow.Cells["NRC"].Value.ToString().Equals(""))
+                {
+                    txbNRC.Text = f.dtgClientes.CurrentRow.Cells["NRC"].Value.ToString();
+                }
+                else
+                {
+                    txbNRC.Text = "N/A";
+                }
+
+                if (!f.dtgClientes.CurrentRow.Cells["Direccion"].Value.ToString().Equals(""))
+                {
+                    txbDireccion.Text = f.dtgClientes.CurrentRow.Cells["Direccion"].Value.ToString();
+                }
+                else
+                {
+                    txbDireccion.Text = "N/A";
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se ha seleccionado ningun elemento","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            
+        }
+
+        private void cbbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Double Subtotal = 0.00;
+            Double Total = 0.00;
+            Double IVA = 0.00;
+            if(cbbEstado.SelectedIndex == 0)
+            {
+                //Pendiente
+
+            }
+            else if (cbbEstado.SelectedIndex == 1)
+            {
+                //Cancelado
+                
+            }
+            else if (cbbEstado.SelectedIndex == 2)
+            {
+                //Anulado
+                
+            }
         }
     }
 }

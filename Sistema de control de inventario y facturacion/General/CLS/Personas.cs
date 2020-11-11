@@ -144,6 +144,7 @@ namespace General.CLS
                 else
                 {
                     MessageBox.Show("No se pudo actualizar al cliente, verifique la informacion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    
                     Guardado = false;
                 }
 

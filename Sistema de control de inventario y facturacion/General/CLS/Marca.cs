@@ -25,13 +25,6 @@ namespace General.CLS
             set { _Nombre = value; }
         }
 
-        byte[] _Imagen;
-
-        public byte[] Imagen
-        {
-            get { return _Imagen; }
-            set { _Imagen = value; }
-        }
 
         public Boolean Guardar()
         {
@@ -40,24 +33,23 @@ namespace General.CLS
             DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
             try
             {
-                Sentencia = @"Insert into Marca(mnombre,Imagen) Values(";
-                Sentencia += "'" + Nombre + "',";
-                Sentencia += "'" + Imagen + "');";
+                Sentencia = @"Insert into Marca(mnombre) Values(";
+                Sentencia += "'" + Nombre + "';";
                 if (Operacion.Insertar(Sentencia) > 0)
                 {
-                    MessageBox.Show("Registro Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Marca Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Guardado = true;
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo realizar el registro", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No se pudo realizar el registro de la marca", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Guardado = false;
                 }
                 
             }
             catch
             {
-                MessageBox.Show("Error al insertar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al insertar la marca, verifica los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Guardado = false;
             }
             return Guardado;
@@ -71,25 +63,24 @@ namespace General.CLS
             try
             {
                 Sentencia = @"Update Marca set";
-                Sentencia += "mnombre= '" + Nombre + "',";
-                Sentencia += "Imagen= '" + Imagen + "'";
+                Sentencia += "mnombre= '" + Nombre + "'";
                 Sentencia += @"Where idmarca= '" + IDMarca + "';";
 
                 if (Operacion.Actualizar(Sentencia) > 0)
                 {
-                    MessageBox.Show("Registro Actualizado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Marca Actualizado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Guardado = true;
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No se pudo actualizar los datos de la marca", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Guardado = false;
                 }
 
             }
             catch
             {
-                MessageBox.Show("Error al Actualizar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al Actualizar la marca, verifica los datos esten correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Guardado = false;
             }
             return Guardado;
@@ -107,7 +98,7 @@ namespace General.CLS
 
                 if (Operacion.Eliminar(Sentencia) > 0)
                 {
-                    MessageBox.Show("Registro Eliminado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Marca Eliminado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Guardado = true;
                 }
                 else

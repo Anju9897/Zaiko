@@ -369,7 +369,7 @@ namespace CacheManager.CLS
             try
             {
                 Consulta = @"select 
-                            p.idproducto, p.nombre, 
+                            p.idproducto,i.idinventario as 'idinventario', p.nombre, 
                             p.descripcion, m.mnombre, i.existencias, i.preciounitario,         u.Unidad
                             from producto p
                             inner join unidades u on p.idUnidad = u.idUnidad 
@@ -392,7 +392,7 @@ namespace CacheManager.CLS
             DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
             try
             {
-                Consulta = @"select dm.idDetalle,i.idproducto as 'idp', p.nombre as 'Producto',i.existencias as 'exi',
+                Consulta = @"select dm.idDetalle,i.idinventario as 'inventario',i.idproducto as 'idp', p.nombre as 'Producto',i.existencias as 'exi',
                             dm.Fecha, dm.Precio, 
                             dm.CantitadSalida,
                             u.unidad as 'Unidades',
@@ -419,7 +419,7 @@ namespace CacheManager.CLS
             DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
             try
             {
-                Consulta = @"select dm.idDetalle,p.idproducto as 'idp', p.nombre as 'Producto', ifnull(i.existencias,0.00) as 'exi',
+                Consulta = @"select dm.idDetalle,i.idinventario as 'inventario',p.idproducto as 'idp', p.nombre as 'Producto', ifnull(i.existencias,0.00) as 'exi',
                             dm.Fecha, dm.Costo, 
                             dm.CantidadEntrada,
                             u.unidad as 'Unidades',

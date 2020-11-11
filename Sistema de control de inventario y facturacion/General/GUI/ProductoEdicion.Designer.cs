@@ -43,12 +43,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txbPrecio = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnExaminar = new System.Windows.Forms.Button();
             this.txbDescripcion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.pbProducto = new System.Windows.Forms.PictureBox();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblIDProducto = new System.Windows.Forms.Label();
             this.txbExistencias = new System.Windows.Forms.TextBox();
@@ -56,7 +54,6 @@
             this.lblIDInventario = new System.Windows.Forms.Label();
             this.txbMarca = new System.Windows.Forms.TextBox();
             this.btnMarca = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +90,7 @@
             // txbCodigo
             // 
             this.txbCodigo.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCodigo.Location = new System.Drawing.Point(62, 108);
+            this.txbCodigo.Location = new System.Drawing.Point(58, 108);
             this.txbCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbCodigo.Name = "txbCodigo";
             this.txbCodigo.Size = new System.Drawing.Size(164, 24);
@@ -196,25 +193,10 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Precio";
             // 
-            // btnExaminar
-            // 
-            this.btnExaminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.btnExaminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExaminar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExaminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExaminar.Location = new System.Drawing.Point(358, 151);
-            this.btnExaminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(100, 32);
-            this.btnExaminar.TabIndex = 9;
-            this.btnExaminar.Text = "Examinar";
-            this.btnExaminar.UseVisualStyleBackColor = false;
-            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
-            // 
             // txbDescripcion
             // 
             this.txbDescripcion.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDescripcion.Location = new System.Drawing.Point(62, 296);
+            this.txbDescripcion.Location = new System.Drawing.Point(58, 296);
             this.txbDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbDescripcion.Multiline = true;
             this.txbDescripcion.Name = "txbDescripcion";
@@ -261,15 +243,6 @@
             this.btnCancelar.Text = "Cancelar ";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // pbProducto
-            // 
-            this.pbProducto.Location = new System.Drawing.Point(356, 188);
-            this.pbProducto.Name = "pbProducto";
-            this.pbProducto.Size = new System.Drawing.Size(305, 222);
-            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbProducto.TabIndex = 20;
-            this.pbProducto.TabStop = false;
             // 
             // Notificador
             // 
@@ -357,12 +330,10 @@
             this.Controls.Add(this.txbExistencias);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblIDProducto);
-            this.Controls.Add(this.pbProducto);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txbDescripcion);
-            this.Controls.Add(this.btnExaminar);
             this.Controls.Add(this.txbPrecio);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbbUnidad);
@@ -380,9 +351,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProductoEdicion";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ProductoEdicion";
-            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -399,7 +370,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnExaminar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
@@ -411,7 +381,6 @@
         public System.Windows.Forms.ComboBox cbbUnidad;
         public System.Windows.Forms.TextBox txbPrecio;
         public System.Windows.Forms.TextBox txbDescripcion;
-        public System.Windows.Forms.PictureBox pbProducto;
         public System.Windows.Forms.TextBox txbExistencias;
         public System.Windows.Forms.Label lblIDProducto;
         public System.Windows.Forms.Label lblIDInventario;

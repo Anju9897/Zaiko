@@ -37,7 +37,7 @@ namespace General.GUI
                 {
                     CLS.Marca oMarca = new CLS.Marca();
                     oMarca.Nombre = txbNombre.Text;
-                    oMarca.Imagen = CacheManager.CLS.Comandos.conversionImagen(pbMarca);
+                    
 
                     oMarca.Guardar();
                     if (MessageBox.Show("¿Desea Agregar otra marca?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

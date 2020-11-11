@@ -42,13 +42,12 @@
             this.txbCliente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbbTipoDoc = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txbDocumento = new System.Windows.Forms.TextBox();
-            this.txbGiro = new System.Windows.Forms.TextBox();
+            this.txbNIT = new System.Windows.Forms.TextBox();
+            this.txbDireccion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txbDireccion = new System.Windows.Forms.TextBox();
+            this.txbNRC = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cbbEstado = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -69,6 +68,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txbIDCliente = new System.Windows.Forms.TextBox();
+            this.txbDUI = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,24 +199,9 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(457, 142);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 21);
+            this.label6.Size = new System.Drawing.Size(40, 21);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Documento";
-            // 
-            // cbbTipoDoc
-            // 
-            this.cbbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTipoDoc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipoDoc.FormattingEnabled = true;
-            this.cbbTipoDoc.Items.AddRange(new object[] {
-            "N/A",
-            "DUI",
-            "NIT",
-            "NRC"});
-            this.cbbTipoDoc.Location = new System.Drawing.Point(461, 166);
-            this.cbbTipoDoc.Name = "cbbTipoDoc";
-            this.cbbTipoDoc.Size = new System.Drawing.Size(251, 29);
-            this.cbbTipoDoc.TabIndex = 6;
+            this.label6.Text = "DUI";
             // 
             // label7
             // 
@@ -225,26 +210,28 @@
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(457, 211);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 21);
+            this.label7.Size = new System.Drawing.Size(36, 21);
             this.label7.TabIndex = 22;
-            this.label7.Text = "N° Documento";
+            this.label7.Text = "NIT";
             // 
-            // txbDocumento
+            // txbNIT
             // 
-            this.txbDocumento.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDocumento.Location = new System.Drawing.Point(461, 235);
-            this.txbDocumento.Name = "txbDocumento";
-            this.txbDocumento.Size = new System.Drawing.Size(251, 28);
-            this.txbDocumento.TabIndex = 7;
+            this.txbNIT.Enabled = false;
+            this.txbNIT.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNIT.Location = new System.Drawing.Point(461, 235);
+            this.txbNIT.Name = "txbNIT";
+            this.txbNIT.Size = new System.Drawing.Size(251, 28);
+            this.txbNIT.TabIndex = 7;
             // 
-            // txbGiro
+            // txbDireccion
             // 
-            this.txbGiro.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbGiro.Location = new System.Drawing.Point(119, 321);
-            this.txbGiro.Multiline = true;
-            this.txbGiro.Name = "txbGiro";
-            this.txbGiro.Size = new System.Drawing.Size(251, 46);
-            this.txbGiro.TabIndex = 8;
+            this.txbDireccion.Enabled = false;
+            this.txbDireccion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDireccion.Location = new System.Drawing.Point(119, 321);
+            this.txbDireccion.Multiline = true;
+            this.txbDireccion.Name = "txbDireccion";
+            this.txbDireccion.Size = new System.Drawing.Size(251, 46);
+            this.txbDireccion.TabIndex = 8;
             // 
             // label8
             // 
@@ -253,9 +240,9 @@
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(115, 297);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 21);
+            this.label8.Size = new System.Drawing.Size(88, 21);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Giro";
+            this.label8.Text = "Direccion";
             // 
             // label9
             // 
@@ -264,25 +251,25 @@
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(457, 282);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 21);
+            this.label9.Size = new System.Drawing.Size(47, 21);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Direccion";
+            this.label9.Text = "NRC";
             // 
-            // txbDireccion
+            // txbNRC
             // 
-            this.txbDireccion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDireccion.Location = new System.Drawing.Point(461, 306);
-            this.txbDireccion.Multiline = true;
-            this.txbDireccion.Name = "txbDireccion";
-            this.txbDireccion.Size = new System.Drawing.Size(251, 83);
-            this.txbDireccion.TabIndex = 9;
+            this.txbNRC.Enabled = false;
+            this.txbNRC.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNRC.Location = new System.Drawing.Point(461, 306);
+            this.txbNRC.Name = "txbNRC";
+            this.txbNRC.Size = new System.Drawing.Size(251, 28);
+            this.txbNRC.TabIndex = 9;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(457, 403);
+            this.label10.Location = new System.Drawing.Point(457, 354);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 21);
             this.label10.TabIndex = 24;
@@ -297,10 +284,11 @@
             "PENDIENTE",
             "CANCELADO",
             "ANULADO"});
-            this.cbbEstado.Location = new System.Drawing.Point(461, 427);
+            this.cbbEstado.Location = new System.Drawing.Point(461, 378);
             this.cbbEstado.Name = "cbbEstado";
             this.cbbEstado.Size = new System.Drawing.Size(251, 29);
             this.cbbEstado.TabIndex = 11;
+            this.cbbEstado.SelectedIndexChanged += new System.EventHandler(this.cbbEstado_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -332,7 +320,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(394, 530);
+            this.btnAceptar.Location = new System.Drawing.Point(395, 469);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(131, 33);
             this.btnAceptar.TabIndex = 12;
@@ -346,7 +334,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(581, 530);
+            this.btnCancelar.Location = new System.Drawing.Point(582, 469);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(131, 33);
             this.btnCancelar.TabIndex = 13;
@@ -506,13 +494,23 @@
             this.txbIDCliente.TabIndex = 37;
             this.txbIDCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txbDUI
+            // 
+            this.txbDUI.Enabled = false;
+            this.txbDUI.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDUI.Location = new System.Drawing.Point(461, 169);
+            this.txbDUI.Name = "txbDUI";
+            this.txbDUI.Size = new System.Drawing.Size(251, 28);
+            this.txbDUI.TabIndex = 38;
+            // 
             // ClienteInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(826, 586);
+            this.ClientSize = new System.Drawing.Size(826, 562);
+            this.Controls.Add(this.txbDUI);
             this.Controls.Add(this.txbIDCliente);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label18);
@@ -533,13 +531,12 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cbbEstado);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txbDireccion);
+            this.Controls.Add(this.txbNRC);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txbGiro);
+            this.Controls.Add(this.txbDireccion);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txbDocumento);
+            this.Controls.Add(this.txbNIT);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbbTipoDoc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbCliente);
             this.Controls.Add(this.label4);
@@ -586,10 +583,9 @@
         public System.Windows.Forms.DateTimePicker dtpFecha;
         public System.Windows.Forms.ComboBox cbbFactura;
         public System.Windows.Forms.TextBox txbCliente;
-        public System.Windows.Forms.ComboBox cbbTipoDoc;
-        public System.Windows.Forms.TextBox txbDocumento;
-        public System.Windows.Forms.TextBox txbGiro;
+        public System.Windows.Forms.TextBox txbNIT;
         public System.Windows.Forms.TextBox txbDireccion;
+        public System.Windows.Forms.TextBox txbNRC;
         public System.Windows.Forms.ComboBox cbbEstado;
         public System.Windows.Forms.ComboBox cbbCondPago;
         private System.Windows.Forms.ErrorProvider errorProvider1;
@@ -606,5 +602,6 @@
         public System.Windows.Forms.ComboBox cbbTransaccion;
         public System.Windows.Forms.TextBox txbIDCliente;
         private System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.TextBox txbDUI;
     }
 }

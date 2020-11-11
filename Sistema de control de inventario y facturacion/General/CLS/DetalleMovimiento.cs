@@ -162,6 +162,42 @@ namespace General.CLS
             return Guardado;
         }
 
+        public Boolean Actualizar_Venta()
+        {
+            Boolean Guardado = false;
+            String Sentencia;
+            DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
+            NumberFormatInfo nfi = new NumberFormatInfo();
+            nfi.NumberDecimalSeparator = ".";
+            try
+            {
+                Sentencia = @"Update DetalleMovimiento set ";
+                Sentencia += "idProducto='" + IDProducto + "',";
+                Sentencia += "Precio='" + Precio.ToString(nfi) + "',";
+                Sentencia += "CantitadSalida='" + CSalida.ToString(nfi) + "',";
+                Sentencia += "Gravado='" + Gravado.ToString(nfi) + "',";
+                Sentencia += "MontoIVA='" + IVA.ToString(nfi) + "',";
+                Sentencia += "SubTotal='" + SubTotal.ToString(nfi) + "' where idmovimiento='"+IDMovimiento+"' and iddetalle='"+IDDetalle+"';";
+                if (Operacion.Insertar(Sentencia.ToString(nfi)) > 0)
+                {
+                    MessageBox.Show("Registro Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Guardado = true;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo realizar el registro", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Guardado = false;
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al insertar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Guardado = false;
+            }
+            return Guardado;
+        }
+
         public Boolean Guardar_Compra()
         {
             Boolean Guardado = false;
@@ -303,5 +339,40 @@ namespace General.CLS
             return Guardado;
         }
 
+        public Boolean Actualizar_Compra()
+        {
+            Boolean Guardado = false;
+            String Sentencia;
+            DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
+            NumberFormatInfo nfi = new NumberFormatInfo();
+            nfi.NumberDecimalSeparator = ".";
+            try
+            {
+                Sentencia = @"update DetalleMovimiento set ";
+                Sentencia += "idProducto='" + IDProducto + "',";
+                Sentencia += "Costo='" + Costo.ToString(nfi) + "',";
+                Sentencia += "CantidadEntrada='" + CEntrada.ToString(nfi) + "',";
+                Sentencia += "Gravado='" + Gravado.ToString(nfi) + "',";
+                Sentencia += "MontoIVA='" + IVA.ToString(nfi) + "',";
+                Sentencia += "SubTotal='" + SubTotal.ToString(nfi) + "' where idmovimiento='" + IDMovimiento + "' and iddetalle='" + IDDetalle + "';";
+                if (Operacion.Insertar(Sentencia.ToString(nfi)) > 0)
+                {
+                    MessageBox.Show("Registro Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Guardado = true;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo realizar el registro", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Guardado = false;
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al insertar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Guardado = false;
+            }
+            return Guardado;
+        }
     }
 }

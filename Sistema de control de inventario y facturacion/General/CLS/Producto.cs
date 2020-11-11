@@ -66,14 +66,6 @@ namespace General.CLS
             set { _Descripcion = value; }
         }
 
-        byte[] _Imagen;
-
-        public byte[] Imagen
-        {
-            get { return _Imagen; }
-            set { _Imagen = value; }
-        }
-
         String _Estado;
 
         public String Estado
@@ -119,27 +111,6 @@ namespace General.CLS
             return id.ToString();
         }
 
-        public byte[] obtenerImagen(String id){
-            byte[] img = null;
-            String sentencia;
-            DataTable resultado = new DataTable();
-            DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
-
-            try
-            {
-                sentencia = @"Select imagen from producto where idproducto='" + id + "';";
-                resultado = Operacion.Consultar(sentencia);
-                if (resultado != null)
-                {
-                    img = resultado.Rows[0].Field<byte[]>("imagen");
-                }
-            }
-            catch 
-            {
-            }
-            return img;
-        }
-
         public Boolean Guardar()
         {
             Boolean Guardado = false;
@@ -147,30 +118,29 @@ namespace General.CLS
             DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
             try
             {
-                Sentencia = @"Insert into Producto(IDMarca, IDCategoria, IDUnidad, Codigo, Nombre, Descripcion, Imagen, Estado) Values(";
+                Sentencia = @"Insert into Producto(IDMarca, IDCategoria, IDUnidad, Codigo, Nombre, Descripcion, Estado) Values(";
                 Sentencia += "'" + IDMarca + "',";
                 Sentencia += "'" + IDCategoria + "',";
                 Sentencia += "'" + IDUnidad + "',";
                 Sentencia += "'" + Codigo + "',";
                 Sentencia += "'" + Nombre + "',";
                 Sentencia += "'" + Descripcion + "',";
-                Sentencia += "'" + Imagen + "',";
                 Sentencia += "'" + Estado + "');";
                 if (Operacion.Insertar(Sentencia) > 0)
                 {
-                    MessageBox.Show("Registro Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Producto Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Guardado = true;
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo realizar el registro", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No se pudo realizar el registro de producto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Guardado = false;
                 }
 
             }
             catch
             {
-                MessageBox.Show("Error al insertar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al insertar el producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Guardado = false;
             }
             return Guardado;
@@ -190,25 +160,24 @@ namespace General.CLS
                 Sentencia += "Codigo='" + Codigo + "',";
                 Sentencia += "Nombre='" + Nombre + "',";
                 Sentencia += "Descripcion='" + Descripcion + "',";
-                Sentencia += "Imagen='" + Imagen + "',";
                 Sentencia += "Estado='" + Estado + "'";
                 Sentencia += @"Where idProducto='" + IDProducto + "';";
 
                 if (Operacion.Actualizar(Sentencia) > 0)
                 {
-                    MessageBox.Show("Registro Actualizado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Producto Actualizado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Guardado = true;
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No se pudo actualizar los productos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Guardado = false;
                 }
 
             }
             catch
             {
-                MessageBox.Show("Error al Actualizar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al Actualizar productos, revise todos los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Guardado = false;
             }
             return Guardado;
@@ -238,7 +207,7 @@ namespace General.CLS
             }
             catch
             {
-                MessageBox.Show("Error al Eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al Eliminar, debe de haber alguna dependencia de el", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Guardado = false;
             }
             return Guardado;

@@ -58,12 +58,6 @@ namespace General.GUI
                 Verificado = false;
             }
 
-            if (pbProducto == null)
-            {
-                Notificador.SetError(pbProducto, "Este campo no puede quedar vacio");
-                Verificado = false;
-            }
-
             return Verificado;
         }
 
@@ -81,38 +75,40 @@ namespace General.GUI
                     oProducto.IDUnidad = cbbUnidad.SelectedValue.ToString();
                     oProducto.Codigo = txbCodigo.Text;
                     oProducto.Descripcion = txbDescripcion.Text;
-                    if (pbProducto.Image != null)
+
+                    if(lblIDProducto.Text.Length > 0){
+                        oProducto.Actualizar();
+                    }
+                    else
                     {
-                        oProducto.Imagen = CacheManager.CLS.Comandos.conversionImagen(pbProducto);
+                        oProducto.Guardar();
                     }
 
-
-                    CLS.Inventario oInventario = new CLS.Inventario();
-                    oInventario.IDInventario = lblIDInventario.Text;
-                    oInventario.PrecioUnitario = txbPrecio.Text;
-                    oInventario.Existencias = txbExistencias.Text;
-                    oInventario.IDUnidades = cbbUnidad.SelectedValue.ToString();
-                    oInventario.IdProducto = oProducto.ObtenerID(txbCodigo.Text);
-
-                    if (lblIDProducto.Text.Length > 0)
-                    {
-                        oProducto.Actualizar();
+                    if (oProducto != null && !oProducto.ObtenerID(txbCodigo.Text).Equals("0")) {
+                        CLS.Inventario oInventario = new CLS.Inventario();
+                        oInventario.IDInventario = lblIDInventario.Text;
+                        oInventario.PrecioUnitario = txbPrecio.Text;
+                        oInventario.Existencias = txbExistencias.Text;
+                        oInventario.IDUnidades = cbbUnidad.SelectedValue.ToString();
+                        oInventario.IdProducto = oProducto.ObtenerID(txbCodigo.Text);
 
                         if (lblIDInventario.Text.Length > 0)
                         {
                             oInventario.Actualizar();
+                            Close();
                         }
-                        Close();
-                    }else{
-                        oProducto.Guardar();
-                        oInventario.IdProducto = oProducto.ObtenerID(txbCodigo.Text);
-
-                        if (lblIDInventario.Text.Length == 0)
+                        else
                         {
+                            oInventario.IdProducto = oProducto.ObtenerID(txbCodigo.Text);
                             oInventario.Guardar();
+                            Close();
                         }
-                        Close();
                     }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido agregar al inventario, debe de verifiar bien los valores","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    }
+
                 }
             }
             catch
@@ -149,29 +145,6 @@ namespace General.GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void btnExaminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog seleccionar = new OpenFileDialog();
-                seleccionar.Filter = "Imagen (*.jpg) | *.jpg|Imagen (*.png) | *.png|Todos los archivos (*.*) | *.*";
-                seleccionar.Title = "Selecciona Imagen";
-                seleccionar.InitialDirectory = @"C:\Productos";
-                seleccionar.RestoreDirectory = true;
-                DialogResult resultado = seleccionar.ShowDialog();
-
-
-                if (resultado == DialogResult.OK)
-                {
-                    pbProducto.Image = Image.FromFile(seleccionar.FileName); 
-                }
-            }
-            catch
-            {
-
-            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

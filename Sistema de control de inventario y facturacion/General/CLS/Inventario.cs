@@ -90,11 +90,11 @@ namespace General.CLS
             {
                 Sentencia = @"Update Inventario set ";
                 Sentencia += "Existencias='" + Existencias + "'";
-                Sentencia += "Where idProducto='" + IdProducto + "';";
+                Sentencia += "Where idProducto='" + IdProducto + "' or idInventario='"+ IDInventario +"';";
 
                 if (Operacion.Actualizar(Sentencia) > 0)
                 {
-                    MessageBox.Show("Registro Actualizado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Existencias Actualizadas con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Guardado = true;
                 }
                 else
@@ -107,6 +107,7 @@ namespace General.CLS
             catch
             {
                 MessageBox.Show("Error al Actualizar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 Guardado = false;
             }
             return Guardado;

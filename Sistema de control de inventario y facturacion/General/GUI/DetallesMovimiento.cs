@@ -18,6 +18,7 @@ namespace General.GUI
         private void Guardar()
         {
             CLS.DetalleMovimiento dm = new CLS.DetalleMovimiento();
+            dm.IDDetalle = lblIDDetalle.Text;
             dm.IDProducto = txbIDProducto.Text;
             dm.IDMovimiento = lblIDMov.Text;
             dm.CSalida = Convert.ToDouble(txbCantidad.Text);
@@ -27,26 +28,70 @@ namespace General.GUI
             dm.IVA = Convert.ToDouble(txbIVA.Text);
             dm.Fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
 
-            dm.Guardar_Venta();
+            if (lblIDDetalle.Text.Length > 0)
+            {
+                actualilzar_existencias();
+                dm.Actualizar_Venta();
+            }
+            else
+            {
+                actualilzar_existencias();
+                dm.Guardar_Venta();
+            }
+
+            Cargar();
+            CargarDetalle();
+
+           
         }
 
         private void actualilzar_existencias()
         {
             CLS.Inventario oInventario = new CLS.Inventario();
-            Double cantidad = 0.00;
-            Double inventario = 0.00;
-            Double aux = 0.00;
             try
             {
+                if (lblIDDetalle.Text.Length > 0)
+                {
+                    double valorAnterior = Convert.ToDouble(dtgDetalle.Rows[dtgDetalle.CurrentRow.Index].Cells["cantitadsalida"].Value);
+                    double nuevoValor = Convert.ToDouble(txbCantidad.Text);
+                    double Existencias = Convert.ToDouble(dtgDetalle.Rows[dtgDetalle.CurrentRow.Index].Cells["exi"].Value);
 
-                cantidad = Convert.ToDouble(txbCantidad.Text);
-                inventario = Convert.ToDouble(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["Existencias"].Value);
-                aux = inventario - cantidad;
-                oInventario.IdProducto = txbIDProducto.Text;
-                oInventario.Existencias = Convert.ToString(aux);
-                oInventario.Actualizar_Existencias();
+                    oInventario.IDInventario = dtgDetalle.Rows[dtgDetalle.CurrentRow.Index].Cells["inventario"].Value.ToString();
+                    oInventario.IdProducto = txbIDProducto.Text;
+                    double aux = 0.00;
+                    if (nuevoValor < valorAnterior)
+                    {
+                        aux = (Existencias + valorAnterior) - nuevoValor;
+                    }
+                    else if(nuevoValor > valorAnterior)
+                    {
+                        aux = Existencias - (nuevoValor - valorAnterior);
+                    }
+                    else if(nuevoValor == valorAnterior)
+                    {
+                        aux = Existencias;
+                    }
+                    oInventario.Existencias = Convert.ToString(aux);
+                }
+                else if(lblIDDetalle.Text.Length == 0)
+                {
+                    oInventario.IDInventario = dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["IDINVENTARIO"].Value.ToString();
+                    oInventario.IdProducto = txbIDProducto.Text;
+                    double cantidad = 0.00;
+                    double inventario = 0.00;
+                    double aux = 0.00;
+                    cantidad = Convert.ToDouble(txbCantidad.Text);
+                    inventario = Convert.ToDouble(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["Existencias"].Value);
+                    aux = inventario - cantidad;
+                    oInventario.Existencias = Convert.ToString(aux);
+                }
 
-                Cargar();
+                if (oInventario.Actualizar_Existencias())
+                {
+                    Cargar();
+                    CargarDetalle();
+                }
+                
             }
             catch
             {
@@ -121,10 +166,20 @@ namespace General.GUI
 
         private void dtgProductos_DoubleClick(object sender, EventArgs e)
         {
+
             if (Convert.ToDouble(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["Existencias"].Value) > 0)
             {
-                SetDefault();
-                txbCantidad.Focus();
+                if (!existeDetalle(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["idproducto"].Value.ToString()))
+                {
+
+                    SetDefault();
+                    txbCantidad.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Este articulo ya existe en el detalle, si desea modificar su valor, puede seguir las siguientes instrucciones:\n1. Seleccionar el articulo existente que desea modificar y dar click al boton 'Modificar'.\n2. Dar doble click al elemento ya existente en el cuadro de abajo para activar la modificacion.","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+
             }
             else
             {
@@ -132,19 +187,61 @@ namespace General.GUI
             }
         }
 
+        private bool existeDetalle(String idp)
+        {
+            bool existe = false;
+            for (int i = 0; i < dtgDetalle.Rows.Count; i++)
+            {
+                if (dtgDetalle.Rows[i].Cells["idp"].Value.ToString().Equals(idp))
+                {
+                    existe = true;
+                    break;
+                }
+            }
+            return existe;
+        }
+
         private void txbCantidad_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                if (txbCantidad.Text.Length > 0)
+                if (lblComprobante.Text.ToUpper().Equals("FACTURA CONSUMIDOR FINAL"))
                 {
-                    txbSubtotal.Text = Convert.ToString(Convert.ToDouble(txbCantidad.Text) * Convert.ToDouble(txbPrecio.Text));
-                    txbIVA.Text = Convert.ToString(Convert.ToDouble(txbSubtotal.Text) * 0.13);
+                    if (txbCantidad.Text.Length > 0)
+                    {
+                        
+                        double valortotal = Math.Round(Convert.ToDouble(txbCantidad.Text) * Convert.ToDouble(txbPrecio.Text),2);
+                        double gravado = Math.Round(valortotal / 1.13,2);
+                        double iva = Math.Round(gravado * 0.13,2);
+                        txbSubtotal.Text = Convert.ToString(gravado);
+                        txbIVA.Text = Convert.ToString(iva);
+                    }
+                    else
+                    {
+                        if (txbIDProducto.Text.Length > 0)
+                        {
+                            SetDefault();
+                        }
+                    }
                 }
-                else
+                else if (lblComprobante.Text.ToUpper().Equals("COMPROBANTE DE CREDITO FISCAL"))
                 {
-                    SetDefault();
+                    if (txbCantidad.Text.Length > 0)
+                    {
+                        double subtotal = Math.Round(Convert.ToDouble(txbCantidad.Text) * Convert.ToDouble(txbPrecio.Text), 2);
+                        double iva = Math.Round(subtotal * 0.13,2);
+                        txbSubtotal.Text = Convert.ToString(subtotal);
+                        txbIVA.Text = Convert.ToString(iva);
+                    }
+                    else
+                    {
+                        if (txbIDProducto.Text.Length > 0)
+                        {
+                            SetDefault();
+                        }
+                    }
                 }
+                
             }
             catch
             {
@@ -176,28 +273,43 @@ namespace General.GUI
             {
                 try
                 {
-                    if (txbCantidad.Text.Length > 0)
+                    if (txbIDProducto.Text.Length > 0)
                     {
-                        Double existencias = Convert.ToDouble(dtgProductos.CurrentRow.Cells["existencias"].Value);
-                        Double cantidades = Convert.ToDouble(txbCantidad.Text);
-                        if (existencias >= cantidades)
+                        if (txbCantidad.Text.Length > 0)
                         {
-                            if (!lblComprobante.Text.Equals("Cotizacion"))
+                            if (lblIDDetalle.Text.Length > 0)
                             {
-                                actualilzar_existencias();
+                                if (!lblComprobante.Text.Equals("Cotizacion"))
+                                {
+                                    Guardar();
+                                }
                             }
-                            Guardar();
+                            else
+                            {
+                                Double existencias = Convert.ToDouble(dtgProductos.CurrentRow.Cells["existencias"].Value);
+                                Double cantidades = Convert.ToDouble(txbCantidad.Text);
+                                if (existencias >= cantidades && existencias > 0)
+                                {
+                                    Guardar();
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No es Posible llevar mas cantidad de productos de la que se tienen", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+
+                            }
+                            Cargar();
                             CargarDetalle();
                         }
                         else
                         {
-                            MessageBox.Show("No es Posible llevar mas cantidad de productos de la que se tienen","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                            MessageBox.Show("No es posible realizar esta operacion sin datos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
-                        
                     }
                     else
                     {
-                        MessageBox.Show("No es posible realizar esta operacion sin datos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("No existe ningun producto seleccionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 catch
@@ -226,7 +338,7 @@ namespace General.GUI
                         Double entrada = Convert.ToDouble(dtgDetalle.CurrentRow.Cells["cantitadsalida"].Value);
                         suma = inventario + entrada;
                         oInventario.IdProducto = dtgDetalle.CurrentRow.Cells["idp"].Value.ToString();
-                        oInventario.Existencias = Convert.ToString(suma);
+                        oInventario.Existencias = Convert.ToString(suma); 
                         oInventario.Actualizar_Existencias();
                         Cargar();
                     }
@@ -253,6 +365,7 @@ namespace General.GUI
             }
 
             txbIDProducto.Text = "";
+            lblIDDetalle.Text = "";
             txbProducto.Text = "";
             txbPrecio.Text = "";
             txbSubtotal.Text = "";
@@ -262,6 +375,7 @@ namespace General.GUI
 
             lblIVAsuma.Text = Convert.ToString(iva);
             lblsubtotalSuma.Text = Convert.ToString(total);
+
         }
 
         private void DetallesMovimiento_FormClosed(object sender, FormClosedEventArgs e)
@@ -281,6 +395,7 @@ namespace General.GUI
             }
 
             txbIDProducto.Text = "";
+            lblIDDetalle.Text = "";
             txbProducto.Text = "";
             txbPrecio.Text = "";
             txbSubtotal.Text = "";
@@ -309,7 +424,7 @@ namespace General.GUI
                     }
                     else if (lblComprobante.Text.Equals("Factura consumidor final"))
                     {
-                        oMov.Total = Convert.ToString(Convert.ToDouble(lblsubtotalSuma.Text));
+                        oMov.Total = Convert.ToString(Convert.ToDouble(lblsubtotalSuma.Text) + Convert.ToDouble(lblIVAsuma.Text));
                     }
                     else
                     {
@@ -322,6 +437,20 @@ namespace General.GUI
             catch
             {
             }
+        }
+
+        private void dtgDetalle_DoubleClick(object sender, EventArgs e)
+        {
+            int RowIndex = dtgDetalle.CurrentRow.Index;
+            txbIDProducto.Text = dtgDetalle.Rows[RowIndex].Cells["idp"].Value.ToString();
+            lblIDDetalle.Text = dtgDetalle.Rows[RowIndex].Cells["iddetalle"].Value.ToString();
+            txbProducto.Text = dtgDetalle.Rows[RowIndex].Cells["producto"].Value.ToString();
+            txbPrecio.Text = dtgDetalle.Rows[RowIndex].Cells["precio"].Value.ToString();
+            lblUnidad.Text = dtgDetalle.Rows[RowIndex].Cells["unidades"].Value.ToString();
+            txbIVA.Text = dtgDetalle.Rows[RowIndex].Cells["montoiva"].Value.ToString();
+            txbSubtotal.Text = dtgDetalle.Rows[RowIndex].Cells["gravado"].Value.ToString();
+            txbCantidad.Text = dtgDetalle.Rows[RowIndex].Cells["cantitadsalida"].Value.ToString();
+            txbCantidad.Focus();
         }
     }
 

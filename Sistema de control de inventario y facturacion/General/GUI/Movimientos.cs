@@ -74,7 +74,6 @@ namespace General.GUI
             cbbTransaccion.SelectedIndex = 0;
         }
 
-
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             FiltrarPorFecha();
@@ -104,11 +103,10 @@ namespace General.GUI
             f.cbbFactura.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
             f.txbNFactura.Text = dtgMovimiento.CurrentRow.Cells["numcomprobante"].Value.ToString();
             f.cbbCondPago.Text = dtgMovimiento.CurrentRow.Cells["condpago"].Value.ToString();
-            f.cbbTipoDoc.Text = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
-            f.txbGiro.Text = dtgMovimiento.CurrentRow.Cells["giro"].Value.ToString();
+            f.txbDireccion.Text = dtgMovimiento.CurrentRow.Cells["giro"].Value.ToString();
             f.cbbTransaccion.Text = dtgMovimiento.CurrentRow.Cells["Transaccion"].Value.ToString();
-            f.txbDireccion.Text = dtgMovimiento.CurrentRow.Cells["direccion"].Value.ToString();
-            f.txbDocumento.Text = dtgMovimiento.CurrentRow.Cells["numdocumento"].Value.ToString();
+            f.txbNRC.Text = dtgMovimiento.CurrentRow.Cells["direccion"].Value.ToString();
+            f.txbNIT.Text = dtgMovimiento.CurrentRow.Cells["numdocumento"].Value.ToString();
             f.lblSubtotal.Text = dtgMovimiento.CurrentRow.Cells["subtotal"].Value.ToString();
             f.lblIVA.Text = dtgMovimiento.CurrentRow.Cells["ivatotal"].Value.ToString();
             f.lblTotal.Text = dtgMovimiento.CurrentRow.Cells["total"].Value.ToString();
@@ -116,18 +114,24 @@ namespace General.GUI
             Cargar();
         }
 
-
         private void Movimientos_Load(object sender, EventArgs e)
         {
         }
 
         private void transaccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DetallesMovimiento f = new DetallesMovimiento();
-            f.lblIDMov.Text = dtgMovimiento.CurrentRow.Cells["IDMovimiento"].Value.ToString();
-            f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
-            f.ShowDialog();
-            Cargar();
+            try
+            {
+                DetallesMovimiento f = new DetallesMovimiento();
+                f.lblIDMov.Text = dtgMovimiento.CurrentRow.Cells["IDMovimiento"].Value.ToString();
+                f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
+                f.ShowDialog();
+                Cargar();
+            }
+            catch (Exception)
+            {
+            }
+            
         }
 
         private void dtgMovimiento_KeyDown(object sender, KeyEventArgs e)
@@ -174,8 +178,6 @@ namespace General.GUI
             {
             }
         }
-
-       
 
         private void btnEmitirCotizacion_Click(object sender, EventArgs e)
         {

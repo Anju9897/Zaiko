@@ -50,13 +50,6 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dtgProductos = new System.Windows.Forms.DataGridView();
-            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preciounitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -75,8 +68,11 @@
             this.txbProducto = new System.Windows.Forms.TextBox();
             this.txbIDProducto = new System.Windows.Forms.TextBox();
             this.dtgDetalle = new System.Windows.Forms.DataGridView();
+            this.lblIDDetalle = new System.Windows.Forms.Label();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.dtsVentaConsumidorFinal1 = new Reportes.DAT.dtsVentaConsumidorFinal();
             this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,6 +83,14 @@
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idinventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preciounitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -157,11 +161,12 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
+            this.lblComprobante,
             this.lblIDMov,
             this.txbBuscar,
             this.toolStripLabel2,
-            this.lblComprobante,
             this.btnEliminar,
+            this.toolStripButton3,
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -281,6 +286,7 @@
             this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idproducto,
+            this.idinventario,
             this.nombre,
             this.descripcion,
             this.mnombre,
@@ -303,58 +309,6 @@
             this.dtgProductos.DoubleClick += new System.EventHandler(this.dtgProductos_DoubleClick);
             this.dtgProductos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgProductos_KeyDown);
             // 
-            // idproducto
-            // 
-            this.idproducto.DataPropertyName = "idproducto";
-            this.idproducto.HeaderText = "ID";
-            this.idproducto.Name = "idproducto";
-            this.idproducto.ReadOnly = true;
-            this.idproducto.Width = 40;
-            // 
-            // nombre
-            // 
-            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcion.DataPropertyName = "descripcion";
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // mnombre
-            // 
-            this.mnombre.DataPropertyName = "mnombre";
-            this.mnombre.HeaderText = "Marca";
-            this.mnombre.Name = "mnombre";
-            this.mnombre.ReadOnly = true;
-            // 
-            // preciounitario
-            // 
-            this.preciounitario.DataPropertyName = "preciounitario";
-            this.preciounitario.HeaderText = "Precio";
-            this.preciounitario.Name = "preciounitario";
-            this.preciounitario.ReadOnly = true;
-            // 
-            // existencias
-            // 
-            this.existencias.DataPropertyName = "existencias";
-            this.existencias.HeaderText = "Existencias";
-            this.existencias.Name = "existencias";
-            this.existencias.ReadOnly = true;
-            // 
-            // unidad
-            // 
-            this.unidad.DataPropertyName = "unidad";
-            this.unidad.HeaderText = "Unidad";
-            this.unidad.Name = "unidad";
-            this.unidad.ReadOnly = true;
-            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -367,6 +321,7 @@
             // 
             this.splitContainer2.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel1.BackgroundImage")));
             this.splitContainer2.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer2.Panel1.Controls.Add(this.lblIDDetalle);
             this.splitContainer2.Panel1.Controls.Add(this.label9);
             this.splitContainer2.Panel1.Controls.Add(this.label8);
             this.splitContainer2.Panel1.Controls.Add(this.label7);
@@ -589,6 +544,7 @@
             this.dtgDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddetalle,
+            this.inventario,
             this.idp,
             this.Producto,
             this.exi,
@@ -614,7 +570,28 @@
             this.dtgDetalle.TabIndex = 0;
             this.dtgDetalle.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dtgDetalle_RowsAdded);
             this.dtgDetalle.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dtgDetalle_RowsRemoved);
+            this.dtgDetalle.DoubleClick += new System.EventHandler(this.dtgDetalle_DoubleClick);
             this.dtgDetalle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgProductos_KeyDown);
+            // 
+            // lblIDDetalle
+            // 
+            this.lblIDDetalle.AutoSize = true;
+            this.lblIDDetalle.Enabled = false;
+            this.lblIDDetalle.Location = new System.Drawing.Point(213, 37);
+            this.lblIDDetalle.Name = "lblIDDetalle";
+            this.lblIDDetalle.Size = new System.Drawing.Size(0, 17);
+            this.lblIDDetalle.TabIndex = 16;
+            this.lblIDDetalle.Visible = false;
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(224, 25);
+            this.toolStripButton3.Text = "Concluir Transacciones";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // dtsVentaConsumidorFinal1
             // 
@@ -628,6 +605,14 @@
             this.iddetalle.Name = "iddetalle";
             this.iddetalle.ReadOnly = true;
             this.iddetalle.Width = 40;
+            // 
+            // inventario
+            // 
+            this.inventario.DataPropertyName = "inventario";
+            this.inventario.HeaderText = "inventario";
+            this.inventario.Name = "inventario";
+            this.inventario.ReadOnly = true;
+            this.inventario.Visible = false;
             // 
             // idp
             // 
@@ -702,6 +687,66 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
+            // idproducto
+            // 
+            this.idproducto.DataPropertyName = "idproducto";
+            this.idproducto.HeaderText = "ID";
+            this.idproducto.Name = "idproducto";
+            this.idproducto.ReadOnly = true;
+            this.idproducto.Width = 40;
+            // 
+            // idinventario
+            // 
+            this.idinventario.DataPropertyName = "idinventario";
+            this.idinventario.HeaderText = "idinventario";
+            this.idinventario.Name = "idinventario";
+            this.idinventario.ReadOnly = true;
+            this.idinventario.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcion.DataPropertyName = "descripcion";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // mnombre
+            // 
+            this.mnombre.DataPropertyName = "mnombre";
+            this.mnombre.HeaderText = "Marca";
+            this.mnombre.Name = "mnombre";
+            this.mnombre.ReadOnly = true;
+            // 
+            // preciounitario
+            // 
+            this.preciounitario.DataPropertyName = "preciounitario";
+            this.preciounitario.HeaderText = "Precio";
+            this.preciounitario.Name = "preciounitario";
+            this.preciounitario.ReadOnly = true;
+            // 
+            // existencias
+            // 
+            this.existencias.DataPropertyName = "existencias";
+            this.existencias.HeaderText = "Existencias";
+            this.existencias.Name = "existencias";
+            this.existencias.ReadOnly = true;
+            // 
+            // unidad
+            // 
+            this.unidad.DataPropertyName = "unidad";
+            this.unidad.HeaderText = "Unidad";
+            this.unidad.Name = "unidad";
+            this.unidad.ReadOnly = true;
+            // 
             // DetalleMovimientoCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -753,13 +798,6 @@
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dtgProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mnombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preciounitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn existencias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unidad;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -778,7 +816,10 @@
         private System.Windows.Forms.TextBox txbProducto;
         private System.Windows.Forms.TextBox txbIDProducto;
         private System.Windows.Forms.DataGridView dtgDetalle;
+        private System.Windows.Forms.Label lblIDDetalle;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn idp;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn exi;
@@ -789,5 +830,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoiva;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idinventario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mnombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preciounitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn existencias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unidad;
     }
 }
