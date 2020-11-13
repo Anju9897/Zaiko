@@ -204,13 +204,12 @@ namespace CacheManager.CLS
             try
             {
                 Consulta = @"SELECT
-                                idmovimiento, estado, cliente,date(FECHA) as 'fecha',
-                                tipocomprobante,numcomprobante,condpago,
-                                ifnull(subtotal,'0.00') as 'Subtotal',
-                                ifnull(IVATOTAL,'0.00') as 'IVATOTAL',
-                                ifnull(TOTAL,'0.00') as 'total',
-                                tipoDocumento,numDocumento,Giro,Direccion,transaccion
-                                from movimientos where Transaccion='"+ pTransaccion +"';";
+                                m.idmovimiento, m.estado,m.idpersona as 'IDPERSONA', concat(p.nombres,' ', p.apellidos) as 'cliente',date(m.FECHA) as 'fecha',
+                                m.tipocomprobante,m.numcomprobante,m.condpago,
+                                ifnull(m.subtotal,'0.00') as 'Subtotal',
+                                ifnull(m.IVATOTAL,'0.00') as 'IVATOTAL',
+                                ifnull(m.TOTAL,'0.00') as 'total',m.transaccion
+                                from movimientos m inner join personas p on p.idpersonas = m.idpersona where Transaccion='"+ pTransaccion +"';";
                 Resultado = oConsulta.Consultar(Consulta);
             }
             catch
@@ -230,13 +229,12 @@ namespace CacheManager.CLS
             try
             {
                 Consulta = @"SELECT
-                                idmovimiento, estado, cliente,date(FECHA) as 'fecha',
-                                tipocomprobante,numcomprobante,condpago,
-                                ifnull(subtotal,'0.00') as 'Subtotal',
-                                ifnull(IVATOTAL,'0.00') as 'IVATOTAL',
-                                ifnull(TOTAL,'0.00') as 'total',
-                                tipoDocumento,numDocumento,Giro,Direccion
-                                from movimientos where Transaccion='Compra';";
+                                m.idmovimiento, m.estado,m.idpersona as 'idpersona',concat(p.nombres,' ', p.apellidos) as  'cliente',date(m.FECHA) as 'fecha',
+                                m.tipocomprobante as 'tipodocumento',m.numcomprobante as 'numdocumento',m.condpago,
+                                ifnull(m.subtotal,'0.00') as 'Subtotal',
+                                ifnull(m.IVATOTAL,'0.00') as 'IVATOTAL',
+                                ifnull(m.TOTAL,'0.00') as 'total', m.transaccion as 'Transaccion' 
+                                from movimientos m inner join personas p on m.idpersona = p.idpersonas where m.Transaccion='Compra';";
                 Resultado = oConsulta.Consultar(Consulta);
             }
             catch
@@ -283,13 +281,13 @@ namespace CacheManager.CLS
                 Consulta = @" select 
                         c.fecha As Fecha, 
                         c.numComprobante as Comprobante_No,
-                        c.Cliente AS Nombre,
-                        c.numDocumento As NRC,
-                         c.subtotal as Gravado,
+                        concat(p.nombres,' ',p.apellidos) AS Nombre,
+                        p.NRC As NRC,
+                        c.subtotal as Gravado,
                         c.IvaTotal as IVA, 
                         c.total As Total ,
                         estado as Estado
-                        from movimientos c
+                        from movimientos c inner join personas p on c.idpersona = p.idpersonas 
                         where c.fecha>= '" + FechaI + "' and c.fecha<= '" + FechaF + " ' and Transaccion= 'Venta' and TipoComprobante = 'Comprobante de Credito fiscal' and estado != 'Pendiente'; ";
                 Resultado = oConsulta.Consultar(Consulta);
 
@@ -342,11 +340,11 @@ namespace CacheManager.CLS
                 Consulta = @" select 
                         c.fecha As Fecha, 
                         c.numComprobante as Registro,
-                        c.Cliente AS Nombre,
+                        concat(p.nombres,' ',p.apellidos) AS Nombre,
                         ifnull(c.subtotal,0.00) as Gravado,
                         ifnull(c.IvaTotal,0.00) as IVA, 
                         ifnull(c.total,0.00) As Total 
-                        from movimientos c " +
+                        from movimientos c inner join personas p on c.idpersona = p.idpersonas " +
                         "where c.fecha>= '" + FechaI 
                         + "' and c.fecha<= '"+ FechaF 
                         +"' and Transaccion= 'Compra' and TipoComprobante = 'Comprobante de Credito fiscal' and estado != 'Pendiente';";

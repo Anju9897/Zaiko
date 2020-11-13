@@ -12,11 +12,84 @@ namespace General.GUI
 {
     public partial class ClienteInfo : Form
     {
+        public static String tipoDoc;
+        public static double subtotal, iva, total;
         public ClienteInfo()
         {
             InitializeComponent();
             cbbFactura.SelectedIndex = 0;
             cbbTransaccion.SelectedIndex = 0;
+            cbbEstado.SelectedIndex = 0;
+            cbbCondPago.SelectedIndex = 0;
+            lblSubtotal.Text = "0.00";
+            lblIVA.Text = "0.00";
+            lblTotal.Text = "0.00";
+        }
+
+        private void calcularValores()
+        {
+            double subtotalAUX = 0.00;
+            double IVAAUX = 0.00;
+            double totalAux = 0.00;
+
+            try
+            {
+            //FCF
+            if (cbbFactura.SelectedIndex == 0)
+            {
+                //si la factura coincide con el tipo de documento, quiere decir que es el valor que estaba anteriormente
+                if (cbbFactura.Text.ToUpper().Equals("FACTURA CONSUMIDOR FINAL"))
+                {
+                    if (cbbFactura.Text.ToUpper().Equals(tipoDoc.ToUpper()))
+                    {
+                        subtotalAUX = subtotal;
+                        IVAAUX = iva;
+                        totalAux = subtotal + iva;
+                        lblSubtotal.Text = Convert.ToString(subtotalAUX);
+                        lblIVA.Text = Convert.ToString(IVAAUX);
+                        lblTotal.Text = Convert.ToString(totalAux);
+                    }
+                    else
+                    {
+                        subtotalAUX = Math.Round(subtotal / 1.13, 2);
+                        IVAAUX = Math.Round(subtotalAUX * 0.13, 2);
+                        totalAux = subtotalAUX + IVAAUX;
+                        lblSubtotal.Text = Convert.ToString(subtotalAUX);
+                        lblIVA.Text = Convert.ToString(IVAAUX);
+                        lblTotal.Text = Convert.ToString(totalAux);
+                    }
+                }
+            }//CCF
+            else if (cbbFactura.SelectedIndex == 1)
+            {
+                if (cbbFactura.Text.ToUpper().Equals("COMPROBANTE DE CREDITO FISCAL"))
+                {
+                    if (cbbFactura.Text.ToUpper().Equals(tipoDoc.ToUpper()))
+                    {
+                        subtotalAUX = subtotal;
+                        IVAAUX = iva;
+                        totalAux = subtotal + iva;
+                        lblSubtotal.Text = Convert.ToString(subtotalAUX);
+                        lblIVA.Text = Convert.ToString(IVAAUX);
+                        lblTotal.Text = Convert.ToString(totalAux);
+                    }
+                    else
+                    {
+                        subtotalAUX = Math.Round(subtotal * 1.13, 2);
+                        IVAAUX = Math.Round(subtotalAUX * 0.13, 2);
+                        totalAux = subtotalAUX + IVAAUX;
+                        lblSubtotal.Text = Convert.ToString(subtotalAUX);
+                        lblIVA.Text = Convert.ToString(IVAAUX);
+                        lblTotal.Text = Convert.ToString(totalAux);
+                    }
+                }
+            }
+            
+            }
+            
+            catch (Exception)
+            {
+            }
         }
 
         private void btnDefault_Click(object sender, EventArgs e)
@@ -42,11 +115,8 @@ namespace General.GUI
             oMovimiento.IDMovimiento = txbIDMov.Text;
             oMovimiento.IDUsuario = SessionManager.CLS.Sesion.Instancia.Informacion.IDUsuario;
             oMovimiento.Fecha = dtpFecha.Text;
-            oMovimiento.Cliente = txbCliente.Text;
-            oMovimiento.Direccion = txbNRC.Text;
+            oMovimiento.IDPersona = txbIDCliente.Text;
             oMovimiento.CondPago = cbbCondPago.Text;
-            oMovimiento.NDoc = txbNIT.Text;
-            oMovimiento.Giro = txbDireccion.Text;
             oMovimiento.TComprobante = cbbFactura.Text;
             oMovimiento.NComprobante = txbNFactura.Text;
             oMovimiento.Transaccion = cbbTransaccion.Text;
@@ -57,66 +127,65 @@ namespace General.GUI
 
             if (txbIDMov.Text.Length > 0)
             {
-                oMovimiento.Actualizar();
-                oMovimiento.Actualizar_Total();
-                
+                if (oMovimiento.Actualizar())
+                {
+                    if (oMovimiento.Actualizar_Total())
+                    {
+                        Close();
+                    }
+                }
             }
             else
             {
-                oMovimiento.Guardar();
+                if (oMovimiento.Guardar()) { Close(); }
+                
             }
-            Close();
+           
             
         }
 
         private void cbbFactura_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
             if (cbbTransaccion.SelectedIndex != 1)
             {
-                //venta
+                //venta o compra
                 
                 if (cbbFactura.SelectedIndex == 0)
                 //consumidor final o cotizacion
                 {
-                    lblTotal.Text = lblSubtotal.Text;
+                    calcularValores();
                 }
 
                 else if (cbbFactura.SelectedIndex == 1)
                 //credito fiscal
                 {
-                    lblTotal.Text = Convert.ToString(Convert.ToDouble(lblSubtotal.Text) + Convert.ToDouble(lblIVA.Text));
-                }
-                else if (cbbFactura.SelectedIndex == 2)
-                {
-                    MessageBox.Show("Este tipo de documentos no es valido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    cbbFactura.SelectedIndex = 0;
+                    calcularValores();
                 }
 
             }
             else
             {
                 //cotizacion
-                if (cbbFactura.SelectedIndex != 2)
-                {
-                    MessageBox.Show("Este tipo de documentos no es valido","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                    cbbFactura.SelectedIndex = 2;
-                }
-                lblTotal.Text = lblSubtotal.Text;
+                calcularValores();
             }
         }
 
         private void cbbTransaccion_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //ventas
             if (cbbTransaccion.SelectedIndex == 0)
             {
-                cbbFactura.SelectedIndex = 0;
-            }
+                calcularValores();
+            }//cotizacion
             else if (cbbTransaccion.SelectedIndex == 1)
             {
-                cbbFactura.SelectedIndex = 2;
+                calcularValores();
+            }//compras
+            else if (cbbTransaccion.SelectedIndex == 2)
+            {
+                calcularValores();
             }
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

@@ -10,6 +10,24 @@ namespace General.CLS
     class Movimiento
     {
         String _IDMovimiento;
+        String _IDUsuario;
+        String _IDPersona;
+        String _CondPago;
+        String _TComprobante;
+        String _nComprobante;
+        String _Fecha;
+        String _Transaccion;
+        String _Subtotal;
+        String _IvaTotal;
+        String _Estado;
+        String _total;
+       
+
+        public String IDPersona
+        {
+            get { return _IDPersona; }
+            set { _IDPersona = value; }
+        }
 
         public String IDMovimiento
         {
@@ -17,31 +35,11 @@ namespace General.CLS
             set { _IDMovimiento = value; }
         }
 
-        String _IDUsuario;
-
         public String IDUsuario
         {
             get { return _IDUsuario; }
             set { _IDUsuario = value; }
         }
-
-        String _Cliente;
-
-        public String Cliente
-        {
-            get { return _Cliente; }
-            set { _Cliente = value; }
-        }
-
-        String _Direccion;
-
-        public String Direccion
-        {
-            get { return _Direccion; }
-            set { _Direccion = value; }
-        }
-
-        String _CondPago;
 
         public String CondPago
         {
@@ -49,39 +47,11 @@ namespace General.CLS
             set { _CondPago = value; }
         }
 
-        String _TDoc;
-
-        public String TDoc
-        {
-            get { return _TDoc; }
-            set { _TDoc = value; }
-        }
-
-        String _NDoc;
-
-        public String NDoc
-        {
-            get { return _NDoc; }
-            set { _NDoc = value; }
-        }
-
-        String _Giro;
-
-        public String Giro
-        {
-            get { return _Giro; }
-            set { _Giro = value; }
-        }
-
-        String _TComprobante;
-
         public String TComprobante
         {
             get { return _TComprobante; }
             set { _TComprobante = value; }
         }
-
-        String _nComprobante;
 
         public String NComprobante
         {
@@ -89,15 +59,11 @@ namespace General.CLS
             set { _nComprobante = value; }
         }
 
-        String _Fecha;
-
         public String Fecha
         {
             get { return _Fecha; }
             set { _Fecha = value; }
         }
-
-        String _Transaccion;
 
         public String Transaccion
         {
@@ -105,15 +71,11 @@ namespace General.CLS
             set { _Transaccion = value; }
         }
 
-        String _total;
-
         public String Total
         {
             get { return _total; }
             set { _total = value; }
         }
-
-        String _Estado;
 
         public String Estado
         {
@@ -121,15 +83,11 @@ namespace General.CLS
             set { _Estado = value; }
         }
 
-        String _IvaTotal;
-
         public String IvaTotal
         {
             get { return _IvaTotal; }
             set { _IvaTotal = value; }
         }
-
-        String _Subtotal;
 
         public String Subtotal
         {
@@ -144,16 +102,11 @@ namespace General.CLS
             DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
             try
             {
-                Sentencia = @"Insert into Movimientos(idUsuario, Cliente,
-                              Direccion, condPago, tipoDocumento, numDocumento, Giro,
+                Sentencia = @"Insert into Movimientos(idUsuario,idpersona, condPago,
                               TipoComprobante, numComprobante, fecha, Transaccion, estado) Values(";
                 Sentencia += "'" + IDUsuario + "',";
-                Sentencia += "'" + Cliente + "',";
-                Sentencia += "'" + Direccion + "',";
+                Sentencia += "'" + IDPersona + "',";
                 Sentencia += "'" + CondPago + "',";
-                Sentencia += "'" + TDoc + "',";
-                Sentencia += "'" + NDoc + "',";
-                Sentencia += "'" + Giro + "',";
                 Sentencia += "'" + TComprobante + "',";
                 Sentencia += "'" + NComprobante + "',";
                 Sentencia += "'" + Fecha + "',";
@@ -161,19 +114,19 @@ namespace General.CLS
                 Sentencia += "'" + Estado + "');";
                 if (Operacion.Insertar(Sentencia) > 0)
                 {
-                    MessageBox.Show("Registro Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Movimiento Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Guardado = true;
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo realizar el registro", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No se pudo realizar el registro del movimiento, revisar la información", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Guardado = false;
                 }
 
             }
             catch
             {
-                MessageBox.Show("Error al insertar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al insertar el movimiento, revise si los datos han sido ingresados correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Guardado = false;
             }
             return Guardado;
@@ -219,19 +172,15 @@ namespace General.CLS
             DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
             try
             {
-                Sentencia = @"Update Movimientos set ";
+                Sentencia = @"update Movimientos set ";
                 Sentencia += "idUsuario='" + IDUsuario + "',";
-                Sentencia += "Cliente='" + Cliente + "',";
-                Sentencia += "Direccion='" + Direccion + "',";
+                Sentencia += "idpersona='" + IDPersona + "',";
                 Sentencia += "condPago='" + CondPago + "',";
-                Sentencia += "tipoDocumento='" + TDoc + "',";
-                Sentencia += "numDocumento='" + NDoc + "',";
-                Sentencia += "Giro='" + Giro + "',";
                 Sentencia += "TipoComprobante='" + TComprobante + "',";
                 Sentencia += "numComprobante='" + NComprobante + "',";
                 Sentencia += "fecha='" + Fecha + "',";
-                Sentencia += "estado='" + Estado + "'";
-                Sentencia += "Where idMovimiento='" + IDMovimiento + "';";
+                Sentencia += "Transaccion='" + Transaccion + "',";
+                Sentencia += "estado='" + Estado + "' where idmovimiento='"+ IDMovimiento +"';";
 
                 if (Operacion.Actualizar(Sentencia) > 0)
                 {
@@ -287,7 +236,6 @@ namespace General.CLS
             }
             return Guardado;
         }
-        
 
         public Boolean Eliminar()
         {

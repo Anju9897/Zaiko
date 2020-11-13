@@ -117,8 +117,7 @@
             this.cbbFactura.FormattingEnabled = true;
             this.cbbFactura.Items.AddRange(new object[] {
             "Factura consumidor final",
-            "Comprobante de Credito fiscal",
-            "Cotizacion"});
+            "Comprobante de Credito fiscal"});
             this.cbbFactura.Location = new System.Drawing.Point(119, 193);
             this.cbbFactura.Name = "cbbFactura";
             this.cbbFactura.Size = new System.Drawing.Size(251, 28);
@@ -168,9 +167,9 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(115, 238);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 21);
+            this.label4.Size = new System.Drawing.Size(227, 21);
             this.label4.TabIndex = 17;
-            this.label4.Text = "N° Factura";
+            this.label4.Text = "N° Factura/Comprobante";
             // 
             // txbCliente
             // 
@@ -452,7 +451,8 @@
             this.cbbTransaccion.FormattingEnabled = true;
             this.cbbTransaccion.Items.AddRange(new object[] {
             "Venta",
-            "Cotizacion"});
+            "Cotizacion",
+            "Compra"});
             this.cbbTransaccion.Location = new System.Drawing.Point(274, 65);
             this.cbbTransaccion.Name = "cbbTransaccion";
             this.cbbTransaccion.Size = new System.Drawing.Size(127, 28);
@@ -565,7 +565,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDefault;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -603,5 +602,6 @@
         public System.Windows.Forms.TextBox txbIDCliente;
         private System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.TextBox txbDUI;
+        public System.Windows.Forms.Button btnDefault;
     }
 }

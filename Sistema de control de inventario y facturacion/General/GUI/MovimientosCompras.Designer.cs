@@ -40,32 +40,30 @@
             this.dtgFecha2 = new System.Windows.Forms.DateTimePicker();
             this.dtgFecha1 = new System.Windows.Forms.DateTimePicker();
             this.dtgMovimiento = new System.Windows.Forms.DataGridView();
-            this.idmovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numdocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipodocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.condpago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IVATOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btneditar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.btneditar = new System.Windows.Forms.ToolStripButton();
+            this.idmovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idpersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numdocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Transaccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipodocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.condpago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IVATOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -193,14 +191,12 @@
             this.dtgMovimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMovimiento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idmovimiento,
+            this.idpersona,
             this.fecha,
             this.cliente,
-            this.direccion,
             this.numdocumento,
+            this.Transaccion,
             this.tipodocumento,
-            this.giro,
-            this.tipoComprobante,
-            this.numComprobante,
             this.estado,
             this.condpago,
             this.Subtotal,
@@ -220,112 +216,6 @@
             this.dtgMovimiento.Size = new System.Drawing.Size(989, 478);
             this.dtgMovimiento.TabIndex = 4;
             this.dtgMovimiento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgMovimiento_KeyDown);
-            // 
-            // idmovimiento
-            // 
-            this.idmovimiento.DataPropertyName = "idmovimiento";
-            this.idmovimiento.HeaderText = "ID";
-            this.idmovimiento.Name = "idmovimiento";
-            this.idmovimiento.ReadOnly = true;
-            this.idmovimiento.Width = 40;
-            // 
-            // fecha
-            // 
-            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fecha.DataPropertyName = "fecha";
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            // 
-            // cliente
-            // 
-            this.cliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cliente.DataPropertyName = "cliente";
-            this.cliente.HeaderText = "Proveedor";
-            this.cliente.Name = "cliente";
-            this.cliente.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.DataPropertyName = "direccion";
-            this.direccion.HeaderText = "";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            this.direccion.Visible = false;
-            // 
-            // numdocumento
-            // 
-            this.numdocumento.DataPropertyName = "numdocumento";
-            this.numdocumento.HeaderText = "";
-            this.numdocumento.Name = "numdocumento";
-            this.numdocumento.ReadOnly = true;
-            this.numdocumento.Visible = false;
-            // 
-            // tipodocumento
-            // 
-            this.tipodocumento.DataPropertyName = "tipodocumento";
-            this.tipodocumento.HeaderText = "";
-            this.tipodocumento.Name = "tipodocumento";
-            this.tipodocumento.ReadOnly = true;
-            this.tipodocumento.Visible = false;
-            // 
-            // giro
-            // 
-            this.giro.DataPropertyName = "giro";
-            this.giro.HeaderText = "";
-            this.giro.Name = "giro";
-            this.giro.ReadOnly = true;
-            this.giro.Visible = false;
-            // 
-            // tipoComprobante
-            // 
-            this.tipoComprobante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tipoComprobante.DataPropertyName = "tipoComprobante";
-            this.tipoComprobante.HeaderText = "Comprobante";
-            this.tipoComprobante.Name = "tipoComprobante";
-            this.tipoComprobante.ReadOnly = true;
-            // 
-            // numComprobante
-            // 
-            this.numComprobante.DataPropertyName = "numComprobante";
-            this.numComprobante.HeaderText = "Número";
-            this.numComprobante.Name = "numComprobante";
-            this.numComprobante.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            // 
-            // condpago
-            // 
-            this.condpago.DataPropertyName = "condpago";
-            this.condpago.HeaderText = "Condicion";
-            this.condpago.Name = "condpago";
-            this.condpago.ReadOnly = true;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.DataPropertyName = "Subtotal";
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            // 
-            // IVATOTAL
-            // 
-            this.IVATOTAL.DataPropertyName = "IVATOTAL";
-            this.IVATOTAL.HeaderText = "IVA";
-            this.IVATOTAL.Name = "IVATOTAL";
-            this.IVATOTAL.ReadOnly = true;
-            // 
-            // total
-            // 
-            this.total.DataPropertyName = "total";
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
             // 
             // statusStrip1
             // 
@@ -385,10 +275,40 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
             // 
+            // btneditar
+            // 
+            this.btneditar.AutoSize = false;
+            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.ForeColor = System.Drawing.Color.White;
+            this.btneditar.Image = ((System.Drawing.Image)(resources.GetObject("btneditar.Image")));
+            this.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(150, 25);
+            this.btneditar.Text = "Editar Cliente";
+            this.btneditar.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.AutoSize = false;
+            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(200, 25);
+            this.toolStripButton1.Text = "Editar Movimientos";
+            this.toolStripButton1.Click += new System.EventHandler(this.transaccionToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
             // 
             // btnAgregar
             // 
@@ -422,35 +342,96 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(107, 21);
             this.toolStripLabel1.Text = "Filtrar (F1)";
             // 
-            // toolStripButton1
+            // idmovimiento
             // 
-            this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(200, 25);
-            this.toolStripButton1.Text = "Editar Movimientos";
-            this.toolStripButton1.Click += new System.EventHandler(this.transaccionToolStripMenuItem_Click);
+            this.idmovimiento.DataPropertyName = "idmovimiento";
+            this.idmovimiento.HeaderText = "ID";
+            this.idmovimiento.Name = "idmovimiento";
+            this.idmovimiento.ReadOnly = true;
+            this.idmovimiento.Width = 40;
             // 
-            // toolStripSeparator3
+            // idpersona
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            this.idpersona.DataPropertyName = "idpersona";
+            this.idpersona.HeaderText = "idpersona";
+            this.idpersona.Name = "idpersona";
+            this.idpersona.ReadOnly = true;
+            this.idpersona.Visible = false;
             // 
-            // btneditar
+            // fecha
             // 
-            this.btneditar.AutoSize = false;
-            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Image = ((System.Drawing.Image)(resources.GetObject("btneditar.Image")));
-            this.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(150, 25);
-            this.btneditar.Text = "Editar Cliente";
-            this.btneditar.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fecha.DataPropertyName = "fecha";
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            // 
+            // cliente
+            // 
+            this.cliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cliente.DataPropertyName = "cliente";
+            this.cliente.HeaderText = "Proveedor";
+            this.cliente.Name = "cliente";
+            this.cliente.ReadOnly = true;
+            // 
+            // numdocumento
+            // 
+            this.numdocumento.DataPropertyName = "numdocumento";
+            this.numdocumento.HeaderText = "";
+            this.numdocumento.Name = "numdocumento";
+            this.numdocumento.ReadOnly = true;
+            this.numdocumento.Visible = false;
+            // 
+            // Transaccion
+            // 
+            this.Transaccion.DataPropertyName = "Transaccion";
+            this.Transaccion.HeaderText = "Transaccion";
+            this.Transaccion.Name = "Transaccion";
+            this.Transaccion.ReadOnly = true;
+            this.Transaccion.Visible = false;
+            // 
+            // tipodocumento
+            // 
+            this.tipodocumento.DataPropertyName = "tipodocumento";
+            this.tipodocumento.HeaderText = "";
+            this.tipodocumento.Name = "tipodocumento";
+            this.tipodocumento.ReadOnly = true;
+            this.tipodocumento.Visible = false;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
+            // condpago
+            // 
+            this.condpago.DataPropertyName = "condpago";
+            this.condpago.HeaderText = "Condicion";
+            this.condpago.Name = "condpago";
+            this.condpago.ReadOnly = true;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.DataPropertyName = "Subtotal";
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
+            // IVATOTAL
+            // 
+            this.IVATOTAL.DataPropertyName = "IVATOTAL";
+            this.IVATOTAL.HeaderText = "IVA";
+            this.IVATOTAL.Name = "IVATOTAL";
+            this.IVATOTAL.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
             // 
             // MovimientosCompras
             // 
@@ -498,23 +479,21 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblRegistros;
         private System.Windows.Forms.DataGridView dtgMovimiento;
+        private System.Windows.Forms.ToolStripButton btneditar;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmovimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpersona;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn numdocumento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Transaccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipodocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoComprobante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numComprobante;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn condpago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn IVATOTAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.ToolStripButton btneditar;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 
     }
 }

@@ -84,7 +84,20 @@ namespace General.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            InfoClienteCompra f = new InfoClienteCompra();
+            ClienteInfo f = new ClienteInfo();
+            f.cbbTransaccion.Enabled = false;
+            f.btnDefault.Enabled = false;
+            f.btnDefault.Visible = false;
+            f.cbbTransaccion.SelectedIndex = 2;
+            f.cbbFactura.SelectedIndex = 1;
+            f.cbbFactura.Enabled = false;
+            f.cbbEstado.SelectedIndex = 1;
+            f.cbbEstado.Enabled = false;
+
+            ClienteInfo.tipoDoc = "";
+            ClienteInfo.subtotal = 0.00;
+            ClienteInfo.iva = 0.00;
+            ClienteInfo.total = 0.00;
             f.ShowDialog();
             Cargar();
         }
@@ -96,21 +109,38 @@ namespace General.GUI
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InfoClienteCompra f = new InfoClienteCompra();
+            ClienteInfo f = new ClienteInfo();
 
             f.txbIDMov.Text = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
+            f.txbIDCliente.Text = dtgMovimiento.CurrentRow.Cells["IDPERSONA"].Value.ToString();
             f.txbCliente.Text = dtgMovimiento.CurrentRow.Cells["cliente"].Value.ToString();
             f.dtpFecha.Text = dtgMovimiento.CurrentRow.Cells["fecha"].Value.ToString();
             f.cbbEstado.Text = dtgMovimiento.CurrentRow.Cells["estado"].Value.ToString();
-            f.cbbFactura.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
-            f.txbNFactura.Text = dtgMovimiento.CurrentRow.Cells["numcomprobante"].Value.ToString();
+            f.cbbFactura.Text = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
+            f.txbNFactura.Text = dtgMovimiento.CurrentRow.Cells["numdocumento"].Value.ToString();
             f.cbbCondPago.Text = dtgMovimiento.CurrentRow.Cells["condpago"].Value.ToString();
-            f.cbbTipoDoc.Text = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
-            f.txbGiro.Text = dtgMovimiento.CurrentRow.Cells["giro"].Value.ToString();
-            f.txbDireccion.Text = dtgMovimiento.CurrentRow.Cells["direccion"].Value.ToString();
-            f.txbDocumento.Text = dtgMovimiento.CurrentRow.Cells["numdocumento"].Value.ToString();
+            f.cbbTransaccion.Text = dtgMovimiento.CurrentRow.Cells["Transaccion"].Value.ToString();
+            f.cbbTransaccion.Enabled = false;
+            f.cbbFactura.Enabled = false;
+            f.cbbFactura.SelectedIndex = 1;
+            f.cbbEstado.Enabled = false;
+            f.lblSubtotal.Text = dtgMovimiento.CurrentRow.Cells["subtotal"].Value.ToString();
+            f.lblIVA.Text = dtgMovimiento.CurrentRow.Cells["ivatotal"].Value.ToString();
+            f.lblTotal.Text = dtgMovimiento.CurrentRow.Cells["total"].Value.ToString();
+            ClienteInfo.tipoDoc = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
+            ClienteInfo.subtotal = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["subtotal"].Value);
+            ClienteInfo.iva = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["ivatotal"].Value);
+            ClienteInfo.total = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["total"].Value);
+
             f.ShowDialog();
             Cargar();
+
+            ClienteInfo.tipoDoc = "";
+            ClienteInfo.subtotal = 0.00;
+            ClienteInfo.iva = 0.00;
+            ClienteInfo.total = 0.00;
+
+            
         }
 
 
@@ -122,7 +152,7 @@ namespace General.GUI
         {
             DetalleMovimientoCompras f = new DetalleMovimientoCompras();
             f.lblIDMov.Text = dtgMovimiento.CurrentRow.Cells["IDMovimiento"].Value.ToString();
-            f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
+            f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
             f.ShowDialog();
             Cargar();
         }

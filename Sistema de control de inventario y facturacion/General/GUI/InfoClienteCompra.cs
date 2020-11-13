@@ -31,12 +31,8 @@ namespace General.GUI
             oMovimiento.IDMovimiento = txbIDMov.Text;
             oMovimiento.IDUsuario = SessionManager.CLS.Sesion.Instancia.Informacion.IDUsuario;
             oMovimiento.Fecha = dtpFecha.Text;
-            oMovimiento.Cliente = txbCliente.Text;
-            oMovimiento.Direccion = txbDireccion.Text;
+            oMovimiento.IDPersona = txbCliente.Text;
             oMovimiento.CondPago = cbbCondPago.Text;
-            oMovimiento.TDoc = cbbTipoDoc.Text;
-            oMovimiento.NDoc = txbDocumento.Text;
-            oMovimiento.Giro = txbGiro.Text;
             oMovimiento.TComprobante = cbbFactura.Text;
             oMovimiento.NComprobante = txbNFactura.Text;
             oMovimiento.Transaccion = "Compra";

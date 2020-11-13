@@ -133,7 +133,7 @@ namespace General.CLS
                 Sentencia += "NRC='" + NRC + "',";
                 Sentencia += "Giro='" + Giro + "',";
                 Sentencia += "Direccion='" + Direccion + "',";
-                Sentencia += "Categoria='" + Categoria + "',";
+                Sentencia += "Categoria='" + Categoria + "' ";
                 Sentencia += "Where IDPersonas='" + IDPersonas + "';";
 
                 if (Operacion.Actualizar(Sentencia) > 0)

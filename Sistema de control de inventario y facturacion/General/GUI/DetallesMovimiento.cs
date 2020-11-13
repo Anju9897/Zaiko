@@ -24,18 +24,24 @@ namespace General.GUI
             dm.CSalida = Convert.ToDouble(txbCantidad.Text);
             dm.Precio = Convert.ToDouble(txbPrecio.Text);
             dm.Gravado = Convert.ToDouble(txbSubtotal.Text);
-            dm.SubTotal = Convert.ToDouble(txbSubtotal.Text);
             dm.IVA = Convert.ToDouble(txbIVA.Text);
+            dm.SubTotal = dm.Gravado + dm.IVA;
             dm.Fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
 
             if (lblIDDetalle.Text.Length > 0)
             {
-                actualilzar_existencias();
+                if (!lblTransaccion.Text.Equals("Cotizacion"))
+                {
+                    actualilzar_existencias();
+                }
                 dm.Actualizar_Venta();
             }
             else
             {
-                actualilzar_existencias();
+                if (!lblTransaccion.Text.Equals("Cotizacion"))
+                {
+                    actualilzar_existencias();
+                }
                 dm.Guardar_Venta();
             }
 
@@ -205,6 +211,7 @@ namespace General.GUI
         {
             try
             {
+                
                 if (lblComprobante.Text.ToUpper().Equals("FACTURA CONSUMIDOR FINAL"))
                 {
                     if (txbCantidad.Text.Length > 0)
@@ -279,7 +286,7 @@ namespace General.GUI
                         {
                             if (lblIDDetalle.Text.Length > 0)
                             {
-                                if (!lblComprobante.Text.Equals("Cotizacion"))
+                                if (!lblTransaccion.Text.Equals("Cotizacion"))
                                 {
                                     Guardar();
                                 }
@@ -331,7 +338,7 @@ namespace General.GUI
                 if (MessageBox.Show("¿Esta Seguro que desea Eliminar este registro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     CLS.DetalleMovimiento oDMovimiento = new CLS.DetalleMovimiento();
-                    if (!lblComprobante.Text.Equals("Cotizacion")) {
+                    if (!lblTransaccion.Text.Equals("Cotizacion")) {
                         CLS.Inventario oInventario = new CLS.Inventario();
                         Double suma = 0.00;
                         Double inventario = Convert.ToDouble(dtgDetalle.CurrentRow.Cells["exi"].Value);
@@ -355,14 +362,16 @@ namespace General.GUI
 
         private void dtgDetalle_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
+            Double gravado = 0.00;
             Double total = 0.00;
             Double iva = 0.00;
 
             foreach (DataGridViewRow row in dtgDetalle.Rows)
             {
                 iva += Convert.ToDouble(row.Cells["MontoIVA"].Value);
-                total += Convert.ToDouble(row.Cells["subtotal"].Value);
+                gravado += Convert.ToDouble(row.Cells["gravado"].Value);
             }
+            total = gravado + iva;
 
             txbIDProducto.Text = "";
             lblIDDetalle.Text = "";
@@ -374,7 +383,7 @@ namespace General.GUI
             lblUnidad.Text = "";
 
             lblIVAsuma.Text = Convert.ToString(iva);
-            lblsubtotalSuma.Text = Convert.ToString(total);
+            lblsubtotalSuma.Text = Convert.ToString(gravado);
 
         }
 
@@ -385,14 +394,16 @@ namespace General.GUI
 
         private void dtgDetalle_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
+            Double gravado = 0.00;
             Double total = 0.00;
             Double iva = 0.00;
 
             foreach (DataGridViewRow row in dtgDetalle.Rows)
             {
                 iva += Convert.ToDouble(row.Cells["MontoIVA"].Value);
-                total += Convert.ToDouble(row.Cells["subtotal"].Value);
+                gravado += Convert.ToDouble(row.Cells["gravado"].Value);
             }
+            total = gravado + iva;
 
             txbIDProducto.Text = "";
             lblIDDetalle.Text = "";
@@ -404,7 +415,7 @@ namespace General.GUI
             lblUnidad.Text = "";
 
             lblIVAsuma.Text = Convert.ToString(iva);
-            lblsubtotalSuma.Text = Convert.ToString(total);
+            lblsubtotalSuma.Text = Convert.ToString(gravado);
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -451,6 +462,14 @@ namespace General.GUI
             txbSubtotal.Text = dtgDetalle.Rows[RowIndex].Cells["gravado"].Value.ToString();
             txbCantidad.Text = dtgDetalle.Rows[RowIndex].Cells["cantitadsalida"].Value.ToString();
             txbCantidad.Focus();
+        }
+
+        private Boolean validarNumero()
+        {
+            if (txbCantidad.Text.Length > 0)
+            {
+
+            }
         }
     }
 

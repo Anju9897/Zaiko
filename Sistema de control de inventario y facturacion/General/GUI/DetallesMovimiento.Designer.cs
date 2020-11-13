@@ -40,7 +40,7 @@
             this.lblIDMov = new System.Windows.Forms.ToolStripLabel();
             this.txbBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.lblComprobante = new System.Windows.Forms.ToolStripLabel();
+            this.lblTransaccion = new System.Windows.Forms.ToolStripLabel();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnConfirmar = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -89,6 +89,10 @@
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblComprobante = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -113,9 +117,13 @@
             this.lblIDMov,
             this.txbBuscar,
             this.toolStripLabel2,
-            this.lblComprobante,
+            this.toolStripSeparator1,
             this.btnEliminar,
-            this.btnConfirmar});
+            this.toolStripSeparator2,
+            this.btnConfirmar,
+            this.toolStripSeparator3,
+            this.lblComprobante,
+            this.lblTransaccion});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1235, 28);
@@ -161,16 +169,16 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(99, 25);
             this.toolStripLabel2.Text = "Buscar (F1)";
             // 
-            // lblComprobante
+            // lblTransaccion
             // 
-            this.lblComprobante.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.lblComprobante.ForeColor = System.Drawing.Color.White;
-            this.lblComprobante.Image = ((System.Drawing.Image)(resources.GetObject("lblComprobante.Image")));
-            this.lblComprobante.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.lblComprobante.Name = "lblComprobante";
-            this.lblComprobante.Size = new System.Drawing.Size(130, 25);
-            this.lblComprobante.Text = "Comprobante";
-            this.lblComprobante.Visible = false;
+            this.lblTransaccion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.lblTransaccion.ForeColor = System.Drawing.Color.White;
+            this.lblTransaccion.Image = ((System.Drawing.Image)(resources.GetObject("lblTransaccion.Image")));
+            this.lblTransaccion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lblTransaccion.Name = "lblTransaccion";
+            this.lblTransaccion.Size = new System.Drawing.Size(110, 25);
+            this.lblTransaccion.Text = "Transaccion";
+            this.lblTransaccion.Visible = false;
             // 
             // btnEliminar
             // 
@@ -728,6 +736,32 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
+            // lblComprobante
+            // 
+            this.lblComprobante.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.lblComprobante.ForeColor = System.Drawing.Color.White;
+            this.lblComprobante.Image = ((System.Drawing.Image)(resources.GetObject("lblComprobante.Image")));
+            this.lblComprobante.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lblComprobante.Name = "lblComprobante";
+            this.lblComprobante.Size = new System.Drawing.Size(130, 25);
+            this.lblComprobante.Text = "Comprobante";
+            this.lblComprobante.Visible = false;
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            // 
             // DetallesMovimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -798,7 +832,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblIVAsuma;
         private System.Windows.Forms.ToolStripStatusLabel lblsubtotalSuma;
         private System.Windows.Forms.ToolStripButton btnEliminar;
-        public System.Windows.Forms.ToolStripLabel lblComprobante;
+        public System.Windows.Forms.ToolStripLabel lblTransaccion;
         private System.Windows.Forms.ToolStripButton btnConfirmar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn idinventario;
@@ -821,5 +855,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoiva;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        public System.Windows.Forms.ToolStripLabel lblComprobante;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
