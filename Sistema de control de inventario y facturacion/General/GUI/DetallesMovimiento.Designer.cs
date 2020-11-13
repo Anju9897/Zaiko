@@ -29,20 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesMovimiento));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripLabel();
             this.lblIDMov = new System.Windows.Forms.ToolStripLabel();
             this.txbBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.lblTransaccion = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnConfirmar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblComprobante = new System.Windows.Forms.ToolStripLabel();
+            this.lblTransaccion = new System.Windows.Forms.ToolStripLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblIVAsuma = new System.Windows.Forms.ToolStripStatusLabel();
@@ -89,10 +93,6 @@
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblComprobante = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -169,16 +169,10 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(99, 25);
             this.toolStripLabel2.Text = "Buscar (F1)";
             // 
-            // lblTransaccion
+            // toolStripSeparator1
             // 
-            this.lblTransaccion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.lblTransaccion.ForeColor = System.Drawing.Color.White;
-            this.lblTransaccion.Image = ((System.Drawing.Image)(resources.GetObject("lblTransaccion.Image")));
-            this.lblTransaccion.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.lblTransaccion.Name = "lblTransaccion";
-            this.lblTransaccion.Size = new System.Drawing.Size(110, 25);
-            this.lblTransaccion.Text = "Transaccion";
-            this.lblTransaccion.Visible = false;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
             // 
             // btnEliminar
             // 
@@ -190,6 +184,11 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
+            // 
             // btnConfirmar
             // 
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
@@ -199,6 +198,33 @@
             this.btnConfirmar.Size = new System.Drawing.Size(219, 25);
             this.btnConfirmar.Text = "Confirmar Transaccion";
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            // 
+            // lblComprobante
+            // 
+            this.lblComprobante.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.lblComprobante.ForeColor = System.Drawing.Color.White;
+            this.lblComprobante.Image = ((System.Drawing.Image)(resources.GetObject("lblComprobante.Image")));
+            this.lblComprobante.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lblComprobante.Name = "lblComprobante";
+            this.lblComprobante.Size = new System.Drawing.Size(130, 25);
+            this.lblComprobante.Text = "Comprobante";
+            this.lblComprobante.Visible = false;
+            // 
+            // lblTransaccion
+            // 
+            this.lblTransaccion.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.lblTransaccion.ForeColor = System.Drawing.Color.White;
+            this.lblTransaccion.Image = ((System.Drawing.Image)(resources.GetObject("lblTransaccion.Image")));
+            this.lblTransaccion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lblTransaccion.Name = "lblTransaccion";
+            this.lblTransaccion.Size = new System.Drawing.Size(110, 25);
+            this.lblTransaccion.Text = "Transaccion";
+            this.lblTransaccion.Visible = false;
             // 
             // statusStrip1
             // 
@@ -273,20 +299,20 @@
             this.dtgProductos.AllowUserToDeleteRows = false;
             this.dtgProductos.AllowUserToResizeColumns = false;
             this.dtgProductos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(199)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
-            this.dtgProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(199)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
+            this.dtgProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgProductos.BackgroundColor = System.Drawing.Color.White;
             this.dtgProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idproducto,
@@ -303,9 +329,9 @@
             this.dtgProductos.Name = "dtgProductos";
             this.dtgProductos.ReadOnly = true;
             this.dtgProductos.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
-            this.dtgProductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
+            this.dtgProductos.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dtgProductos.RowTemplate.Height = 24;
             this.dtgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgProductos.Size = new System.Drawing.Size(1235, 243);
@@ -538,6 +564,7 @@
             this.txbSubtotal.Size = new System.Drawing.Size(163, 26);
             this.txbSubtotal.TabIndex = 5;
             this.txbSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbSubtotal.TextChanged += new System.EventHandler(this.txbSubtotal_TextChanged);
             // 
             // txbCantidad
             // 
@@ -550,6 +577,7 @@
             this.txbCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txbCantidad.TextChanged += new System.EventHandler(this.txbCantidad_TextChanged);
             this.txbCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbCantidad_KeyDown);
+            this.txbCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCantidad_KeyPress);
             // 
             // label2
             // 
@@ -601,20 +629,20 @@
             this.dtgDetalle.AllowUserToDeleteRows = false;
             this.dtgDetalle.AllowUserToResizeColumns = false;
             this.dtgDetalle.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(199)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
-            this.dtgDetalle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(199)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
+            this.dtgDetalle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgDetalle.BackgroundColor = System.Drawing.Color.White;
             this.dtgDetalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dtgDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddetalle,
@@ -635,9 +663,9 @@
             this.dtgDetalle.Name = "dtgDetalle";
             this.dtgDetalle.ReadOnly = true;
             this.dtgDetalle.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
-            this.dtgDetalle.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
+            this.dtgDetalle.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dtgDetalle.RowTemplate.Height = 24;
             this.dtgDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDetalle.Size = new System.Drawing.Size(1235, 299);
@@ -735,32 +763,6 @@
             this.subtotal.HeaderText = "Subtotal";
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
-            // 
-            // lblComprobante
-            // 
-            this.lblComprobante.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.lblComprobante.ForeColor = System.Drawing.Color.White;
-            this.lblComprobante.Image = ((System.Drawing.Image)(resources.GetObject("lblComprobante.Image")));
-            this.lblComprobante.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.lblComprobante.Name = "lblComprobante";
-            this.lblComprobante.Size = new System.Drawing.Size(130, 25);
-            this.lblComprobante.Text = "Comprobante";
-            this.lblComprobante.Visible = false;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
             // 
             // DetallesMovimiento
             // 

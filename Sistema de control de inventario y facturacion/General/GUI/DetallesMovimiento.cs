@@ -211,7 +211,7 @@ namespace General.GUI
         {
             try
             {
-                
+
                 if (lblComprobante.Text.ToUpper().Equals("FACTURA CONSUMIDOR FINAL"))
                 {
                     if (txbCantidad.Text.Length > 0)
@@ -276,6 +276,8 @@ namespace General.GUI
 
         private void txbCantidad_KeyDown(object sender, KeyEventArgs e)
         {
+
+
             if (e.KeyData == Keys.Enter)
             {
                 try
@@ -464,13 +466,50 @@ namespace General.GUI
             txbCantidad.Focus();
         }
 
-        private Boolean validarNumero()
-        {
-            if (txbCantidad.Text.Length > 0)
-            {
 
+        private void txbSubtotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar > 47 && e.KeyChar < 58) || (e.KeyChar == 46) || (e.KeyChar == 8) || (e.KeyChar == 13))
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Solo son permitidos numeros o puntos decimales", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
+
+
+        /*
+        private void txbCantidad_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox cantidad = sender as TextBox;
+
+            decimal numero = 0;
+
+            if (decimal.TryParse(cantidad.Text, out numero))
+            {
+                if (numero >= 100)
+                {
+                    MessageBox.Show("Solo se permiten 2 decimales","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    txbCantidad.Text = numero.ToString("N2");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El valor no es valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }*/
     }
 
 }
