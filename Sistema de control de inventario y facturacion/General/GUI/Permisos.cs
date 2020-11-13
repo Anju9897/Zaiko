@@ -24,26 +24,22 @@ namespace General.GUI
 
         private void CargarAsignaciones()
         {
-            try
-            {
-                INDICE = dtgOpciones.CurrentRow.Index;
-            }
-            catch
-            {
-                INDICE = 0;
-            }
-
             DataTable Asignaciones = new DataTable();
             Asignaciones = CacheManager.CLS.Cache.ASIGNACIONES_DE_PERMISOS_SEGUN_IDROL(cbbRoles.SelectedValue.ToString());
             dtgOpciones.AutoGenerateColumns = false;
             dtgOpciones.DataSource = Asignaciones;
+
             try
             {
+                INDICE = dtgOpciones.CurrentRow.Index;
+
                 dtgOpciones.Rows[INDICE].Selected = true;
             }
-            catch
+            catch(Exception ex)
             {
+                INDICE = 0;
             }
+
             
         }
 

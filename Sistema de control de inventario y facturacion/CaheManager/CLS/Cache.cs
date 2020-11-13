@@ -83,7 +83,7 @@ namespace CacheManager.CLS
             {
                 Consulta = @"select 
                             p.idproducto, i.idinventario,m.idmarca, p.codigo, p.nombre, 
-                            p.descripcion, m.mnombre, i.existencias, i.preciounitario, u.Unidad, p.imagen
+                            p.descripcion, m.mnombre, i.existencias, i.preciounitario, u.Unidad 
                             from producto p
                             inner join unidades u on p.idUnidad = u.idUnidad 
                             inner join inventario i on p.idProducto = i.idProducto 
@@ -256,9 +256,8 @@ namespace CacheManager.CLS
                 Consulta = @"Select
                             IDOpcion, Opciones, a.IDClasificacion,b.Clasificacion,
                             IFNULL((SELECT IDPermiso from permiso z where z.IDRol = " + idRol + @" and z.IDOpcion=a.IDOpcion),0) as 'IDPermiso',
-                            IF(IFNULL((SELECT IDPermiso from permiso z where z.IDRol = " + idRol + @" and z.IDOpcion=a.IDOpcion),0)>0,1,0) as 'Asignado'
-                            from Opcion a, Clasificacion b
-                            where a.IDClasificacion = b.IDClasificacion;";
+                            IF(IFNULL((SELECT IDPermiso from permiso z where z.IDRol = " + idRol + @" and z.IDOpcion=a.IDOpcion),0)>0,1,0) as 'Asignado' 
+                            from Opcion a inner join Clasificacion b on a.IDClasificacion = b.IDClasificacion;";
                 Resultado = oConsulta.Consultar(Consulta);
             }
             catch
