@@ -419,3 +419,4 @@ C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de in
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.csproj.GenerateResource.Cache
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.dll
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.TarjetaInfo.resources

@@ -64,6 +64,7 @@
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IVATOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.devolucion = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -201,7 +202,8 @@
             this.condpago,
             this.Subtotal,
             this.IVATOTAL,
-            this.total});
+            this.total,
+            this.devolucion});
             this.dtgMovimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgMovimiento.Location = new System.Drawing.Point(0, 28);
             this.dtgMovimiento.MultiSelect = false;
@@ -215,6 +217,7 @@
             this.dtgMovimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgMovimiento.Size = new System.Drawing.Size(989, 478);
             this.dtgMovimiento.TabIndex = 4;
+            this.dtgMovimiento.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMovimiento_CellContentDoubleClick);
             this.dtgMovimiento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgMovimiento_KeyDown);
             // 
             // statusStrip1
@@ -360,11 +363,11 @@
             // 
             // fecha
             // 
-            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.fecha.DataPropertyName = "fecha";
             this.fecha.HeaderText = "Fecha";
             this.fecha.Name = "fecha";
             this.fecha.ReadOnly = true;
+            this.fecha.Width = 150;
             // 
             // cliente
             // 
@@ -433,6 +436,14 @@
             this.total.Name = "total";
             this.total.ReadOnly = true;
             // 
+            // devolucion
+            // 
+            this.devolucion.DataPropertyName = "devolucion";
+            this.devolucion.HeaderText = "Devolucion";
+            this.devolucion.Image = ((System.Drawing.Image)(resources.GetObject("devolucion.Image")));
+            this.devolucion.Name = "devolucion";
+            this.devolucion.ReadOnly = true;
+            // 
             // MovimientosCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -494,6 +505,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn IVATOTAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.DataGridViewImageColumn devolucion;
 
     }
 }

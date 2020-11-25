@@ -54,7 +54,7 @@
             this.cbbCondPago = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorMovimiento = new System.Windows.Forms.ErrorProvider(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -69,7 +69,14 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txbIDCliente = new System.Windows.Forms.TextBox();
             this.txbDUI = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.btnTarjeta = new System.Windows.Forms.Button();
+            this.txtCuenta = new System.Windows.Forms.Label();
+            this.txtPropietario = new System.Windows.Forms.Label();
+            this.txtBanco = new System.Windows.Forms.Label();
+            this.lblCuenta = new System.Windows.Forms.Label();
+            this.lblPropietario = new System.Windows.Forms.Label();
+            this.lblBanco = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMovimiento)).BeginInit();
             this.SuspendLayout();
             // 
             // txbIDMov
@@ -87,7 +94,7 @@
             this.txbNFactura.Location = new System.Drawing.Point(119, 262);
             this.txbNFactura.Name = "txbNFactura";
             this.txbNFactura.Size = new System.Drawing.Size(251, 28);
-            this.txbNFactura.TabIndex = 3;
+            this.txbNFactura.TabIndex = 4;
             // 
             // label1
             // 
@@ -108,7 +115,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(119, 129);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(251, 28);
-            this.dtpFecha.TabIndex = 1;
+            this.dtpFecha.TabIndex = 2;
             // 
             // cbbFactura
             // 
@@ -121,7 +128,7 @@
             this.cbbFactura.Location = new System.Drawing.Point(119, 193);
             this.cbbFactura.Name = "cbbFactura";
             this.cbbFactura.Size = new System.Drawing.Size(251, 28);
-            this.cbbFactura.TabIndex = 2;
+            this.cbbFactura.TabIndex = 3;
             this.cbbFactura.SelectedIndexChanged += new System.EventHandler(this.cbbFactura_SelectedIndexChanged);
             // 
             // btnDefault
@@ -130,10 +137,10 @@
             this.btnDefault.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDefault.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDefault.ForeColor = System.Drawing.Color.White;
-            this.btnDefault.Location = new System.Drawing.Point(461, 33);
+            this.btnDefault.Location = new System.Drawing.Point(528, 45);
             this.btnDefault.Name = "btnDefault";
             this.btnDefault.Size = new System.Drawing.Size(131, 33);
-            this.btnDefault.TabIndex = 4;
+            this.btnDefault.TabIndex = 10;
             this.btnDefault.Text = "Por Defecto";
             this.btnDefault.UseVisualStyleBackColor = false;
             this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
@@ -175,17 +182,17 @@
             // 
             this.txbCliente.Enabled = false;
             this.txbCliente.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCliente.Location = new System.Drawing.Point(513, 102);
+            this.txbCliente.Location = new System.Drawing.Point(580, 114);
             this.txbCliente.Name = "txbCliente";
             this.txbCliente.Size = new System.Drawing.Size(199, 28);
-            this.txbCliente.TabIndex = 5;
+            this.txbCliente.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(457, 78);
+            this.label5.Location = new System.Drawing.Point(524, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 21);
             this.label5.TabIndex = 20;
@@ -196,7 +203,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(457, 142);
+            this.label6.Location = new System.Drawing.Point(524, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 21);
             this.label6.TabIndex = 21;
@@ -207,7 +214,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(457, 211);
+            this.label7.Location = new System.Drawing.Point(524, 223);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 21);
             this.label7.TabIndex = 22;
@@ -217,10 +224,10 @@
             // 
             this.txbNIT.Enabled = false;
             this.txbNIT.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNIT.Location = new System.Drawing.Point(461, 235);
+            this.txbNIT.Location = new System.Drawing.Point(528, 247);
             this.txbNIT.Name = "txbNIT";
             this.txbNIT.Size = new System.Drawing.Size(251, 28);
-            this.txbNIT.TabIndex = 7;
+            this.txbNIT.TabIndex = 12;
             // 
             // txbDireccion
             // 
@@ -230,7 +237,7 @@
             this.txbDireccion.Multiline = true;
             this.txbDireccion.Name = "txbDireccion";
             this.txbDireccion.Size = new System.Drawing.Size(251, 46);
-            this.txbDireccion.TabIndex = 8;
+            this.txbDireccion.TabIndex = 5;
             // 
             // label8
             // 
@@ -248,7 +255,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(457, 282);
+            this.label9.Location = new System.Drawing.Point(524, 294);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 21);
             this.label9.TabIndex = 23;
@@ -258,17 +265,17 @@
             // 
             this.txbNRC.Enabled = false;
             this.txbNRC.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNRC.Location = new System.Drawing.Point(461, 306);
+            this.txbNRC.Location = new System.Drawing.Point(528, 318);
             this.txbNRC.Name = "txbNRC";
             this.txbNRC.Size = new System.Drawing.Size(251, 28);
-            this.txbNRC.TabIndex = 9;
+            this.txbNRC.TabIndex = 13;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(457, 354);
+            this.label10.Location = new System.Drawing.Point(524, 369);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 21);
             this.label10.TabIndex = 24;
@@ -283,10 +290,10 @@
             "PENDIENTE",
             "CANCELADO",
             "ANULADO"});
-            this.cbbEstado.Location = new System.Drawing.Point(461, 378);
+            this.cbbEstado.Location = new System.Drawing.Point(528, 393);
             this.cbbEstado.Name = "cbbEstado";
             this.cbbEstado.Size = new System.Drawing.Size(251, 29);
-            this.cbbEstado.TabIndex = 11;
+            this.cbbEstado.TabIndex = 14;
             this.cbbEstado.SelectedIndexChanged += new System.EventHandler(this.cbbEstado_SelectedIndexChanged);
             // 
             // label11
@@ -294,7 +301,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(115, 378);
+            this.label11.Location = new System.Drawing.Point(115, 387);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(172, 21);
             this.label11.TabIndex = 19;
@@ -308,10 +315,11 @@
             this.cbbCondPago.Items.AddRange(new object[] {
             "EFECTIVO",
             "TARJETA DE CREDITO"});
-            this.cbbCondPago.Location = new System.Drawing.Point(119, 402);
+            this.cbbCondPago.Location = new System.Drawing.Point(119, 411);
             this.cbbCondPago.Name = "cbbCondPago";
             this.cbbCondPago.Size = new System.Drawing.Size(251, 29);
-            this.cbbCondPago.TabIndex = 10;
+            this.cbbCondPago.TabIndex = 6;
+            this.cbbCondPago.SelectedIndexChanged += new System.EventHandler(this.cbbCondPago_SelectedIndexChanged);
             // 
             // btnAceptar
             // 
@@ -319,10 +327,10 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(395, 469);
+            this.btnAceptar.Location = new System.Drawing.Point(502, 600);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(131, 33);
-            this.btnAceptar.TabIndex = 12;
+            this.btnAceptar.TabIndex = 15;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.button1_Click);
@@ -333,24 +341,24 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(582, 469);
+            this.btnCancelar.Location = new System.Drawing.Point(689, 600);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(131, 33);
-            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // errorProvider1
+            // errorMovimiento
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.errorMovimiento.ContainerControl = this;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(115, 454);
+            this.label12.Location = new System.Drawing.Point(564, 459);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 21);
             this.label12.TabIndex = 25;
@@ -361,7 +369,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(115, 475);
+            this.label13.Location = new System.Drawing.Point(564, 480);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 21);
             this.label13.TabIndex = 26;
@@ -372,7 +380,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(115, 496);
+            this.label14.Location = new System.Drawing.Point(564, 501);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(51, 21);
             this.label14.TabIndex = 27;
@@ -383,7 +391,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(216, 496);
+            this.label15.Location = new System.Drawing.Point(665, 501);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(19, 21);
             this.label15.TabIndex = 30;
@@ -394,7 +402,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(216, 475);
+            this.label16.Location = new System.Drawing.Point(665, 480);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(19, 21);
             this.label16.TabIndex = 29;
@@ -405,7 +413,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(216, 454);
+            this.label17.Location = new System.Drawing.Point(665, 459);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(19, 21);
             this.label17.TabIndex = 28;
@@ -416,7 +424,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(246, 496);
+            this.lblTotal.Location = new System.Drawing.Point(695, 501);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(42, 21);
             this.lblTotal.TabIndex = 33;
@@ -427,7 +435,7 @@
             this.lblIVA.AutoSize = true;
             this.lblIVA.BackColor = System.Drawing.Color.Transparent;
             this.lblIVA.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIVA.Location = new System.Drawing.Point(246, 475);
+            this.lblIVA.Location = new System.Drawing.Point(695, 480);
             this.lblIVA.Name = "lblIVA";
             this.lblIVA.Size = new System.Drawing.Size(42, 21);
             this.lblIVA.TabIndex = 32;
@@ -438,7 +446,7 @@
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.BackColor = System.Drawing.Color.Transparent;
             this.lblSubtotal.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.Location = new System.Drawing.Point(246, 454);
+            this.lblSubtotal.Location = new System.Drawing.Point(695, 459);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(42, 21);
             this.lblSubtotal.TabIndex = 31;
@@ -456,7 +464,7 @@
             this.cbbTransaccion.Location = new System.Drawing.Point(274, 65);
             this.cbbTransaccion.Name = "cbbTransaccion";
             this.cbbTransaccion.Size = new System.Drawing.Size(127, 28);
-            this.cbbTransaccion.TabIndex = 34;
+            this.cbbTransaccion.TabIndex = 1;
             this.cbbTransaccion.SelectedIndexChanged += new System.EventHandler(this.cbbTransaccion_SelectedIndexChanged);
             // 
             // label18
@@ -476,10 +484,10 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(622, 33);
+            this.btnBuscar.Location = new System.Drawing.Point(689, 45);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(90, 33);
-            this.btnBuscar.TabIndex = 36;
+            this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -488,7 +496,7 @@
             // 
             this.txbIDCliente.Enabled = false;
             this.txbIDCliente.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIDCliente.Location = new System.Drawing.Point(461, 102);
+            this.txbIDCliente.Location = new System.Drawing.Point(528, 114);
             this.txbIDCliente.Name = "txbIDCliente";
             this.txbIDCliente.Size = new System.Drawing.Size(46, 28);
             this.txbIDCliente.TabIndex = 37;
@@ -498,10 +506,87 @@
             // 
             this.txbDUI.Enabled = false;
             this.txbDUI.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDUI.Location = new System.Drawing.Point(461, 169);
+            this.txbDUI.Location = new System.Drawing.Point(528, 181);
             this.txbDUI.Name = "txbDUI";
             this.txbDUI.Size = new System.Drawing.Size(251, 28);
-            this.txbDUI.TabIndex = 38;
+            this.txbDUI.TabIndex = 11;
+            // 
+            // btnTarjeta
+            // 
+            this.btnTarjeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnTarjeta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTarjeta.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTarjeta.ForeColor = System.Drawing.Color.White;
+            this.btnTarjeta.Location = new System.Drawing.Point(119, 463);
+            this.btnTarjeta.Name = "btnTarjeta";
+            this.btnTarjeta.Size = new System.Drawing.Size(251, 76);
+            this.btnTarjeta.TabIndex = 7;
+            this.btnTarjeta.Text = "Agregar Informacion de Tarjeta";
+            this.btnTarjeta.UseVisualStyleBackColor = false;
+            this.btnTarjeta.Click += new System.EventHandler(this.btnTarjeta_Click);
+            // 
+            // txtCuenta
+            // 
+            this.txtCuenta.AutoSize = true;
+            this.txtCuenta.BackColor = System.Drawing.Color.Transparent;
+            this.txtCuenta.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuenta.Location = new System.Drawing.Point(115, 600);
+            this.txtCuenta.Name = "txtCuenta";
+            this.txtCuenta.Size = new System.Drawing.Size(104, 21);
+            this.txtCuenta.TabIndex = 42;
+            this.txtCuenta.Text = "N° Cuenta:";
+            // 
+            // txtPropietario
+            // 
+            this.txtPropietario.AutoSize = true;
+            this.txtPropietario.BackColor = System.Drawing.Color.Transparent;
+            this.txtPropietario.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPropietario.Location = new System.Drawing.Point(115, 579);
+            this.txtPropietario.Name = "txtPropietario";
+            this.txtPropietario.Size = new System.Drawing.Size(105, 21);
+            this.txtPropietario.TabIndex = 41;
+            this.txtPropietario.Text = "Propietario:";
+            // 
+            // txtBanco
+            // 
+            this.txtBanco.AutoSize = true;
+            this.txtBanco.BackColor = System.Drawing.Color.Transparent;
+            this.txtBanco.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBanco.Location = new System.Drawing.Point(115, 558);
+            this.txtBanco.Name = "txtBanco";
+            this.txtBanco.Size = new System.Drawing.Size(69, 21);
+            this.txtBanco.TabIndex = 40;
+            this.txtBanco.Text = "Banco:";
+            // 
+            // lblCuenta
+            // 
+            this.lblCuenta.AutoSize = true;
+            this.lblCuenta.BackColor = System.Drawing.Color.Transparent;
+            this.lblCuenta.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuenta.Location = new System.Drawing.Point(270, 600);
+            this.lblCuenta.Name = "lblCuenta";
+            this.lblCuenta.Size = new System.Drawing.Size(0, 21);
+            this.lblCuenta.TabIndex = 45;
+            // 
+            // lblPropietario
+            // 
+            this.lblPropietario.AutoSize = true;
+            this.lblPropietario.BackColor = System.Drawing.Color.Transparent;
+            this.lblPropietario.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPropietario.Location = new System.Drawing.Point(270, 579);
+            this.lblPropietario.Name = "lblPropietario";
+            this.lblPropietario.Size = new System.Drawing.Size(0, 21);
+            this.lblPropietario.TabIndex = 44;
+            // 
+            // lblBanco
+            // 
+            this.lblBanco.AutoSize = true;
+            this.lblBanco.BackColor = System.Drawing.Color.Transparent;
+            this.lblBanco.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBanco.Location = new System.Drawing.Point(270, 558);
+            this.lblBanco.Name = "lblBanco";
+            this.lblBanco.Size = new System.Drawing.Size(0, 21);
+            this.lblBanco.TabIndex = 43;
             // 
             // ClienteInfo
             // 
@@ -509,7 +594,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(826, 562);
+            this.ClientSize = new System.Drawing.Size(953, 672);
+            this.Controls.Add(this.lblCuenta);
+            this.Controls.Add(this.lblPropietario);
+            this.Controls.Add(this.lblBanco);
+            this.Controls.Add(this.txtCuenta);
+            this.Controls.Add(this.txtPropietario);
+            this.Controls.Add(this.txtBanco);
+            this.Controls.Add(this.btnTarjeta);
             this.Controls.Add(this.txbDUI);
             this.Controls.Add(this.txbIDCliente);
             this.Controls.Add(this.btnBuscar);
@@ -556,7 +648,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informacion del Ciente";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMovimiento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,7 +679,7 @@
         public System.Windows.Forms.TextBox txbNRC;
         public System.Windows.Forms.ComboBox cbbEstado;
         public System.Windows.Forms.ComboBox cbbCondPago;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorMovimiento;
         public System.Windows.Forms.Label lblTotal;
         public System.Windows.Forms.Label lblIVA;
         public System.Windows.Forms.Label lblSubtotal;
@@ -603,5 +695,12 @@
         private System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.TextBox txbDUI;
         public System.Windows.Forms.Button btnDefault;
+        public System.Windows.Forms.Label lblCuenta;
+        public System.Windows.Forms.Label lblPropietario;
+        public System.Windows.Forms.Label lblBanco;
+        private System.Windows.Forms.Label txtCuenta;
+        private System.Windows.Forms.Label txtPropietario;
+        private System.Windows.Forms.Label txtBanco;
+        public System.Windows.Forms.Button btnTarjeta;
     }
 }

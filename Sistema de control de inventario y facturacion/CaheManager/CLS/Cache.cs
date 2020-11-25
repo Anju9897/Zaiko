@@ -206,6 +206,9 @@ namespace CacheManager.CLS
                 Consulta = @"SELECT
                                 m.idmovimiento, m.estado,m.idpersona as 'IDPERSONA', concat(p.nombres,' ', p.apellidos) as 'cliente',date(m.FECHA) as 'fecha',
                                 m.tipocomprobante,m.numcomprobante,m.condpago,
+                                ifnull(m.banco,'') as 'banco',
+                                ifnull(m.propietariocuenta,'') as 'propietariocuenta',
+                                ifnull(m.ncuenta,'') as 'ncuenta',
                                 ifnull(m.subtotal,'0.00') as 'Subtotal',
                                 ifnull(m.IVATOTAL,'0.00') as 'IVATOTAL',
                                 ifnull(m.TOTAL,'0.00') as 'total',m.transaccion

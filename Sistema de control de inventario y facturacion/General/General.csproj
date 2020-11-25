@@ -165,6 +165,12 @@
     <Compile Include="GUI\EmpleadosGestion.Designer.cs">
       <DependentUpon>EmpleadosGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TarjetaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TarjetaInfo.Designer.cs">
+      <DependentUpon>TarjetaInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UnidadesEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EmpleadosGestion.resx">
       <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TarjetaInfo.resx">
+      <DependentUpon>TarjetaInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UnidadesEdicion.resx">
       <DependentUpon>UnidadesEdicion.cs</DependentUpon>

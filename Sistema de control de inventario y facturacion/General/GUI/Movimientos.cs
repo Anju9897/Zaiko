@@ -67,11 +67,25 @@ namespace General.GUI
             }
         }
 
+        private void FiltrarPorComprobante()
+        {
+            try
+            {
+                _DATOS.Filter = @"TipoComprobante ='" + cbbComprobante.Text.ToString() + "'";
+                dtgMovimiento.DataSource = _DATOS;
+                lblRegistros.Text = dtgMovimiento.Rows.Count.ToString() + " Registros Encontrados";
+            }
+            catch
+            {
+            }
+        }
+
         public Movimientos()
         {
             InitializeComponent();
             Cargar();
             cbbTransaccion.SelectedIndex = 0;
+            cbbComprobante.SelectedIndex = 0;
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
@@ -107,7 +121,7 @@ namespace General.GUI
             f.cbbEstado.Text = dtgMovimiento.CurrentRow.Cells["estado"].Value.ToString();
             f.cbbFactura.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
             f.txbNFactura.Text = dtgMovimiento.CurrentRow.Cells["numcomprobante"].Value.ToString();
-            f.cbbCondPago.Text = dtgMovimiento.CurrentRow.Cells["condpago"].Value.ToString();
+            
             f.cbbTransaccion.Text = dtgMovimiento.CurrentRow.Cells["Transaccion"].Value.ToString();;
             f.lblSubtotal.Text = dtgMovimiento.CurrentRow.Cells["subtotal"].Value.ToString();
             f.lblIVA.Text = dtgMovimiento.CurrentRow.Cells["ivatotal"].Value.ToString();
@@ -116,6 +130,18 @@ namespace General.GUI
             ClienteInfo.subtotal = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["subtotal"].Value);
             ClienteInfo.iva = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["ivatotal"].Value);
             ClienteInfo.total = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["total"].Value);
+
+            if (dtgMovimiento.CurrentRow.Cells["condpago"].Value.ToString().Equals("TARJETA DE CREDITO"))
+            {
+                f.cbbCondPago.SelectedIndex = 1;
+                f.lblBanco.Text = dtgMovimiento.CurrentRow.Cells["banco"].Value.ToString();
+                f.lblPropietario.Text = dtgMovimiento.CurrentRow.Cells["propietariocuenta"].Value.ToString();
+                f.lblCuenta.Text = dtgMovimiento.CurrentRow.Cells["ncuenta"].Value.ToString();
+            }
+            else if (dtgMovimiento.CurrentRow.Cells["condpago"].Value.ToString().Equals("EFECTIVO"))
+            {
+                f.cbbCondPago.SelectedIndex = 0;
+            }
 
             f.ShowDialog();
             Cargar();
@@ -161,12 +187,14 @@ namespace General.GUI
             {
                 btnEmitirCotizacion.Enabled = false;
                 btnEmitirCotizacion.Visible = false;
+
                 Cargar();
             }
             else if (cbbTransaccion.SelectedIndex == 1)
             {
                 btnEmitirCotizacion.Enabled = true;
                 btnEmitirCotizacion.Visible = true;
+
                 Cargar();
             }
         }
@@ -197,6 +225,29 @@ namespace General.GUI
             Reportes.GUI.Cotizaciones f = new Reportes.GUI.Cotizaciones();
             f.txbNCotizacion.Text = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
             f.Show();
+        }
+
+        private void cbbComprobante_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbComprobante.SelectedIndex != 0)
+            {
+                FiltrarPorComprobante();
+            }
+            else
+            {
+                FiltrarLocalmente();
+            }
+        }
+
+        private void dtgMovimiento_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if(e.RowIndex >= 0){
+                if(e.ColumnIndex == 12){
+                     MessageBox.Show("Se ha seleccinado la opcion de DEVOLUCION");
+                }else if(e.ColumnIndex == 13){
+                     MessageBox.Show("Se ha seleccinado la opcion de IMPRIMIR");
+                }
+            }
         }
 
 

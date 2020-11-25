@@ -121,7 +121,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(475, 85);
+            this.label5.Location = new System.Drawing.Point(354, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 19);
             this.label5.TabIndex = 6;
@@ -200,7 +200,7 @@
             this.txbDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbDescripcion.Multiline = true;
             this.txbDescripcion.Name = "txbDescripcion";
-            this.txbDescripcion.Size = new System.Drawing.Size(244, 55);
+            this.txbDescripcion.Size = new System.Drawing.Size(255, 55);
             this.txbDescripcion.TabIndex = 8;
             // 
             // label10
@@ -220,7 +220,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(188, 429);
+            this.btnAceptar.Location = new System.Drawing.Point(151, 424);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(125, 45);
@@ -235,7 +235,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(336, 429);
+            this.btnCancelar.Location = new System.Drawing.Point(299, 424);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(122, 45);
@@ -294,7 +294,7 @@
             // 
             this.txbMarca.Enabled = false;
             this.txbMarca.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbMarca.Location = new System.Drawing.Point(478, 108);
+            this.txbMarca.Location = new System.Drawing.Point(357, 168);
             this.txbMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbMarca.Name = "txbMarca";
             this.txbMarca.Size = new System.Drawing.Size(64, 26);
@@ -308,7 +308,7 @@
             this.btnMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarca.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMarca.Location = new System.Drawing.Point(562, 101);
+            this.btnMarca.Location = new System.Drawing.Point(441, 161);
             this.btnMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMarca.Name = "btnMarca";
             this.btnMarca.Size = new System.Drawing.Size(63, 33);
@@ -323,7 +323,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(689, 496);
+            this.ClientSize = new System.Drawing.Size(570, 496);
             this.Controls.Add(this.btnMarca);
             this.Controls.Add(this.txbMarca);
             this.Controls.Add(this.lblIDInventario);

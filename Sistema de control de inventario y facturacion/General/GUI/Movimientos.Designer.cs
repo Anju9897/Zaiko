@@ -43,18 +43,6 @@
             this.dtgFecha2 = new System.Windows.Forms.DateTimePicker();
             this.dtgFecha1 = new System.Windows.Forms.DateTimePicker();
             this.dtgMovimiento = new System.Windows.Forms.DataGridView();
-            this.idmovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDPERSONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Transaccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.condpago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IVATOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -68,6 +56,25 @@
             this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.dtsCompras1 = new Reportes.DAT.dtsCompras();
+            this.lblComprobante = new System.Windows.Forms.Label();
+            this.cbbComprobante = new System.Windows.Forms.ComboBox();
+            this.idmovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDPERSONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Transaccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.condpago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IVATOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.devolucion = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Imprimir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.banco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.propietariocuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ncuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -90,6 +97,8 @@
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel1.BackgroundImage")));
             this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer1.Panel1.Controls.Add(this.lblComprobante);
+            this.splitContainer1.Panel1.Controls.Add(this.cbbComprobante);
             this.splitContainer1.Panel1.Controls.Add(this.btnEmitirCotizacion);
             this.splitContainer1.Panel1.Controls.Add(this.lblfiltro3);
             this.splitContainer1.Panel1.Controls.Add(this.cbbTransaccion);
@@ -106,8 +115,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.dtgMovimiento);
             this.splitContainer1.Panel2.Controls.Add(this.statusStrip1);
             this.splitContainer1.Panel2.Controls.Add(this.toolStrip1);
-            this.splitContainer1.Size = new System.Drawing.Size(1079, 524);
-            this.splitContainer1.SplitterDistance = 120;
+            this.splitContainer1.Size = new System.Drawing.Size(1616, 730);
+            this.splitContainer1.SplitterDistance = 179;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -117,7 +126,7 @@
             this.btnEmitirCotizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmitirCotizacion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmitirCotizacion.ForeColor = System.Drawing.Color.White;
-            this.btnEmitirCotizacion.Location = new System.Drawing.Point(23, 433);
+            this.btnEmitirCotizacion.Location = new System.Drawing.Point(28, 493);
             this.btnEmitirCotizacion.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmitirCotizacion.Name = "btnEmitirCotizacion";
             this.btnEmitirCotizacion.Size = new System.Drawing.Size(111, 61);
@@ -131,7 +140,7 @@
             this.lblfiltro3.AutoSize = true;
             this.lblfiltro3.BackColor = System.Drawing.Color.Transparent;
             this.lblfiltro3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfiltro3.Location = new System.Drawing.Point(24, 353);
+            this.lblfiltro3.Location = new System.Drawing.Point(21, 424);
             this.lblfiltro3.Name = "lblfiltro3";
             this.lblfiltro3.Size = new System.Drawing.Size(110, 21);
             this.lblfiltro3.TabIndex = 8;
@@ -145,9 +154,9 @@
             this.cbbTransaccion.Items.AddRange(new object[] {
             "Venta",
             "Cotizacion"});
-            this.cbbTransaccion.Location = new System.Drawing.Point(24, 388);
+            this.cbbTransaccion.Location = new System.Drawing.Point(24, 448);
             this.cbbTransaccion.Name = "cbbTransaccion";
-            this.cbbTransaccion.Size = new System.Drawing.Size(121, 28);
+            this.cbbTransaccion.Size = new System.Drawing.Size(142, 28);
             this.cbbTransaccion.TabIndex = 7;
             this.cbbTransaccion.SelectedIndexChanged += new System.EventHandler(this.cbbTransaccion_SelectedIndexChanged);
             // 
@@ -253,7 +262,12 @@
             this.condpago,
             this.Subtotal,
             this.IVATOTAL,
-            this.total});
+            this.total,
+            this.devolucion,
+            this.Imprimir,
+            this.banco,
+            this.propietariocuenta,
+            this.ncuenta});
             this.dtgMovimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgMovimiento.Location = new System.Drawing.Point(0, 28);
             this.dtgMovimiento.Name = "dtgMovimiento";
@@ -264,99 +278,10 @@
             this.dtgMovimiento.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgMovimiento.RowTemplate.Height = 24;
             this.dtgMovimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgMovimiento.Size = new System.Drawing.Size(958, 470);
+            this.dtgMovimiento.Size = new System.Drawing.Size(1436, 676);
             this.dtgMovimiento.TabIndex = 1;
+            this.dtgMovimiento.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgMovimiento_CellMouseDoubleClick);
             this.dtgMovimiento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgMovimiento_KeyDown);
-            // 
-            // idmovimiento
-            // 
-            this.idmovimiento.DataPropertyName = "idmovimiento";
-            this.idmovimiento.HeaderText = "ID";
-            this.idmovimiento.Name = "idmovimiento";
-            this.idmovimiento.ReadOnly = true;
-            this.idmovimiento.Width = 40;
-            // 
-            // IDPERSONA
-            // 
-            this.IDPERSONA.DataPropertyName = "IDPERSONA";
-            this.IDPERSONA.HeaderText = "IDPERSONA";
-            this.IDPERSONA.Name = "IDPERSONA";
-            this.IDPERSONA.ReadOnly = true;
-            this.IDPERSONA.Visible = false;
-            // 
-            // fecha
-            // 
-            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fecha.DataPropertyName = "fecha";
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            // 
-            // cliente
-            // 
-            this.cliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cliente.DataPropertyName = "cliente";
-            this.cliente.HeaderText = "Cliente";
-            this.cliente.Name = "cliente";
-            this.cliente.ReadOnly = true;
-            // 
-            // Transaccion
-            // 
-            this.Transaccion.DataPropertyName = "Transaccion";
-            this.Transaccion.HeaderText = "";
-            this.Transaccion.Name = "Transaccion";
-            this.Transaccion.ReadOnly = true;
-            this.Transaccion.Visible = false;
-            // 
-            // tipoComprobante
-            // 
-            this.tipoComprobante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tipoComprobante.DataPropertyName = "tipoComprobante";
-            this.tipoComprobante.HeaderText = "Comprobante";
-            this.tipoComprobante.Name = "tipoComprobante";
-            this.tipoComprobante.ReadOnly = true;
-            // 
-            // numComprobante
-            // 
-            this.numComprobante.DataPropertyName = "numComprobante";
-            this.numComprobante.HeaderText = "Número";
-            this.numComprobante.Name = "numComprobante";
-            this.numComprobante.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            // 
-            // condpago
-            // 
-            this.condpago.DataPropertyName = "condpago";
-            this.condpago.HeaderText = "Condicion";
-            this.condpago.Name = "condpago";
-            this.condpago.ReadOnly = true;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.DataPropertyName = "Subtotal";
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.ReadOnly = true;
-            // 
-            // IVATOTAL
-            // 
-            this.IVATOTAL.DataPropertyName = "IVATOTAL";
-            this.IVATOTAL.HeaderText = "IVA";
-            this.IVATOTAL.Name = "IVATOTAL";
-            this.IVATOTAL.ReadOnly = true;
-            // 
-            // total
-            // 
-            this.total.DataPropertyName = "total";
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
             // 
             // statusStrip1
             // 
@@ -365,9 +290,9 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblRegistros});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 498);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 704);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(958, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1436, 26);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.TabStop = true;
             this.statusStrip1.Text = "statusStrip1";
@@ -395,7 +320,7 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(958, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(1436, 28);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -488,11 +413,167 @@
             this.dtsCompras1.DataSetName = "dtsCompras";
             this.dtsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // lblComprobante
+            // 
+            this.lblComprobante.AutoSize = true;
+            this.lblComprobante.BackColor = System.Drawing.Color.Transparent;
+            this.lblComprobante.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComprobante.Location = new System.Drawing.Point(24, 346);
+            this.lblComprobante.Name = "lblComprobante";
+            this.lblComprobante.Size = new System.Drawing.Size(148, 21);
+            this.lblComprobante.TabIndex = 11;
+            this.lblComprobante.Text = "T. Comprobante";
+            // 
+            // cbbComprobante
+            // 
+            this.cbbComprobante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbComprobante.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbComprobante.FormattingEnabled = true;
+            this.cbbComprobante.Items.AddRange(new object[] {
+            "Todos",
+            "Factura Consumidor Final",
+            "Comprobante de Credito Fiscal"});
+            this.cbbComprobante.Location = new System.Drawing.Point(25, 370);
+            this.cbbComprobante.Name = "cbbComprobante";
+            this.cbbComprobante.Size = new System.Drawing.Size(143, 28);
+            this.cbbComprobante.TabIndex = 10;
+            this.cbbComprobante.SelectedIndexChanged += new System.EventHandler(this.cbbComprobante_SelectedIndexChanged);
+            // 
+            // idmovimiento
+            // 
+            this.idmovimiento.DataPropertyName = "idmovimiento";
+            this.idmovimiento.HeaderText = "ID";
+            this.idmovimiento.Name = "idmovimiento";
+            this.idmovimiento.ReadOnly = true;
+            this.idmovimiento.Width = 40;
+            // 
+            // IDPERSONA
+            // 
+            this.IDPERSONA.DataPropertyName = "IDPERSONA";
+            this.IDPERSONA.HeaderText = "IDPERSONA";
+            this.IDPERSONA.Name = "IDPERSONA";
+            this.IDPERSONA.ReadOnly = true;
+            this.IDPERSONA.Visible = false;
+            // 
+            // fecha
+            // 
+            this.fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fecha.DataPropertyName = "fecha";
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            // 
+            // cliente
+            // 
+            this.cliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cliente.DataPropertyName = "cliente";
+            this.cliente.HeaderText = "Cliente";
+            this.cliente.Name = "cliente";
+            this.cliente.ReadOnly = true;
+            // 
+            // Transaccion
+            // 
+            this.Transaccion.DataPropertyName = "Transaccion";
+            this.Transaccion.HeaderText = "";
+            this.Transaccion.Name = "Transaccion";
+            this.Transaccion.ReadOnly = true;
+            this.Transaccion.Visible = false;
+            // 
+            // tipoComprobante
+            // 
+            this.tipoComprobante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tipoComprobante.DataPropertyName = "tipoComprobante";
+            this.tipoComprobante.HeaderText = "Comprobante";
+            this.tipoComprobante.Name = "tipoComprobante";
+            this.tipoComprobante.ReadOnly = true;
+            // 
+            // numComprobante
+            // 
+            this.numComprobante.DataPropertyName = "numComprobante";
+            this.numComprobante.HeaderText = "Número";
+            this.numComprobante.Name = "numComprobante";
+            this.numComprobante.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
+            // condpago
+            // 
+            this.condpago.DataPropertyName = "condpago";
+            this.condpago.HeaderText = "Condicion";
+            this.condpago.Name = "condpago";
+            this.condpago.ReadOnly = true;
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.DataPropertyName = "Subtotal";
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
+            // IVATOTAL
+            // 
+            this.IVATOTAL.DataPropertyName = "IVATOTAL";
+            this.IVATOTAL.HeaderText = "IVA";
+            this.IVATOTAL.Name = "IVATOTAL";
+            this.IVATOTAL.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
+            // devolucion
+            // 
+            this.devolucion.DataPropertyName = "devolucion";
+            this.devolucion.HeaderText = "Devolucion";
+            this.devolucion.Image = ((System.Drawing.Image)(resources.GetObject("devolucion.Image")));
+            this.devolucion.Name = "devolucion";
+            this.devolucion.ReadOnly = true;
+            // 
+            // Imprimir
+            // 
+            this.Imprimir.DataPropertyName = "Imprimir";
+            this.Imprimir.HeaderText = "Imprimir";
+            this.Imprimir.Image = ((System.Drawing.Image)(resources.GetObject("Imprimir.Image")));
+            this.Imprimir.Name = "Imprimir";
+            this.Imprimir.ReadOnly = true;
+            // 
+            // banco
+            // 
+            this.banco.DataPropertyName = "banco";
+            this.banco.HeaderText = "banco";
+            this.banco.Name = "banco";
+            this.banco.ReadOnly = true;
+            this.banco.Visible = false;
+            // 
+            // propietariocuenta
+            // 
+            this.propietariocuenta.DataPropertyName = "propietariocuenta";
+            this.propietariocuenta.HeaderText = "propietario";
+            this.propietariocuenta.Name = "propietariocuenta";
+            this.propietariocuenta.ReadOnly = true;
+            this.propietariocuenta.Visible = false;
+            // 
+            // ncuenta
+            // 
+            this.ncuenta.DataPropertyName = "ncuenta";
+            this.ncuenta.HeaderText = "cuenta";
+            this.ncuenta.Name = "ncuenta";
+            this.ncuenta.ReadOnly = true;
+            this.ncuenta.Visible = false;
+            // 
             // Movimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 524);
+            this.ClientSize = new System.Drawing.Size(1616, 730);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -546,6 +627,8 @@
         private System.Windows.Forms.ToolStripButton btnEditarProductos;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton btneditar;
+        private System.Windows.Forms.Label lblComprobante;
+        private System.Windows.Forms.ComboBox cbbComprobante;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmovimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDPERSONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
@@ -558,5 +641,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn IVATOTAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.DataGridViewImageColumn devolucion;
+        private System.Windows.Forms.DataGridViewImageColumn Imprimir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn banco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn propietariocuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ncuenta;
     }
 }

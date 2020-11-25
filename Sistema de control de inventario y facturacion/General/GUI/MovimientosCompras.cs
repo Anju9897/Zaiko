@@ -187,5 +187,16 @@ namespace General.GUI
             btnMostrar.Focus();
         }
 
+        private void dtgMovimiento_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == 12)
+                {
+                    MessageBox.Show("ESTA ES LA OPCION DE DEVOLUCION SOBRE COMPRAS ACTIVADA");
+                }
+            }
+        }
+
     }
 }

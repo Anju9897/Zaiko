@@ -21,6 +21,28 @@ namespace General.CLS
         String _IvaTotal;
         String _Estado;
         String _total;
+
+        String _BANCO;
+
+        public String BANCO
+        {
+            get { return _BANCO; }
+            set { _BANCO = value; }
+        }
+        String _PROPIETARIO;
+
+        public String PROPIETARIO
+        {
+            get { return _PROPIETARIO; }
+            set { _PROPIETARIO = value; }
+        }
+        String _NCUENTA;
+
+        public String NCUENTA
+        {
+            get { return _NCUENTA; }
+            set { _NCUENTA = value; }
+        }
        
 
         public String IDPersona
@@ -102,11 +124,14 @@ namespace General.CLS
             DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
             try
             {
-                Sentencia = @"Insert into Movimientos(idUsuario,idpersona, condPago,
+                Sentencia = @"Insert into Movimientos(idUsuario,idpersona, condPago, Banco, PropietarioCuenta, nCuenta,
                               TipoComprobante, numComprobante, fecha, Transaccion, estado) Values(";
                 Sentencia += "'" + IDUsuario + "',";
                 Sentencia += "'" + IDPersona + "',";
                 Sentencia += "'" + CondPago + "',";
+                Sentencia += "'" + BANCO + "',";
+                Sentencia += "'" + PROPIETARIO + "',";
+                Sentencia += "'" + NCUENTA + "',";
                 Sentencia += "'" + TComprobante + "',";
                 Sentencia += "'" + NComprobante + "',";
                 Sentencia += "'" + Fecha + "',";
@@ -176,6 +201,9 @@ namespace General.CLS
                 Sentencia += "idUsuario='" + IDUsuario + "',";
                 Sentencia += "idpersona='" + IDPersona + "',";
                 Sentencia += "condPago='" + CondPago + "',";
+                Sentencia += "Banco='" + BANCO + "',";
+                Sentencia += "PropietarioCuenta='" + PROPIETARIO + "',";
+                Sentencia += "nCuenta='" + NCUENTA + "',";
                 Sentencia += "TipoComprobante='" + TComprobante + "',";
                 Sentencia += "numComprobante='" + NComprobante + "',";
                 Sentencia += "fecha='" + Fecha + "',";

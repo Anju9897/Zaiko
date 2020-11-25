@@ -26,6 +26,44 @@ namespace General.GUI
             lblTotal.Text = "0.00";
         }
 
+        public Boolean validarCampos()
+        {
+            Boolean validado = true;
+            errorMovimiento.Clear();
+
+            if (txbIDCliente.Text.Length == 0)
+            {
+                validado = false;
+                errorMovimiento.SetError(txbIDCliente,"Este campo debe ir con valores");
+            }
+            if (txbNFactura.Text.Length == 0)
+            {
+                validado = false;
+                errorMovimiento.SetError(txbNFactura, "Este campo debe ir con valores");
+            }
+
+            if (cbbCondPago.SelectedIndex == 1)
+            {
+                if (lblBanco.Text.Length == 0)
+                {
+                    validado = false;
+                    errorMovimiento.SetError(lblBanco, "Este campo debe ir con valores");
+                }
+                if (lblCuenta.Text.Length == 0)
+                {
+                    validado = false;
+                    errorMovimiento.SetError(lblCuenta, "Este campo debe ir con valores");
+                }
+                if (lblPropietario.Text.Length == 0)
+                {
+                    validado = false;
+                    errorMovimiento.SetError(lblPropietario, "Este campo debe ir con valores");
+                }
+            }
+
+            return validado;
+        }
+
         private void calcularValores()
         {
             double subtotalAUX = 0.00;
@@ -111,36 +149,52 @@ namespace General.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CLS.Movimiento oMovimiento = new CLS.Movimiento();
-            oMovimiento.IDMovimiento = txbIDMov.Text;
-            oMovimiento.IDUsuario = SessionManager.CLS.Sesion.Instancia.Informacion.IDUsuario;
-            oMovimiento.Fecha = dtpFecha.Text;
-            oMovimiento.IDPersona = txbIDCliente.Text;
-            oMovimiento.CondPago = cbbCondPago.Text;
-            oMovimiento.TComprobante = cbbFactura.Text;
-            oMovimiento.NComprobante = txbNFactura.Text;
-            oMovimiento.Transaccion = cbbTransaccion.Text;
-            oMovimiento.Estado = cbbEstado.Text;
-            oMovimiento.Subtotal = Convert.ToString(Convert.ToDouble(lblSubtotal.Text));
-            oMovimiento.IvaTotal = Convert.ToString(Convert.ToDouble(lblIVA.Text));
-            oMovimiento.Total = Convert.ToString(Convert.ToDouble(lblTotal.Text));
 
-            if (txbIDMov.Text.Length > 0)
+            if (validarCampos())
             {
-                if (oMovimiento.Actualizar())
+                CLS.Movimiento oMovimiento = new CLS.Movimiento();
+                oMovimiento.IDMovimiento = txbIDMov.Text;
+                oMovimiento.IDUsuario = SessionManager.CLS.Sesion.Instancia.Informacion.IDUsuario;
+                oMovimiento.Fecha = dtpFecha.Text;
+                oMovimiento.IDPersona = txbIDCliente.Text;
+                oMovimiento.CondPago = cbbCondPago.Text;
+                oMovimiento.TComprobante = cbbFactura.Text;
+                oMovimiento.NComprobante = txbNFactura.Text;
+                oMovimiento.Transaccion = cbbTransaccion.Text;
+                oMovimiento.Estado = cbbEstado.Text;
+                oMovimiento.Subtotal = Convert.ToString(Convert.ToDouble(lblSubtotal.Text));
+                oMovimiento.IvaTotal = Convert.ToString(Convert.ToDouble(lblIVA.Text));
+                oMovimiento.Total = Convert.ToString(Convert.ToDouble(lblTotal.Text));
+
+                if (cbbCondPago.SelectedIndex == 1)
                 {
-                    if (oMovimiento.Actualizar_Total())
+                    oMovimiento.BANCO = lblBanco.Text;
+                    oMovimiento.PROPIETARIO = lblPropietario.Text;
+                    oMovimiento.NCUENTA = lblCuenta.Text;
+                }
+                else if (cbbCondPago.SelectedIndex == 0)
+                {
+                    oMovimiento.BANCO = "";
+                    oMovimiento.PROPIETARIO = "";
+                    oMovimiento.NCUENTA = "";
+                }
+
+                if (txbIDMov.Text.Length > 0)
+                {
+                    if (oMovimiento.Actualizar())
                     {
-                        Close();
+                        if (oMovimiento.Actualizar_Total())
+                        {
+                            Close();
+                        }
                     }
                 }
+                else
+                {
+                    if (oMovimiento.Guardar()) { Close(); }
+
+                }
             }
-            else
-            {
-                if (oMovimiento.Guardar()) { Close(); }
-                
-            }
-           
             
         }
 
@@ -261,6 +315,42 @@ namespace General.GUI
                 //Anulado
                 
             }
+        }
+
+        private void btnTarjeta_Click(object sender, EventArgs e)
+        {
+            TarjetaInfo f = new TarjetaInfo();
+            f.ShowDialog();
+
+            lblBanco.Text = f.txbBanco.Text;
+            lblCuenta.Text = f.txbNumero.Text;
+            lblPropietario.Text = f.txbPropietario.Text;
+        }
+
+        private void cbbCondPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbCondPago.SelectedIndex == 1)
+            {
+                btnTarjeta.Enabled = true;
+                btnTarjeta.Visible = true;
+                lblBanco.Visible = true;
+                lblPropietario.Visible = true;
+                lblCuenta.Visible = true;
+                txtBanco.Visible = true;
+                txtCuenta.Visible = true;
+                txtPropietario.Visible = true;
+            }
+            else
+            {
+                btnTarjeta.Enabled = false;
+                btnTarjeta.Visible = false;
+                lblBanco.Visible = false;
+                lblPropietario.Visible = false;
+                lblCuenta.Visible = false;
+                txtBanco.Visible = false;
+                txtCuenta.Visible = false;
+                txtPropietario.Visible = false;
+            } 
         }
     }
 }

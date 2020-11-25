@@ -173,23 +173,31 @@ namespace General.GUI
         private void dtgProductos_DoubleClick(object sender, EventArgs e)
         {
 
-            if (Convert.ToDouble(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["Existencias"].Value) > 0)
+            if (dtgDetalle.RowCount < 5)
             {
-                if (!existeDetalle(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["idproducto"].Value.ToString()))
-                {
 
-                    SetDefault();
-                    txbCantidad.Focus();
+                if (Convert.ToDouble(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["Existencias"].Value) > 0)
+                {
+                    if (!existeDetalle(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["idproducto"].Value.ToString()))
+                    {
+
+                        SetDefault();
+                        txbCantidad.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Este articulo ya existe en el detalle, si desea modificar su valor, puede seguir las siguientes instrucciones:\n1. Seleccionar el articulo existente que desea modificar y dar click al boton 'Modificar'.\n2. Dar doble click al elemento ya existente en el cuadro de abajo para activar la modificacion.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Este articulo ya existe en el detalle, si desea modificar su valor, puede seguir las siguientes instrucciones:\n1. Seleccionar el articulo existente que desea modificar y dar click al boton 'Modificar'.\n2. Dar doble click al elemento ya existente en el cuadro de abajo para activar la modificacion.","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("No hay existencias de este producto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-
             }
             else
             {
-                MessageBox.Show("No hay existencias de este producto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se pueden agregar mas elementos a la factura, debido a que excede el numero de elementos permitidos por el comprobante\nSi desea agregar mas elementos debe de crear una nota de crédito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -271,6 +279,10 @@ namespace General.GUI
             if (e.KeyData == Keys.F1)
             {
                 txbBuscar.Focus();
+            }
+            if (e.KeyData == Keys.F3)
+            {
+                btnConfirmar_Click(sender, e);
             }
         }
 
@@ -466,7 +478,6 @@ namespace General.GUI
             txbCantidad.Focus();
         }
 
-
         private void txbSubtotal_TextChanged(object sender, EventArgs e)
         {
 
@@ -486,30 +497,18 @@ namespace General.GUI
             }
         }
 
-
-        /*
-        private void txbCantidad_Validating(object sender, CancelEventArgs e)
+        private void dtgDetalle_KeyDown(object sender, KeyEventArgs e)
         {
-            TextBox cantidad = sender as TextBox;
-
-            decimal numero = 0;
-
-            if (decimal.TryParse(cantidad.Text, out numero))
+            if (e.KeyData == Keys.F1)
             {
-                if (numero >= 100)
-                {
-                    MessageBox.Show("Solo se permiten 2 decimales","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    txbCantidad.Text = numero.ToString("N2");
-                }
+                txbBuscar.Focus();
             }
-            else
+            if (e.KeyData == Keys.F3)
             {
-                MessageBox.Show("El valor no es valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                btnConfirmar_Click(sender, e);
             }
-        }*/
+        }
+
     }
 
 }
