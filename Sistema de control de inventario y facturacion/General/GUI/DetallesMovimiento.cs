@@ -172,7 +172,7 @@ namespace General.GUI
 
         private void dtgProductos_DoubleClick(object sender, EventArgs e)
         {
-
+            //PENDIENTE: NUMERO DE CAPACIDAD DE LA FACTURA DE PRODUCTOS
             if (dtgDetalle.RowCount < 5)
             {
 
@@ -197,7 +197,7 @@ namespace General.GUI
             }
             else
             {
-                MessageBox.Show("No se pueden agregar mas elementos a la factura, debido a que excede el numero de elementos permitidos por el comprobante\nSi desea agregar mas elementos debe de crear una nota de crédito", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se pueden agregar mas elementos a la factura, debido a que excede el numero de elementos permitidos por el comprobante\nSi desea agregar mas elementos debe de crear otra facturacion o movimiento", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

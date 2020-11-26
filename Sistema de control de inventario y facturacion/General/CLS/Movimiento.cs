@@ -239,12 +239,8 @@ namespace General.CLS
             {
                 CLS.DetalleMovimiento dm = new DetalleMovimiento();
                 dm.IDMovimiento = IDMovimiento;
-                dm.Eliminar_Detalles();
                 Sentencia = @"Update Movimientos set ";
-                Sentencia += "Estado='" + Estado + "',";
-                Sentencia += "Subtotal='" + Subtotal + "',";
-                Sentencia += "IVATOTAL='" + IvaTotal + "',";
-                Sentencia += "Total='" + Total + "' ";
+                Sentencia += "Estado='" + Estado + "' ";
                 Sentencia += "Where idMovimiento='" + IDMovimiento + "';";
 
                 if (Operacion.Actualizar(Sentencia) > 0)

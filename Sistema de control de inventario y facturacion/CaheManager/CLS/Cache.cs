@@ -473,5 +473,32 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
+
+        public static DataTable OBTENER_ELEMENTOS_DETALLEMOV_POR_IDMOV(string idMov)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"Select 
+                                    dm.iddetalle as 'IDDetalle', 
+                                    dm.idproducto as 'IDProducto',
+                                    dm.cantitadsalida as 'Cantidad',
+                                    i.idinventario as 'idInventario',
+                                    i.existencias as 'Existencias' 
+                                    from detallemovimiento dm inner join inventario i on dm.idproducto = i.idproducto
+                                    where dm.idmovimiento = '" + idMov +"';";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
     }
 }

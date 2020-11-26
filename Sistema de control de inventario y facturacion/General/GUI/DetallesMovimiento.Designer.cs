@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetallesMovimiento));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripLabel();
             this.lblIDMov = new System.Windows.Forms.ToolStripLabel();
@@ -85,12 +85,12 @@
             this.idp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantitadsalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gravado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantitadsalidfa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gravado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
@@ -299,20 +299,20 @@
             this.dtgProductos.AllowUserToDeleteRows = false;
             this.dtgProductos.AllowUserToResizeColumns = false;
             this.dtgProductos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(199)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
-            this.dtgProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(199)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
+            this.dtgProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgProductos.BackgroundColor = System.Drawing.Color.White;
             this.dtgProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idproducto,
@@ -329,9 +329,9 @@
             this.dtgProductos.Name = "dtgProductos";
             this.dtgProductos.ReadOnly = true;
             this.dtgProductos.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
-            this.dtgProductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
+            this.dtgProductos.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dtgProductos.RowTemplate.Height = 24;
             this.dtgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgProductos.Size = new System.Drawing.Size(1235, 243);
@@ -629,32 +629,32 @@
             this.dtgDetalle.AllowUserToDeleteRows = false;
             this.dtgDetalle.AllowUserToResizeColumns = false;
             this.dtgDetalle.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(199)))), ((int)(((byte)(130)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
-            this.dtgDetalle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(199)))), ((int)(((byte)(130)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
+            this.dtgDetalle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgDetalle.BackgroundColor = System.Drawing.Color.White;
             this.dtgDetalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgDetalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dtgDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddetalle,
             this.idp,
             this.inventario,
             this.exi,
-            this.Producto,
-            this.precio,
-            this.cantitadsalida,
-            this.Unidades,
-            this.gravado,
             this.fecha,
+            this.cantitadsalidfa,
+            this.Producto,
+            this.Unidades,
+            this.precio,
+            this.gravado,
             this.montoiva,
             this.subtotal});
             this.dtgDetalle.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -663,9 +663,9 @@
             this.dtgDetalle.Name = "dtgDetalle";
             this.dtgDetalle.ReadOnly = true;
             this.dtgDetalle.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
-            this.dtgDetalle.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(157)))), ((int)(((byte)(42)))));
+            this.dtgDetalle.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dtgDetalle.RowTemplate.Height = 24;
             this.dtgDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDetalle.Size = new System.Drawing.Size(1235, 299);
@@ -681,7 +681,8 @@
             this.iddetalle.HeaderText = "ID";
             this.iddetalle.Name = "iddetalle";
             this.iddetalle.ReadOnly = true;
-            this.iddetalle.Width = 40;
+            this.iddetalle.Visible = false;
+            this.iddetalle.Width = 5;
             // 
             // idp
             // 
@@ -707,27 +708,29 @@
             this.exi.ReadOnly = true;
             this.exi.Visible = false;
             // 
+            // fecha
+            // 
+            this.fecha.DataPropertyName = "fecha";
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Visible = false;
+            // 
+            // cantitadsalidfa
+            // 
+            this.cantitadsalidfa.DataPropertyName = "cantitadsalida";
+            this.cantitadsalidfa.HeaderText = "U. Salida";
+            this.cantitadsalidfa.Name = "cantitadsalidfa";
+            this.cantitadsalidfa.ReadOnly = true;
+            this.cantitadsalidfa.Width = 150;
+            // 
             // Producto
             // 
+            this.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Producto.DataPropertyName = "Producto";
             this.Producto.HeaderText = "Producto";
             this.Producto.Name = "Producto";
             this.Producto.ReadOnly = true;
-            this.Producto.Width = 200;
-            // 
-            // precio
-            // 
-            this.precio.DataPropertyName = "precio";
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // cantitadsalida
-            // 
-            this.cantitadsalida.DataPropertyName = "cantitadsalida";
-            this.cantitadsalida.HeaderText = "U. Salida";
-            this.cantitadsalida.Name = "cantitadsalida";
-            this.cantitadsalida.ReadOnly = true;
             // 
             // Unidades
             // 
@@ -735,6 +738,15 @@
             this.Unidades.HeaderText = "Unidad";
             this.Unidades.Name = "Unidades";
             this.Unidades.ReadOnly = true;
+            this.Unidades.Width = 150;
+            // 
+            // precio
+            // 
+            this.precio.DataPropertyName = "precio";
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            this.precio.Width = 150;
             // 
             // gravado
             // 
@@ -742,13 +754,7 @@
             this.gravado.HeaderText = "Gravado";
             this.gravado.Name = "gravado";
             this.gravado.ReadOnly = true;
-            // 
-            // fecha
-            // 
-            this.fecha.DataPropertyName = "fecha";
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
+            this.gravado.Width = 150;
             // 
             // montoiva
             // 
@@ -756,6 +762,7 @@
             this.montoiva.HeaderText = "IVA";
             this.montoiva.Name = "montoiva";
             this.montoiva.ReadOnly = true;
+            this.montoiva.Visible = false;
             // 
             // subtotal
             // 
@@ -763,6 +770,7 @@
             this.subtotal.HeaderText = "Subtotal";
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
+            this.subtotal.Visible = false;
             // 
             // DetallesMovimiento
             // 
@@ -803,10 +811,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataGridView dtgProductos;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.ToolStripLabel toolStripButton1;
         public System.Windows.Forms.ToolStripLabel lblIDMov;
@@ -819,7 +825,6 @@
         private System.Windows.Forms.TextBox txbPrecio;
         private System.Windows.Forms.TextBox txbIVA;
         private System.Windows.Forms.TextBox txbSubtotal;
-        private System.Windows.Forms.TextBox txbCantidad;
         private System.Windows.Forms.Label lblUnidad;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -830,7 +835,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.DataGridView dtgDetalle;
         private System.Windows.Forms.ToolStripStatusLabel lblIVAsuma;
         private System.Windows.Forms.ToolStripStatusLabel lblsubtotalSuma;
         private System.Windows.Forms.ToolStripButton btnEliminar;
@@ -845,21 +849,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn existencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidad;
         private System.Windows.Forms.Label lblIDDetalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantitadsalida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unidades;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gravado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn montoiva;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         public System.Windows.Forms.ToolStripLabel lblComprobante;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inventario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantitadsalidfa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unidades;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gravado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn montoiva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        public System.Windows.Forms.DataGridView dtgProductos;
+        public System.Windows.Forms.TextBox txbCantidad;
+        public System.Windows.Forms.DataGridView dtgDetalle;
+        public System.Windows.Forms.ToolStrip toolStrip1;
     }
 }

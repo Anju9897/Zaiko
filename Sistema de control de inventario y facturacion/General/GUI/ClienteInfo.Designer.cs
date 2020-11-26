@@ -288,8 +288,7 @@
             this.cbbEstado.FormattingEnabled = true;
             this.cbbEstado.Items.AddRange(new object[] {
             "PENDIENTE",
-            "CANCELADO",
-            "ANULADO"});
+            "CANCELADO"});
             this.cbbEstado.Location = new System.Drawing.Point(528, 393);
             this.cbbEstado.Name = "cbbEstado";
             this.cbbEstado.Size = new System.Drawing.Size(251, 29);
