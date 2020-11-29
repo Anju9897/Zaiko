@@ -286,7 +286,42 @@ namespace General.GUI
             {
                 if (e.ColumnIndex == 12)
                 {
-                    MessageBox.Show("Se ha seleccinado la opcion de DEVOLUCION");
+                    if (!dtgMovimiento.CurrentRow.Cells["estado"].Value.ToString().Equals("Anulado"))
+                    {
+                        try
+                        {
+                            String idmovimiento = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
+                            String idmovDev = obtenerIDMovimientoDevolucion(idmovimiento);
+                            Devoluciones f = new Devoluciones();
+                            f.tsMovimiento.Text = idmovimiento;
+                            f.tsDocumento.Text = dtgMovimiento.CurrentRow.Cells["tipoComprobante"].Value.ToString();
+
+                            if (idmovimiento.Equals(idmovDev))
+                            {
+                                if (MessageBox.Show("Ya hay una devolucion concluida de este documento, podra ingresar pero solo podra visualizar los datos pero no modificarlos.\nAun asi, ¿desea continuar?", "Aviso de devolucion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                                {
+                                    f.dtgDetalles.Enabled = false;
+                                    f.dtgDevoluciones.Enabled = false;
+                                    f.botones.Enabled = false;
+                                    f.txbCantidad.Enabled = false;
+                                    f.ShowDialog();
+                                }
+                            }
+                            else
+                            {
+                                f.ShowDialog();
+                            }
+
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No es posible hacer devoluciones de documentos anulados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else if (e.ColumnIndex == 13)
                 {
@@ -295,6 +330,20 @@ namespace General.GUI
             }
         }
 
+        private string obtenerIDMovimientoDevolucion(string idmovimiento)
+        {
+            String idDevolucionMov = "";
+            try
+            {
+                idDevolucionMov = CacheManager.CLS.Cache.OBTENER_ID_MOVIMIENTO_PARA_VERIFICAR_SI_EXISTE_DEVOLUCION(idmovimiento)["idmov"].ToString();
+            }
+            catch 
+            {
+                idDevolucionMov = "";
+            }
+
+            return idDevolucionMov;
+        }
 
         private void actualizar_anulacion()
         {

@@ -500,5 +500,85 @@ namespace CacheManager.CLS
 
             return Resultado;
         }
+
+        public static DataTable DEVOLUCIONES_CON_DETALLES_POR_MOVIMIENTO(string idMov)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"SELECT d.iddevolucion as 'iddevolucion',
+                            d.iddetalle as 'idd',
+                            d.idmovimiento as 'idm',
+                            d.Fecha as 'fecha_dev',
+                            d.precio as 'precioVenta',
+                            p.nombre as 'DevProducto',
+                            d.cEntrada as 'cEntrada',
+                            d.Gravado as 'devGravado',
+                            d.IVA as 'devIVA',
+                            d.Subtotal as 'devSubtotal' 
+
+                            from devoluciones d 
+                            inner join detallemovimiento dm on d.iddetalle = dm.iddetalle 
+                            inner join movimientos m on d.idmovimiento = m.idmovimiento 
+                            inner join producto p on dm.idproducto = p.idproducto 
+                            where m.idmovimiento = '"+ idMov +"';";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+
+        public static DataTable INFORMACION_INVENTARIO_PARA_DEVOLUCION(string iddetalle)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"select
+                dm.iddetalle as 'iddetalle',dm.idProducto as 'idproducto',p.nombre as 'producto',i.idinventario as 'idinventario', i.existencias as 'existencias'
+                from detallemovimiento dm 
+                inner join inventario i on dm.idproducto = i.idproducto
+                inner join producto p on i.idProducto = p.idProducto
+                where dm.iddetalle = "+ iddetalle +";";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+
+        public static DataRow OBTENER_ID_MOVIMIENTO_PARA_VERIFICAR_SI_EXISTE_DEVOLUCION(string idmov)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"select d.idmovimiento as 'idmov' from devoluciones d inner join  movimientos m on m.idMovimiento = d.idmovimiento group by d.idmovimiento having d.idmovimiento = "+ idmov +";";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado.Rows[0];
+        }
     }
 }

@@ -44,6 +44,7 @@
     <Compile Include="CLS\Categoria.cs" />
     <Compile Include="CLS\Clasificacion.cs" />
     <Compile Include="CLS\DetalleMovimiento.cs" />
+    <Compile Include="CLS\Devolucion.cs" />
     <Compile Include="CLS\Empleado.cs" />
     <Compile Include="CLS\Empresa.cs" />
     <Compile Include="CLS\Inventario.cs" />
@@ -92,6 +93,12 @@
     </Compile>
     <Compile Include="GUI\DetallesMovimiento.Designer.cs">
       <DependentUpon>DetallesMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Devoluciones_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Devoluciones_Form.Designer.cs">
+      <DependentUpon>Devoluciones_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\EmpleadosEdicion.cs">
       <SubType>Form</SubType>
@@ -209,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DetallesMovimiento.resx">
       <DependentUpon>DetallesMovimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Devoluciones_Form.resx">
+      <DependentUpon>Devoluciones_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EmpleadosEdicion.resx">
       <DependentUpon>EmpleadosEdicion.cs</DependentUpon>

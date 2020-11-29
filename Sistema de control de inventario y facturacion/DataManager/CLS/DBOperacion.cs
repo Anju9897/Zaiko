@@ -43,6 +43,7 @@ namespace DataManager.CLS
             }
             return FilasAfectadas;
         }
+
         public DataTable Consultar(String pConsulta)
         {
             DataTable Resultado = new DataTable();

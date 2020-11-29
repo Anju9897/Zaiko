@@ -15,6 +15,7 @@ namespace General.GUI
         BindingSource _DATOS = new BindingSource();
         BindingSource _DATOSDETALLE = new BindingSource();
 
+
         private void Guardar()
         {
             CLS.DetalleMovimiento dm = new CLS.DetalleMovimiento();

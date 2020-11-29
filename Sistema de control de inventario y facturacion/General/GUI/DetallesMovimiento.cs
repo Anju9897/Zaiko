@@ -109,6 +109,7 @@ namespace General.GUI
             try
             {
                 _DATOSDETALLE.DataSource = CacheManager.CLS.Cache.TODOS_LOS_DETALLES_POR_ID(lblIDMov.Text);
+                dtgDetalle.AutoGenerateColumns = false;
                 dtgDetalle.DataSource = _DATOSDETALLE;
             }
             catch
