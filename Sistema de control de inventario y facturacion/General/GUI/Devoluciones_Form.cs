@@ -159,7 +159,7 @@ namespace General.GUI
         private void Guardar_Devolucion()
         {
             CLS.Devolucion oDevolucion = new CLS.Devolucion();
-            oDevolucion.Iddevolucion = tsIDDEVOLUCION.Text;
+            oDevolucion.Iddevolucion = lblIDDevolucion.Text;
             oDevolucion.Idmovimiento = tsMovimiento.Text;
             oDevolucion.Iddetalle = txbIDDetalle.Text;
             oDevolucion.TipoNota = tsTipoNota.Text;
@@ -167,16 +167,37 @@ namespace General.GUI
             oDevolucion.CEntrada = Convert.ToDouble(txbCantidad.Text);
             oDevolucion.Gravado1 = Convert.ToDouble(txbSubtotal.Text);
             oDevolucion.IVA1 = Convert.ToDouble(txbIVA.Text);
+            oDevolucion.Fecha = new DateTime().ToShortDateString();
 
             oDevolucion.Subtotal1 = Convert.ToDouble(txbIVA.Text) + Convert.ToDouble(txbSubtotal.Text);
 
-            if (tsIDDEVOLUCION.Text.Length == 0)
+            if (lblIDDevolucion.Text.Length == 0)
             {
                 if (oDevolucion.Guardar_devolucion_venta())
                 {
                     CargarDevoluciones();
+                    LimpiarCampos();
                 }
             }
+            else
+            {
+                if (oDevolucion.Actualizar_devolucion_venta())
+                {
+                    CargarDevoluciones();
+                    LimpiarCampos();
+                }
+            }
+        }
+
+        private void LimpiarCampos()
+        {
+            lblIDDevolucion.Text = "";
+            txbCantidad.Text = "";
+            txbIDDetalle.Text = "";
+            txbIVA.Text = "";
+            txbSubtotal.Text = "";
+            txbPrecio.Text = "";
+            txbProducto.Text = "";
         }
 
         private void btnFinDev_Click(object sender, EventArgs e)
@@ -248,8 +269,61 @@ namespace General.GUI
             {
                 btnFinDev_Click(sender, e);
             }
+            if (e.KeyData == Keys.E)
+            {
+                btnEditarDev_Click(sender, e);
+            }
+            if (e.KeyData == Keys.X)
+            {
+                btnEliminarDev_Click(sender, e);
+            }
         }
 
+        private void btnEditarDev_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea editar este valor?","Aviso edicion",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                txbIDDetalle.Text = dtgDevoluciones.CurrentRow.Cells["idd"].Value.ToString();
+                txbPrecio.Text = dtgDevoluciones.CurrentRow.Cells["precioventa"].Value.ToString();
+                txbProducto.Text = dtgDevoluciones.CurrentRow.Cells["devproducto"].Value.ToString();
+                lblIDDevolucion.Text = dtgDevoluciones.CurrentRow.Cells["iddevolucion"].Value.ToString();
+                txbCantidad.Text = dtgDevoluciones.CurrentRow.Cells["cEntrada"].Value.ToString();
+                txbSubtotal.Text = dtgDevoluciones.CurrentRow.Cells["devGravado"].Value.ToString();
+                txbIVA.Text = dtgDevoluciones.CurrentRow.Cells["DevIVA"].Value.ToString();
+                txbCantidad.Focus();
+            }
+        }
+
+        private void dtgDevoluciones_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+        }
+
+        private void dtgDevoluciones_DoubleClick(object sender, EventArgs e)
+        {
+            btnEditarDev_Click(sender, e);
+        }
+
+        private void btnEliminarDev_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("¿Esta seguro que desea eliminar este registro?", "Aviso eliminando elemento", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CLS.Devolucion oDevolucion = new CLS.Devolucion();
+                    oDevolucion.Iddevolucion = dtgDevoluciones.CurrentRow.Cells["iddevolucion"].Value.ToString();
+                    if (oDevolucion.eliminar_devolucion_venta())
+                    {
+                        CargarDevoluciones();
+                    }
+                }
+            }
+            catch 
+            {
+                
+            }
+           
+        }
             
         }
     }

@@ -221,6 +221,7 @@ namespace General.GUI
                 btnEmitirCotizacion.Visible = false;
 
                 Cargar();
+                FiltrarPorComprobante();
             }
             else if (cbbTransaccion.SelectedIndex == 1)
             {
@@ -228,6 +229,7 @@ namespace General.GUI
                 btnEmitirCotizacion.Visible = true;
 
                 Cargar();
+                FiltrarPorComprobante();
             }
         }
 
@@ -263,9 +265,17 @@ namespace General.GUI
 
         private void btnEmitirCotizacion_Click(object sender, EventArgs e)
         {
-            Reportes.GUI.Cotizaciones f = new Reportes.GUI.Cotizaciones();
-            f.txbNCotizacion.Text = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
-            f.Show();
+            try
+            {
+                
+                Reportes.GUI.Cotizaciones f = new Reportes.GUI.Cotizaciones();
+                f.txbNCotizacion.Text = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
+                f.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se ha seleccionado o no hay ningun dato el cual sea posible mostrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void cbbComprobante_SelectedIndexChanged(object sender, EventArgs e)

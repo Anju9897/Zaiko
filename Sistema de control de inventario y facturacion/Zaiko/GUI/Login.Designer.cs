@@ -144,6 +144,7 @@
             this.txbPassword.Size = new System.Drawing.Size(278, 23);
             this.txbPassword.TabIndex = 14;
             this.txbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbPassword_KeyDown);
             // 
             // label2
             // 

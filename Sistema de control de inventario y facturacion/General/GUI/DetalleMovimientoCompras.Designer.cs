@@ -78,6 +78,7 @@
             this.txbProducto = new System.Windows.Forms.TextBox();
             this.txbIDProducto = new System.Windows.Forms.TextBox();
             this.dtgDetalle = new System.Windows.Forms.DataGridView();
+            this.dtsVentaConsumidorFinal1 = new Reportes.DAT.dtsVentaConsumidorFinal();
             this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,7 +91,6 @@
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtsVentaConsumidorFinal1 = new Reportes.DAT.dtsVentaConsumidorFinal();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -653,6 +653,11 @@
             this.dtgDetalle.DoubleClick += new System.EventHandler(this.dtgDetalle_DoubleClick);
             this.dtgDetalle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgProductos_KeyDown);
             // 
+            // dtsVentaConsumidorFinal1
+            // 
+            this.dtsVentaConsumidorFinal1.DataSetName = "dtsVentaConsumidorFinal";
+            this.dtsVentaConsumidorFinal1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // iddetalle
             // 
             this.iddetalle.DataPropertyName = "iddetalle";
@@ -679,11 +684,11 @@
             // 
             // Producto
             // 
+            this.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Producto.DataPropertyName = "Producto";
             this.Producto.HeaderText = "Producto";
             this.Producto.Name = "Producto";
             this.Producto.ReadOnly = true;
-            this.Producto.Width = 200;
             // 
             // exi
             // 
@@ -741,11 +746,6 @@
             this.subtotal.HeaderText = "Subtotal";
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
-            // 
-            // dtsVentaConsumidorFinal1
-            // 
-            this.dtsVentaConsumidorFinal1.DataSetName = "dtsVentaConsumidorFinal";
-            this.dtsVentaConsumidorFinal1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DetalleMovimientoCompras
             // 
@@ -818,6 +818,14 @@
         private System.Windows.Forms.DataGridView dtgDetalle;
         private System.Windows.Forms.Label lblIDDetalle;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idinventario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mnombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preciounitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn existencias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn inventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn idp;
@@ -830,13 +838,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoiva;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idproducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idinventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mnombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preciounitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn existencias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unidad;
     }
 }

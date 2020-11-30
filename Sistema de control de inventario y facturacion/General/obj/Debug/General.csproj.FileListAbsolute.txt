@@ -384,6 +384,16 @@ C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inve
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\General\obj\Debug\General.csproj.GenerateResource.Cache
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\General\obj\Debug\General.dll
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\General\obj\Debug\General.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\General.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\General.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\Reportes.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\SessionManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\Reportes.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\SessionManager.pdb
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.csprojResolveAssemblyReference.cache
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.CategoriasEdicion.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.ClienteInfo.resources
@@ -391,6 +401,7 @@ C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de in
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.ClientesLista.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.DetalleMovimientoCompras.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.DetallesMovimiento.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.Devoluciones_Compras.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.Devoluciones.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.EmpleadosEdicion.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.GestionUnidades.resources
@@ -409,15 +420,5 @@ C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de in
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.GUI.UsuariosEdicion.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.Properties.Resources.resources
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.csproj.GenerateResource.Cache
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\General.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\General.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\CaheManager.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\DataManager.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\Reportes.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\SessionManager.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\CaheManager.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\DataManager.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\Reportes.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\bin\Debug\SessionManager.pdb
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.dll
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\General\obj\Debug\General.pdb

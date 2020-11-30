@@ -61,7 +61,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnFinDev = new System.Windows.Forms.ToolStripButton();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.lblIDDetalle = new System.Windows.Forms.Label();
+            this.lblIDDevolucion = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -325,6 +325,7 @@
             this.btnEditarDev.Name = "btnEditarDev";
             this.btnEditarDev.Size = new System.Drawing.Size(207, 25);
             this.btnEditarDev.Text = "Editar Devolucion (E)";
+            this.btnEditarDev.Click += new System.EventHandler(this.btnEditarDev_Click);
             // 
             // tsDocumento
             // 
@@ -352,6 +353,7 @@
             this.btnEliminarDev.Name = "btnEliminarDev";
             this.btnEliminarDev.Size = new System.Drawing.Size(220, 25);
             this.btnEliminarDev.Text = "Eliminar Devolucion (X)";
+            this.btnEliminarDev.Click += new System.EventHandler(this.btnEliminarDev_Click);
             // 
             // toolStripSeparator3
             // 
@@ -380,7 +382,7 @@
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel1.BackgroundImage")));
-            this.splitContainer2.Panel1.Controls.Add(this.lblIDDetalle);
+            this.splitContainer2.Panel1.Controls.Add(this.lblIDDevolucion);
             this.splitContainer2.Panel1.Controls.Add(this.label9);
             this.splitContainer2.Panel1.Controls.Add(this.label8);
             this.splitContainer2.Panel1.Controls.Add(this.label7);
@@ -407,15 +409,15 @@
             this.splitContainer2.SplitterDistance = 131;
             this.splitContainer2.TabIndex = 0;
             // 
-            // lblIDDetalle
+            // lblIDDevolucion
             // 
-            this.lblIDDetalle.AutoSize = true;
-            this.lblIDDetalle.Enabled = false;
-            this.lblIDDetalle.Location = new System.Drawing.Point(264, 38);
-            this.lblIDDetalle.Name = "lblIDDetalle";
-            this.lblIDDetalle.Size = new System.Drawing.Size(0, 17);
-            this.lblIDDetalle.TabIndex = 33;
-            this.lblIDDetalle.Visible = false;
+            this.lblIDDevolucion.AutoSize = true;
+            this.lblIDDevolucion.Enabled = false;
+            this.lblIDDevolucion.Location = new System.Drawing.Point(264, 38);
+            this.lblIDDevolucion.Name = "lblIDDevolucion";
+            this.lblIDDevolucion.Size = new System.Drawing.Size(0, 17);
+            this.lblIDDevolucion.TabIndex = 33;
+            this.lblIDDevolucion.Visible = false;
             // 
             // label9
             // 
@@ -653,7 +655,9 @@
             this.dtgDevoluciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDevoluciones.Size = new System.Drawing.Size(1049, 360);
             this.dtgDevoluciones.TabIndex = 0;
+            this.dtgDevoluciones.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDevoluciones_CellContentDoubleClick);
             this.dtgDevoluciones.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dtgDevoluciones_RowsAdded);
+            this.dtgDevoluciones.DoubleClick += new System.EventHandler(this.dtgDevoluciones_DoubleClick);
             this.dtgDevoluciones.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgDevoluciones_KeyDown);
             // 
             // iddevolucion
@@ -781,7 +785,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gravado;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoiva;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.Label lblIDDetalle;
+        private System.Windows.Forms.Label lblIDDevolucion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
