@@ -48,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAT\dtsCardexProducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsCardexProducto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAT\dtsCompras.cs">
       <DependentUpon>dtsCompras.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -83,6 +88,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dtsFACTURA_CREDITO_FISCAL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsProductosMasVendidos.cs">
+      <DependentUpon>dtsProductosMasVendidos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAT\dtsProductosMasVendidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsProductosMasVendidos.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAT\dtsVentaConsumidorFinal.cs">
       <DependentUpon>dtsVentaConsumidorFinal.xsd</DependentUpon>
@@ -120,11 +134,23 @@
     <Compile Include="GUI\VistaPreviaReporteCompras.Designer.cs">
       <DependentUpon>VistaPreviaReporteCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\VPCARDEX_X_PRODUCTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VPCARDEX_X_PRODUCTO.Designer.cs">
+      <DependentUpon>VPCARDEX_X_PRODUCTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\VPFacturas_Consumidor_Final.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\VPFacturas_Consumidor_Final.Designer.cs">
       <DependentUpon>VPFacturas_Consumidor_Final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VPProductosMasVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VPProductosMasVendidos.Designer.cs">
+      <DependentUpon>VPProductosMasVendidos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\VP_Factura_CREDITOFISCAL.cs">
       <SubType>Form</SubType>
@@ -168,6 +194,17 @@
       <DependentUpon>ReporteFactura_CREDITO_FISCAL.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="REP\ReporteProductosMasVendidos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProductosMasVendidos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\Reporte_Cardex_Prodicto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Cardex_Prodicto.rpt</DependentUpon>
+    </Compile>
     <Compile Include="REP\VentaConsumidorFinal.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +232,17 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DAT\dtsCardexProducto.xsc">
+      <DependentUpon>dtsCardexProducto.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsCardexProducto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsCardexProducto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsCardexProducto.xss">
+      <DependentUpon>dtsCardexProducto.xsd</DependentUpon>
+    </None>
     <None Include="DAT\dtsCompras.xsc">
       <DependentUpon>dtsCompras.xsd</DependentUpon>
     </None>
@@ -239,6 +287,17 @@
     <None Include="DAT\dtsFACTURA_CREDITO_FISCAL.xss">
       <DependentUpon>dtsFACTURA_CREDITO_FISCAL.xsd</DependentUpon>
     </None>
+    <None Include="DAT\dtsProductosMasVendidos.xsc">
+      <DependentUpon>dtsProductosMasVendidos.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsProductosMasVendidos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsProductosMasVendidos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsProductosMasVendidos.xss">
+      <DependentUpon>dtsProductosMasVendidos.xsd</DependentUpon>
+    </None>
     <None Include="DAT\dtsVentaConsumidorFinal.xsc">
       <DependentUpon>dtsVentaConsumidorFinal.xsd</DependentUpon>
     </None>
@@ -272,8 +331,14 @@
     <EmbeddedResource Include="GUI\VistaPreviaReporteCompras.resx">
       <DependentUpon>VistaPreviaReporteCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VPCARDEX_X_PRODUCTO.resx">
+      <DependentUpon>VPCARDEX_X_PRODUCTO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\VPFacturas_Consumidor_Final.resx">
       <DependentUpon>VPFacturas_Consumidor_Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VPProductosMasVendidos.resx">
+      <DependentUpon>VPProductosMasVendidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\VP_Factura_CREDITOFISCAL.resx">
       <DependentUpon>VP_Factura_CREDITOFISCAL.cs</DependentUpon>
@@ -300,6 +365,14 @@
     <EmbeddedResource Include="REP\ReporteFactura_CREDITO_FISCAL.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteFactura_CREDITO_FISCAL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteProductosMasVendidos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProductosMasVendidos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\Reporte_Cardex_Prodicto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Cardex_Prodicto.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REP\VentaConsumidorFinal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

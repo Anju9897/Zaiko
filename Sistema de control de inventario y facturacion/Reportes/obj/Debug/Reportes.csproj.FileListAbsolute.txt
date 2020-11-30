@@ -160,3 +160,5 @@ C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventari
 C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VistaPreviaCreditoFidscal.resources
 C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VPFacturas_Consumidor_Final.resources
 C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VP_Factura_CREDITOFISCAL.resources
+C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VPProductosMasVendidos.resources
+C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VPCARDEX_X_PRODUCTO.resources

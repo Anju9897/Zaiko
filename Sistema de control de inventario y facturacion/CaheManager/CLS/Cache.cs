@@ -633,6 +633,57 @@ namespace CacheManager.CLS
 
             return Resultado;
         }
+
+    
+
+        public static DataTable SQL_PRODUCTOS_MAS_VENDIDOS(String FechaI, String FechaF)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"select
+                p.codigo,p.nombre as producto ,sum(dm.CantitadSalida) as 'Cantidad',sum(dm.Gravado) as Gravado,dm.fecha , inv.Existencias as 'Ex'
+                from detallemovimiento dm inner join producto p on dm.idProducto = p.idProducto inner join inventario inv on
+                inv.idProducto = p.idProducto group by dm.idProducto having (dm.Fecha >= '" + FechaI + "' && dm.Fecha <= '" + FechaF + "') order by sum(dm.CantitadSalida) desc limit 10;";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+  
+        
+        public static DataTable SQL_CARDEX_PORPRODUCTO(int idProducto)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @" select dm.SubTotal as Gravado,ifnull(dm.CantidadEntrada, '----------')  as Entradas, ifnull(dm.CantitadSalida,
+                '----------') as Salidas, dm.Precio as Precio, dm.Fecha,
+                mov.Transaccion, mov.numComprobante as Correlativo , p.nombre as producto , p.codigo
+                from detallemovimiento dm inner join producto p on dm.idProducto = p.idProducto inner join Movimientos mov on mov.idMovimiento = dm.idMovimiento 
+                where p.idProducto='" + idProducto + "' and mov.Transaccion = 'Venta' or p.idProducto=14 and mov.Transaccion = 'Compra'; ";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+    
     }
 
    
