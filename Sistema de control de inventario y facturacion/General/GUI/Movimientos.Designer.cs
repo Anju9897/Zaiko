@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblComprobante = new System.Windows.Forms.Label();
+            this.cbbComprobante = new System.Windows.Forms.ComboBox();
             this.btnEmitirCotizacion = new System.Windows.Forms.Button();
             this.lblfiltro3 = new System.Windows.Forms.Label();
             this.cbbTransaccion = new System.Windows.Forms.ComboBox();
@@ -43,21 +45,6 @@
             this.dtgFecha2 = new System.Windows.Forms.DateTimePicker();
             this.dtgFecha1 = new System.Windows.Forms.DateTimePicker();
             this.dtgMovimiento = new System.Windows.Forms.DataGridView();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btneditar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnEditarProductos = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnAgregar = new System.Windows.Forms.ToolStripButton();
-            this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.dtsCompras1 = new Reportes.DAT.dtsCompras();
-            this.lblComprobante = new System.Windows.Forms.Label();
-            this.cbbComprobante = new System.Windows.Forms.ComboBox();
             this.idmovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDPERSONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +62,19 @@
             this.banco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.propietariocuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ncuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btneditar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnEditarProductos = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAgregar = new System.Windows.Forms.ToolStripButton();
+            this.txbFiltro = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.dtsCompras1 = new Reportes.DAT.dtsCompras();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -119,6 +119,32 @@
             this.splitContainer1.SplitterDistance = 179;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // lblComprobante
+            // 
+            this.lblComprobante.AutoSize = true;
+            this.lblComprobante.BackColor = System.Drawing.Color.Transparent;
+            this.lblComprobante.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComprobante.Location = new System.Drawing.Point(24, 346);
+            this.lblComprobante.Name = "lblComprobante";
+            this.lblComprobante.Size = new System.Drawing.Size(148, 21);
+            this.lblComprobante.TabIndex = 11;
+            this.lblComprobante.Text = "T. Comprobante";
+            // 
+            // cbbComprobante
+            // 
+            this.cbbComprobante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbComprobante.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbComprobante.FormattingEnabled = true;
+            this.cbbComprobante.Items.AddRange(new object[] {
+            "Todos",
+            "Factura Consumidor Final",
+            "Comprobante de Credito Fiscal"});
+            this.cbbComprobante.Location = new System.Drawing.Point(25, 370);
+            this.cbbComprobante.Name = "cbbComprobante";
+            this.cbbComprobante.Size = new System.Drawing.Size(143, 28);
+            this.cbbComprobante.TabIndex = 10;
+            this.cbbComprobante.SelectedIndexChanged += new System.EventHandler(this.cbbComprobante_SelectedIndexChanged);
             // 
             // btnEmitirCotizacion
             // 
@@ -280,164 +306,9 @@
             this.dtgMovimiento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgMovimiento.Size = new System.Drawing.Size(1436, 676);
             this.dtgMovimiento.TabIndex = 1;
+            this.dtgMovimiento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMovimiento_CellContentClick);
             this.dtgMovimiento.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgMovimiento_CellMouseDoubleClick);
             this.dtgMovimiento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgMovimiento_KeyDown);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.statusStrip1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblRegistros});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 704);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1436, 26);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.TabStop = true;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // lblRegistros
-            // 
-            this.lblRegistros.ForeColor = System.Drawing.Color.White;
-            this.lblRegistros.Name = "lblRegistros";
-            this.lblRegistros.Size = new System.Drawing.Size(206, 21);
-            this.lblRegistros.Text = "0 Registros Encontrados";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnEliminar,
-            this.toolStripSeparator1,
-            this.btneditar,
-            this.toolStripSeparator2,
-            this.btnEditarProductos,
-            this.toolStripSeparator3,
-            this.btnAgregar,
-            this.txbFiltro,
-            this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1436, 28);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.AutoSize = false;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(94, 25);
-            this.btnEliminar.Text = "Anular";
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
-            // 
-            // btneditar
-            // 
-            this.btneditar.AutoSize = false;
-            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
-            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneditar.ForeColor = System.Drawing.Color.White;
-            this.btneditar.Image = ((System.Drawing.Image)(resources.GetObject("btneditar.Image")));
-            this.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(150, 25);
-            this.btneditar.Text = "Editar Cliente";
-            this.btneditar.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
-            // 
-            // btnEditarProductos
-            // 
-            this.btnEditarProductos.AutoSize = false;
-            this.btnEditarProductos.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarProductos.ForeColor = System.Drawing.Color.White;
-            this.btnEditarProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarProductos.Image")));
-            this.btnEditarProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEditarProductos.Name = "btnEditarProductos";
-            this.btnEditarProductos.Size = new System.Drawing.Size(200, 25);
-            this.btnEditarProductos.Text = "Editar Movimientos";
-            this.btnEditarProductos.Click += new System.EventHandler(this.transaccionToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.AutoSize = false;
-            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(102, 25);
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // txbFiltro
-            // 
-            this.txbFiltro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.txbFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFiltro.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbFiltro.Name = "txbFiltro";
-            this.txbFiltro.Size = new System.Drawing.Size(250, 28);
-            this.txbFiltro.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txbFiltro.TextChanged += new System.EventHandler(this.txbFiltro_TextChanged);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(107, 25);
-            this.toolStripLabel1.Text = "Filtrar (F1)";
-            // 
-            // dtsCompras1
-            // 
-            this.dtsCompras1.DataSetName = "dtsCompras";
-            this.dtsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lblComprobante
-            // 
-            this.lblComprobante.AutoSize = true;
-            this.lblComprobante.BackColor = System.Drawing.Color.Transparent;
-            this.lblComprobante.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComprobante.Location = new System.Drawing.Point(24, 346);
-            this.lblComprobante.Name = "lblComprobante";
-            this.lblComprobante.Size = new System.Drawing.Size(148, 21);
-            this.lblComprobante.TabIndex = 11;
-            this.lblComprobante.Text = "T. Comprobante";
-            // 
-            // cbbComprobante
-            // 
-            this.cbbComprobante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbComprobante.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbComprobante.FormattingEnabled = true;
-            this.cbbComprobante.Items.AddRange(new object[] {
-            "Todos",
-            "Factura Consumidor Final",
-            "Comprobante de Credito Fiscal"});
-            this.cbbComprobante.Location = new System.Drawing.Point(25, 370);
-            this.cbbComprobante.Name = "cbbComprobante";
-            this.cbbComprobante.Size = new System.Drawing.Size(143, 28);
-            this.cbbComprobante.TabIndex = 10;
-            this.cbbComprobante.SelectedIndexChanged += new System.EventHandler(this.cbbComprobante_SelectedIndexChanged);
             // 
             // idmovimiento
             // 
@@ -568,6 +439,136 @@
             this.ncuenta.Name = "ncuenta";
             this.ncuenta.ReadOnly = true;
             this.ncuenta.Visible = false;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.statusStrip1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblRegistros});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 704);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1436, 26);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.TabStop = true;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblRegistros
+            // 
+            this.lblRegistros.ForeColor = System.Drawing.Color.White;
+            this.lblRegistros.Name = "lblRegistros";
+            this.lblRegistros.Size = new System.Drawing.Size(206, 21);
+            this.lblRegistros.Text = "0 Registros Encontrados";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnEliminar,
+            this.toolStripSeparator1,
+            this.btneditar,
+            this.toolStripSeparator2,
+            this.btnEditarProductos,
+            this.toolStripSeparator3,
+            this.btnAgregar,
+            this.txbFiltro,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1436, 28);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.AutoSize = false;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(94, 25);
+            this.btnEliminar.Text = "Anular";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            // 
+            // btneditar
+            // 
+            this.btneditar.AutoSize = false;
+            this.btneditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.btneditar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.ForeColor = System.Drawing.Color.White;
+            this.btneditar.Image = ((System.Drawing.Image)(resources.GetObject("btneditar.Image")));
+            this.btneditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(150, 25);
+            this.btneditar.Text = "Editar Cliente";
+            this.btneditar.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
+            // 
+            // btnEditarProductos
+            // 
+            this.btnEditarProductos.AutoSize = false;
+            this.btnEditarProductos.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarProductos.ForeColor = System.Drawing.Color.White;
+            this.btnEditarProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarProductos.Image")));
+            this.btnEditarProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditarProductos.Name = "btnEditarProductos";
+            this.btnEditarProductos.Size = new System.Drawing.Size(200, 25);
+            this.btnEditarProductos.Text = "Editar Movimientos";
+            this.btnEditarProductos.Click += new System.EventHandler(this.transaccionToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.AutoSize = false;
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(102, 25);
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txbFiltro
+            // 
+            this.txbFiltro.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.txbFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFiltro.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbFiltro.Name = "txbFiltro";
+            this.txbFiltro.Size = new System.Drawing.Size(250, 28);
+            this.txbFiltro.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbFiltro.TextChanged += new System.EventHandler(this.txbFiltro_TextChanged);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
+            this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(107, 25);
+            this.toolStripLabel1.Text = "Filtrar (F1)";
+            // 
+            // dtsCompras1
+            // 
+            this.dtsCompras1.DataSetName = "dtsCompras";
+            this.dtsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Movimientos
             // 

@@ -580,5 +580,60 @@ namespace CacheManager.CLS
 
             return Resultado.Rows[0];
         }
+        public static DataTable SQL_CONSUMIDOR_FINAL(int idMovi)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"select mov.TipoComprobante, mov.total, DAY( mov.fecha) as dia ,MONTH(mov.fecha) as mes ,YEAR(mov.fecha) as anio,
+                concat(ifnull(per.nombres,''),' ',ifnull(per.apellidos,'')) as cliente,ifnull(per.DUI,''), ifnull(per.direccion,''),
+                dm.CantitadSalida,dm.Precio,dm.SubTotal,
+                p.nombre
+                from detallemovimiento dm
+                inner join Movimientos mov on dm.idMovimiento=mov.idMovimiento
+                inner join producto p on p.idProducto = dm.idProducto
+                inner join personas per on per.idPersonas = mov.idpersona where dm.idMovimiento = '" + idMovi + "' order by iddetalle asc;";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+
+        public static DataTable SQL_CREDITO_FISCAL(int idMovi)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"select mov.TipoComprobante, mov.subtotal,mov.IvaTotal,mov.condPago,mov.total, DAY( mov.fecha) as dia ,MONTH(mov.fecha) as mes ,YEAR(mov.fecha) as anio,
+                concat(ifnull(per.nombres,''),' ',ifnull(per.apellidos,'')) as cliente ,ifnull(per.NIT,'') AS NIT,ifnull(per.NRC,'') AS NRC, ifnull(per.Giro,'') as Giro,ifnull(per.direccion,'') as Direccion,
+                dm.CantitadSalida,dm.Precio,dm.gravado,
+                p.nombre
+                from detallemovimiento dm
+                inner join Movimientos mov on dm.idMovimiento=mov.idMovimiento
+                inner join producto p on p.idProducto = dm.idProducto
+                inner join personas per on per.idPersonas = mov.idpersona where dm.idMovimiento = '" + idMovi + "' order by iddetalle asc;";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
     }
+
+   
 }
