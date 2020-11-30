@@ -204,6 +204,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reporte_Cardex_Prodicto.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="REP\VentaConsumidorFinal.cs">
       <AutoGen>True</AutoGen>
