@@ -94,10 +94,3 @@ C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventari
 C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
 C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
 C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\CaheManager.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\bin\Debug\DataManager.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\CaheManager\obj\Debug\CaheManager.pdb

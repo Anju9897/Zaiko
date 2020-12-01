@@ -315,6 +315,7 @@ namespace General.GUI
                     if (oDevolucion.eliminar_devolucion_venta())
                     {
                         CargarDevoluciones();
+                        LimpiarCampos();
                     }
                 }
             }

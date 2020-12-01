@@ -30,12 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Devoluciones_Compras));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Devoluciones_Compras));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dtgDetallesCompras = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.botones = new System.Windows.Forms.ToolStrip();
+            this.lblIDDEVCOMPRAS = new System.Windows.Forms.ToolStripLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.lblIDDevolucion = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,6 +56,14 @@
             this.txbProducto = new System.Windows.Forms.TextBox();
             this.txbIDDetalle = new System.Windows.Forms.TextBox();
             this.dtgDevoluciones = new System.Windows.Forms.DataGridView();
+            this.tsDocumento = new System.Windows.Forms.ToolStripLabel();
+            this.TipoNota = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnEliminarDev = new System.Windows.Forms.ToolStripButton();
+            this.btnFinDev = new System.Windows.Forms.ToolStripButton();
+            this.btnEditarDev = new System.Windows.Forms.ToolStripButton();
             this.iddevolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idm = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,25 +74,24 @@
             this.Gravado_Dev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IVA_DEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal_DEV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblIDDEVCOMPRAS = new System.Windows.Forms.ToolStripLabel();
-            this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gravado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iddetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetallesCompras)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.botones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -102,7 +110,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.dtgDetallesCompras);
-            this.splitContainer1.Panel1.Controls.Add(this.toolStrip1);
+            this.splitContainer1.Panel1.Controls.Add(this.botones);
             // 
             // splitContainer1.Panel2
             // 
@@ -122,17 +130,17 @@
             this.dtgDetallesCompras.BackgroundColor = System.Drawing.Color.White;
             this.dtgDetallesCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDetallesCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iddetalle,
-            this.inventario,
-            this.idp,
-            this.exi,
-            this.Producto,
-            this.Costo,
             this.CantidadEntrada,
+            this.Producto,
             this.unidades,
+            this.Costo,
             this.gravado,
             this.montoiva,
             this.subtotal,
+            this.inventario,
+            this.idp,
+            this.exi,
+            this.iddetalle,
             this.fecha});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -143,26 +151,44 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgDetallesCompras.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgDetallesCompras.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgDetallesCompras.Location = new System.Drawing.Point(0, 25);
+            this.dtgDetallesCompras.Location = new System.Drawing.Point(0, 28);
+            this.dtgDetallesCompras.MultiSelect = false;
             this.dtgDetallesCompras.Name = "dtgDetallesCompras";
             this.dtgDetallesCompras.ReadOnly = true;
             this.dtgDetallesCompras.RowHeadersVisible = false;
             this.dtgDetallesCompras.RowTemplate.Height = 24;
             this.dtgDetallesCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDetallesCompras.Size = new System.Drawing.Size(964, 218);
+            this.dtgDetallesCompras.Size = new System.Drawing.Size(964, 215);
             this.dtgDetallesCompras.TabIndex = 1;
             this.dtgDetallesCompras.DoubleClick += new System.EventHandler(this.dtgDetallesCompras_DoubleClick);
             // 
-            // toolStrip1
+            // botones
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblIDDEVCOMPRAS});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(964, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.botones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.botones.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botones.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.botones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblIDDEVCOMPRAS,
+            this.toolStripSeparator1,
+            this.tsDocumento,
+            this.toolStripSeparator2,
+            this.TipoNota,
+            this.toolStripSeparator3,
+            this.btnEliminarDev,
+            this.btnFinDev,
+            this.btnEditarDev});
+            this.botones.Location = new System.Drawing.Point(0, 0);
+            this.botones.Name = "botones";
+            this.botones.Size = new System.Drawing.Size(964, 28);
+            this.botones.TabIndex = 0;
+            this.botones.Text = "toolStrip1";
+            // 
+            // lblIDDEVCOMPRAS
+            // 
+            this.lblIDDEVCOMPRAS.Name = "lblIDDEVCOMPRAS";
+            this.lblIDDEVCOMPRAS.Size = new System.Drawing.Size(0, 25);
+            this.lblIDDEVCOMPRAS.Visible = false;
+            this.lblIDDEVCOMPRAS.TextChanged += new System.EventHandler(this.lblIDDEVCOMPRAS_TextChanged);
             // 
             // splitContainer2
             // 
@@ -338,6 +364,8 @@
             this.txbCantidad.Size = new System.Drawing.Size(153, 26);
             this.txbCantidad.TabIndex = 38;
             this.txbCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbCantidad.TextChanged += new System.EventHandler(this.txbCantidad_TextChanged_1);
+            this.txbCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbCantidad_KeyDown_1);
             // 
             // label2
             // 
@@ -414,12 +442,76 @@
             this.dtgDevoluciones.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgDevoluciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgDevoluciones.Location = new System.Drawing.Point(0, 0);
+            this.dtgDevoluciones.MultiSelect = false;
             this.dtgDevoluciones.Name = "dtgDevoluciones";
             this.dtgDevoluciones.ReadOnly = true;
+            this.dtgDevoluciones.RowHeadersVisible = false;
             this.dtgDevoluciones.RowTemplate.Height = 24;
             this.dtgDevoluciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgDevoluciones.Size = new System.Drawing.Size(964, 279);
             this.dtgDevoluciones.TabIndex = 2;
+            this.dtgDevoluciones.DoubleClick += new System.EventHandler(this.dtgDevoluciones_DoubleClick);
+            this.dtgDevoluciones.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgDevoluciones_KeyDown);
+            // 
+            // tsDocumento
+            // 
+            this.tsDocumento.ForeColor = System.Drawing.Color.White;
+            this.tsDocumento.Name = "tsDocumento";
+            this.tsDocumento.Size = new System.Drawing.Size(126, 25);
+            this.tsDocumento.Text = "DOCUMENTO";
+            this.tsDocumento.Visible = false;
+            // 
+            // TipoNota
+            // 
+            this.TipoNota.ForeColor = System.Drawing.Color.White;
+            this.TipoNota.Name = "TipoNota";
+            this.TipoNota.Size = new System.Drawing.Size(84, 25);
+            this.TipoNota.Text = "CREDITO";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            // 
+            // btnEliminarDev
+            // 
+            this.btnEliminarDev.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarDev.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarDev.Image")));
+            this.btnEliminarDev.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminarDev.Name = "btnEliminarDev";
+            this.btnEliminarDev.Size = new System.Drawing.Size(220, 25);
+            this.btnEliminarDev.Text = "Eliminar Devolucion (X)";
+            this.btnEliminarDev.Click += new System.EventHandler(this.btnEliminarDev_Click);
+            // 
+            // btnFinDev
+            // 
+            this.btnFinDev.ForeColor = System.Drawing.Color.White;
+            this.btnFinDev.Image = ((System.Drawing.Image)(resources.GetObject("btnFinDev.Image")));
+            this.btnFinDev.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFinDev.Name = "btnFinDev";
+            this.btnFinDev.Size = new System.Drawing.Size(230, 25);
+            this.btnFinDev.Text = "Finalizar Devolucion (F1)";
+            this.btnFinDev.Click += new System.EventHandler(this.btnFinDev_Click);
+            // 
+            // btnEditarDev
+            // 
+            this.btnEditarDev.ForeColor = System.Drawing.Color.White;
+            this.btnEditarDev.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarDev.Image")));
+            this.btnEditarDev.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditarDev.Name = "btnEditarDev";
+            this.btnEditarDev.Size = new System.Drawing.Size(207, 25);
+            this.btnEditarDev.Text = "Editar Devolucion (E)";
+            this.btnEditarDev.Click += new System.EventHandler(this.btnEditarDev_Click);
             // 
             // iddevolucion
             // 
@@ -427,6 +519,7 @@
             this.iddevolucion.HeaderText = "ID";
             this.iddevolucion.Name = "iddevolucion";
             this.iddevolucion.ReadOnly = true;
+            this.iddevolucion.Visible = false;
             // 
             // idd
             // 
@@ -434,6 +527,7 @@
             this.idd.HeaderText = "Detalle";
             this.idd.Name = "idd";
             this.idd.ReadOnly = true;
+            this.idd.Visible = false;
             // 
             // idm
             // 
@@ -441,6 +535,7 @@
             this.idm.HeaderText = "idmovimiento";
             this.idm.Name = "idm";
             this.idm.ReadOnly = true;
+            this.idm.Visible = false;
             // 
             // Fecha_dev
             // 
@@ -448,6 +543,7 @@
             this.Fecha_dev.HeaderText = "Fecha_Dev";
             this.Fecha_dev.Name = "Fecha_dev";
             this.Fecha_dev.ReadOnly = true;
+            this.Fecha_dev.Visible = false;
             // 
             // Producto_Dev
             // 
@@ -492,18 +588,55 @@
             this.Subtotal_DEV.Name = "Subtotal_DEV";
             this.Subtotal_DEV.ReadOnly = true;
             // 
-            // lblIDDEVCOMPRAS
+            // CantidadEntrada
             // 
-            this.lblIDDEVCOMPRAS.Name = "lblIDDEVCOMPRAS";
-            this.lblIDDEVCOMPRAS.Size = new System.Drawing.Size(0, 22);
-            this.lblIDDEVCOMPRAS.TextChanged += new System.EventHandler(this.lblIDDEVCOMPRAS_TextChanged);
+            this.CantidadEntrada.DataPropertyName = "CantidadEntrada";
+            this.CantidadEntrada.HeaderText = "U. Entrada";
+            this.CantidadEntrada.Name = "CantidadEntrada";
+            this.CantidadEntrada.ReadOnly = true;
             // 
-            // iddetalle
+            // Producto
             // 
-            this.iddetalle.DataPropertyName = "iddetalle";
-            this.iddetalle.HeaderText = "ID";
-            this.iddetalle.Name = "iddetalle";
-            this.iddetalle.ReadOnly = true;
+            this.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Producto.DataPropertyName = "Producto";
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            // 
+            // unidades
+            // 
+            this.unidades.DataPropertyName = "unidades";
+            this.unidades.HeaderText = "Unidad";
+            this.unidades.Name = "unidades";
+            this.unidades.ReadOnly = true;
+            // 
+            // Costo
+            // 
+            this.Costo.DataPropertyName = "Costo";
+            this.Costo.HeaderText = "Costo";
+            this.Costo.Name = "Costo";
+            this.Costo.ReadOnly = true;
+            // 
+            // gravado
+            // 
+            this.gravado.DataPropertyName = "gravado";
+            this.gravado.HeaderText = "Gravado";
+            this.gravado.Name = "gravado";
+            this.gravado.ReadOnly = true;
+            // 
+            // montoiva
+            // 
+            this.montoiva.DataPropertyName = "montoiva";
+            this.montoiva.HeaderText = "IVA";
+            this.montoiva.Name = "montoiva";
+            this.montoiva.ReadOnly = true;
+            // 
+            // subtotal
+            // 
+            this.subtotal.DataPropertyName = "subtotal";
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
             // 
             // inventario
             // 
@@ -529,55 +662,13 @@
             this.exi.ReadOnly = true;
             this.exi.Visible = false;
             // 
-            // Producto
+            // iddetalle
             // 
-            this.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Producto.DataPropertyName = "Producto";
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            // 
-            // Costo
-            // 
-            this.Costo.DataPropertyName = "Costo";
-            this.Costo.HeaderText = "Costo";
-            this.Costo.Name = "Costo";
-            this.Costo.ReadOnly = true;
-            // 
-            // CantidadEntrada
-            // 
-            this.CantidadEntrada.DataPropertyName = "CantidadEntrada";
-            this.CantidadEntrada.HeaderText = "U. Entrada";
-            this.CantidadEntrada.Name = "CantidadEntrada";
-            this.CantidadEntrada.ReadOnly = true;
-            // 
-            // unidades
-            // 
-            this.unidades.DataPropertyName = "unidades";
-            this.unidades.HeaderText = "Unidad";
-            this.unidades.Name = "unidades";
-            this.unidades.ReadOnly = true;
-            // 
-            // gravado
-            // 
-            this.gravado.DataPropertyName = "gravado";
-            this.gravado.HeaderText = "Gravado";
-            this.gravado.Name = "gravado";
-            this.gravado.ReadOnly = true;
-            // 
-            // montoiva
-            // 
-            this.montoiva.DataPropertyName = "montoiva";
-            this.montoiva.HeaderText = "IVA";
-            this.montoiva.Name = "montoiva";
-            this.montoiva.ReadOnly = true;
-            // 
-            // subtotal
-            // 
-            this.subtotal.DataPropertyName = "subtotal";
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
+            this.iddetalle.DataPropertyName = "iddetalle";
+            this.iddetalle.HeaderText = "ID";
+            this.iddetalle.Name = "iddetalle";
+            this.iddetalle.ReadOnly = true;
+            this.iddetalle.Visible = false;
             // 
             // fecha
             // 
@@ -585,6 +676,7 @@
             this.fecha.HeaderText = "fecha";
             this.fecha.Name = "fecha";
             this.fecha.ReadOnly = true;
+            this.fecha.Visible = false;
             // 
             // Devoluciones_Compras
             // 
@@ -598,14 +690,15 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Devoluciones_Compras";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Devoluciones_Compras_FormClosing);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetallesCompras)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.botones.ResumeLayout(false);
+            this.botones.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
@@ -619,10 +712,7 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataGridView dtgDetallesCompras;
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.DataGridView dtgDevoluciones;
         private System.Windows.Forms.Label lblIDDevolucion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -640,6 +730,27 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbProducto;
         private System.Windows.Forms.TextBox txbIDDetalle;
+        public System.Windows.Forms.ToolStripLabel lblIDDEVCOMPRAS;
+        public System.Windows.Forms.ToolStripLabel tsDocumento;
+        private System.Windows.Forms.ToolStripLabel TipoNota;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btnEliminarDev;
+        private System.Windows.Forms.ToolStripButton btnFinDev;
+        private System.Windows.Forms.ToolStripButton btnEditarDev;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadEntrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unidades;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gravado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn montoiva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inventario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddevolucion;
         private System.Windows.Forms.DataGridViewTextBoxColumn idd;
         private System.Windows.Forms.DataGridViewTextBoxColumn idm;
@@ -650,18 +761,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Gravado_Dev;
         private System.Windows.Forms.DataGridViewTextBoxColumn IVA_DEV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal_DEV;
-        public System.Windows.Forms.ToolStripLabel lblIDDEVCOMPRAS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iddetalle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadEntrada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unidades;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gravado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn montoiva;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        public System.Windows.Forms.DataGridView dtgDetallesCompras;
+        public System.Windows.Forms.ToolStrip botones;
+        public System.Windows.Forms.DataGridView dtgDevoluciones;
     }
 }

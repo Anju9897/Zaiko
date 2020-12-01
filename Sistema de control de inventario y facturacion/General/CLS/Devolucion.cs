@@ -139,7 +139,8 @@ namespace General.CLS
                 Sentencia += "'" + CSalida + "',";
                 Sentencia += "'" + Gravado1 + "',";
                 Sentencia += "'" + IVA1 + "',";
-                Sentencia += "'" + Subtotal1 + "')";
+                Sentencia += "'" + Subtotal1 + "',";
+                Sentencia += "'" + Iddetalle + "')";
                 if (Operacion.Insertar(Sentencia) > 0)
                 {
                     MessageBox.Show("Devolucion registrada con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -216,6 +217,43 @@ namespace General.CLS
             catch
             {
                 MessageBox.Show("Error al eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Guardado = false;
+            }
+            return Guardado;
+        }
+
+        public Boolean Actualizar_devolucion_compra()
+        {
+            Boolean Guardado = false;
+            String Sentencia;
+            DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
+            try
+            {
+                Sentencia = @"Update devoluciones set ";
+                Sentencia += "idmovimiento='" + Idmovimiento + "',";
+                Sentencia += "fecha='" + Fecha + "',";
+                Sentencia += "tiponota='" + tipoNota + "',";
+                Sentencia += "Costo=" + Costo1 + ",";
+                Sentencia += "cSalida=" + CSalida + ",";
+                Sentencia += "Gravado=" + Gravado1 + ",";
+                Sentencia += "IVA=" + IVA1 + ",";
+                Sentencia += "subtotal=" + Subtotal1 + ",";
+                Sentencia += "iddetalle=" + Iddetalle + " where iddevolucion = '"+ iddevolucion +"';";
+                if (Operacion.Insertar(Sentencia) > 0)
+                {
+                    MessageBox.Show("Devolucion registrada con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Guardado = true;
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo realizar el registro de la devolucion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Guardado = false;
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al insertar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Guardado = false;
             }
             return Guardado;

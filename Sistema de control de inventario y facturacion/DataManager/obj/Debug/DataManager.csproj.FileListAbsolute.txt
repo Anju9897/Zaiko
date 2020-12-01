@@ -54,8 +54,3 @@ C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inve
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
-C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache

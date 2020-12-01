@@ -143,7 +143,6 @@ namespace General.GUI
             
         }
 
-
         private void Movimientos_Load(object sender, EventArgs e)
         {
         }
@@ -195,15 +194,49 @@ namespace General.GUI
                 {
                     try
                     {
+
+                        String idmovimiento = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
+                        String idmovDev = obtenerIDMovimientoDevolucion(idmovimiento);
                         Devoluciones_Compras f = new Devoluciones_Compras();
-                        f.lblIDDEVCOMPRAS.Text = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
-                        f.ShowDialog();
+                        f.lblIDDEVCOMPRAS.Text = idmovimiento;                        
+                        f.tsDocumento.Text = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
+
+                        if (idmovimiento.Equals(idmovDev))
+                        {
+                            if (MessageBox.Show("Ya hay una devolucion concluida de este documento, podra ingresar pero solo podra visualizar los datos pero no modificarlos.\nAun asi, ¿desea continuar?", "Aviso de devolucion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                            {
+                                f.dtgDetallesCompras.Enabled = false;
+                                f.dtgDevoluciones.Enabled = false;
+                                f.botones.Enabled = false;
+                                f.txbCantidad.Enabled = false;
+                                f.ShowDialog();
+                            }
+                        }
+                        else
+                        {
+                            f.ShowDialog();
+                        }
                     }
                     catch
                     {
                     }
                 }
             }
+        }
+
+        private string obtenerIDMovimientoDevolucion(string idmovimiento)
+        {
+            String idDevolucionMov = "";
+            try
+            {
+                idDevolucionMov = CacheManager.CLS.Cache.OBTENER_ID_MOVIMIENTO_PARA_VERIFICAR_SI_EXISTE_DEVOLUCION(idmovimiento)["idmov"].ToString();
+            }
+            catch
+            {
+                idDevolucionMov = "";
+            }
+
+            return idDevolucionMov;
         }
 
     }
