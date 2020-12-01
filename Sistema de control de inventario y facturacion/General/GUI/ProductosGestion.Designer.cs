@@ -55,6 +55,7 @@
             this.Existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kardex = new System.Windows.Forms.DataGridViewImageColumn();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
@@ -198,7 +199,8 @@
             this.mnombre,
             this.Existencias,
             this.PrecioUnitario,
-            this.Unidad});
+            this.Unidad,
+            this.Kardex});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,6 +223,8 @@
             this.dtgProductos.Size = new System.Drawing.Size(991, 401);
             this.dtgProductos.TabIndex = 2;
             this.dtgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellContentClick);
+            this.dtgProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellContentDoubleClick);
+            this.dtgProductos.DoubleClick += new System.EventHandler(this.dtgProductos_DoubleClick);
             this.dtgProductos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgProductos_KeyDown);
             // 
             // idproducto
@@ -299,6 +303,14 @@
             this.Unidad.Name = "Unidad";
             this.Unidad.ReadOnly = true;
             // 
+            // Kardex
+            // 
+            this.Kardex.DataPropertyName = "Kardex";
+            this.Kardex.HeaderText = "Kardex";
+            this.Kardex.Image = ((System.Drawing.Image)(resources.GetObject("Kardex.Image")));
+            this.Kardex.Name = "Kardex";
+            this.Kardex.ReadOnly = true;
+            // 
             // ProductosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -347,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Existencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
+        private System.Windows.Forms.DataGridViewImageColumn Kardex;
     }
 }

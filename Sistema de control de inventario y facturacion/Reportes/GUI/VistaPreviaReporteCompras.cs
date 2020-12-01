@@ -58,7 +58,7 @@ namespace Reportes.GUI
                         _SaveConsulta = CacheManager.CLS.Cache.VentaCreditoFiscal(dtpInicial.Text, dtpFinal.Text);
                         oReporte.SetDataSource(_SaveConsulta);
                         crvCompras.ReportSource = oReporte;
-                        oReporte.SetParameterValue("FA", DateTime.Now.ToString("yyy-MM-dd"));
+                        oReporte.SetParameterValue("FA", DateTime.Now.ToString("yyyy-MM-dd"));
                         oReporte.SetParameterValue("pFechaInicial", dtpInicial.Text);
                         oReporte.SetParameterValue("pFechaFinal", dtpFinal.Text);
                         Show();
@@ -70,7 +70,7 @@ namespace Reportes.GUI
                         _SaveConsulta = CacheManager.CLS.Cache.VentaConsumidorFinal(dtpInicial.Text, dtpFinal.Text);
                         oReporte.SetDataSource(_SaveConsulta);
                         crvCompras.ReportSource = oReporte;
-                        oReporte.SetParameterValue("FA", DateTime.Now.ToString("yyy-MM-dd"));
+                        oReporte.SetParameterValue("FA", DateTime.Now.ToString("yyyy-MM-dd"));
                         oReporte.SetParameterValue("pFechaInicial", dtpInicial.Text);
                         oReporte.SetParameterValue("pFechaFinal", dtpFinal.Text);
                         Show();
@@ -85,10 +85,23 @@ namespace Reportes.GUI
                     _SaveConsulta = CacheManager.CLS.Cache.CompraCreditoFiscal(dtpInicial.Text, dtpFinal.Text);
                     oReporte.SetDataSource(_SaveConsulta);
                     crvCompras.ReportSource = oReporte;
-                    oReporte.SetParameterValue("FA", DateTime.Now.ToString("yyy-MM-dd"));
+                    oReporte.SetParameterValue("FA", DateTime.Now.ToString("yyyy-MM-dd"));
                     oReporte.SetParameterValue("pFechaInicial", dtpInicial.Text);
                     oReporte.SetParameterValue("pFechaFinal", dtpFinal.Text);
                     Show();
+                }
+                else if (cbbTipoReporte.Text.Equals("Productos mas Vendidos"))
+                {
+                    REP.ReporteProductosMasVendidos oReporte = new REP.ReporteProductosMasVendidos();
+
+                    _SaveConsulta = CacheManager.CLS.Cache.SQL_PRODUCTOS_MAS_VENDIDOS(dtpInicial.Text, dtpFinal.Text);
+                    oReporte.SetDataSource(_SaveConsulta);
+                    crvCompras.ReportSource = oReporte;
+                   //oReporte.SetParameterValue("FA", DateTime.Now.ToString("yyyy-MM-dd"));
+                   oReporte.SetParameterValue("pFechaInicial", dtpInicial.Text);
+                   oReporte.SetParameterValue("pFechaFinal", dtpFinal.Text);
+                    Show();
+                   
                 }
             }
             catch
@@ -120,6 +133,11 @@ namespace Reportes.GUI
         }
 
         private void crvCompras_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

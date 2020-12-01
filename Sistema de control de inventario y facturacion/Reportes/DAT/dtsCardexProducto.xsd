@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsCardexProducto" targetNamespace="http://tempuri.org/dtsCardexProducto.xsd" xmlns:mstns="http://tempuri.org/dtsCardexProducto.xsd" xmlns="http://tempuri.org/dtsCardexProducto.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsCardexProducto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsCardexProducto" msprop:Generator_UserDSName="dtsCardexProducto">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cardexP" msprop:Generator_TableClassName="cardexPDataTable" msprop:Generator_TableVarName="tablecardexP" msprop:Generator_RowChangedName="cardexPRowChanged" msprop:Generator_TablePropName="cardexP" msprop:Generator_RowDeletingName="cardexPRowDeleting" msprop:Generator_RowChangingName="cardexPRowChanging" msprop:Generator_RowEvHandlerName="cardexPRowChangeEventHandler" msprop:Generator_RowDeletedName="cardexPRowDeleted" msprop:Generator_RowClassName="cardexPRow" msprop:Generator_UserTableName="cardexP" msprop:Generator_RowEvArgName="cardexPRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Gravado" msprop:Generator_ColumnVarNameInTable="columnGravado" msprop:Generator_ColumnPropNameInRow="Gravado" msprop:Generator_ColumnPropNameInTable="GravadoColumn" msprop:Generator_UserColumnName="Gravado" type="xs:double" minOccurs="0" />
+              <xs:element name="Entradas" msdata:Caption="Gravado" msprop:Generator_ColumnVarNameInTable="columnEntradas" msprop:Generator_ColumnPropNameInRow="Entradas" msprop:Generator_ColumnPropNameInTable="EntradasColumn" msprop:Generator_UserColumnName="Entradas" type="xs:double" minOccurs="0" />
+              <xs:element name="Salidas" msdata:Caption="Gravado" msprop:Generator_ColumnVarNameInTable="columnSalidas" msprop:Generator_ColumnPropNameInRow="Salidas" msprop:Generator_ColumnPropNameInTable="SalidasColumn" msprop:Generator_UserColumnName="Salidas" type="xs:double" minOccurs="0" />
+              <xs:element name="Costo" msdata:Caption="Gravado" msprop:Generator_ColumnVarNameInTable="columnCosto" msprop:Generator_ColumnPropNameInRow="Costo" msprop:Generator_ColumnPropNameInTable="CostoColumn" msprop:Generator_UserColumnName="Costo" type="xs:double" minOccurs="0" />
+              <xs:element name="Precio" msdata:Caption="Gravado" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_UserColumnName="Precio" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msdata:Caption="Gravado" msdata:DateTimeMode="Local" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Transaccion" msdata:Caption="Gravado" msprop:Generator_ColumnVarNameInTable="columnTransaccion" msprop:Generator_ColumnPropNameInRow="Transaccion" msprop:Generator_ColumnPropNameInTable="TransaccionColumn" msprop:Generator_UserColumnName="Transaccion" type="xs:string" minOccurs="0" />
+              <xs:element name="Correlativo" msdata:Caption="Gravado" msprop:Generator_ColumnVarNameInTable="columnCorrelativo" msprop:Generator_ColumnPropNameInRow="Correlativo" msprop:Generator_ColumnPropNameInTable="CorrelativoColumn" msprop:Generator_UserColumnName="Correlativo" type="xs:string" minOccurs="0" />
+              <xs:element name="Producto" msdata:Caption="Gravado" msprop:Generator_ColumnVarNameInTable="columnProducto" msprop:Generator_ColumnPropNameInRow="Producto" msprop:Generator_ColumnPropNameInTable="ProductoColumn" msprop:Generator_UserColumnName="Producto" type="xs:string" minOccurs="0" />
+              <xs:element name="Codigo" msdata:Caption="Gravado" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

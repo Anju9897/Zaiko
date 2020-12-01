@@ -212,7 +212,7 @@ namespace CacheManager.CLS
                                 ifnull(m.subtotal,'0.00') as 'Subtotal',
                                 ifnull(m.IVATOTAL,'0.00') as 'IVATOTAL',
                                 ifnull(m.TOTAL,'0.00') as 'total',m.transaccion
-                                from movimientos m inner join personas p on p.idpersonas = m.idpersona where Transaccion='"+ pTransaccion +"';";
+                                from movimientos m inner join personas p on p.idpersonas = m.idpersona where Transaccion='"+ pTransaccion +"' order by m.idmovimiento asc;";
                 Resultado = oConsulta.Consultar(Consulta);
             }
             catch
@@ -473,7 +473,6 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
-
         public static DataTable OBTENER_ELEMENTOS_DETALLEMOV_POR_IDMOV(string idMov)
         {
             DataTable Resultado = new DataTable();
@@ -580,5 +579,165 @@ namespace CacheManager.CLS
 
             return Resultado.Rows[0];
         }
+
+        public static DataTable SQL_CONSUMIDOR_FINAL(int idMovi)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"select mov.TipoComprobante, mov.total, DAY( mov.fecha) as dia ,MONTH(mov.fecha) as mes ,YEAR(mov.fecha) as anio,
+                concat(ifnull(per.nombres,''),' ',ifnull(per.apellidos,'')) as cliente,ifnull(per.DUI,''), ifnull(per.direccion,''),
+                dm.CantitadSalida,dm.Precio,dm.SubTotal,
+                p.nombre
+                from detallemovimiento dm
+                inner join Movimientos mov on dm.idMovimiento=mov.idMovimiento
+                inner join producto p on p.idProducto = dm.idProducto
+                inner join personas per on per.idPersonas = mov.idpersona where dm.idMovimiento = '" + idMovi + "' order by iddetalle asc;";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+
+        public static DataTable SQL_CREDITO_FISCAL(int idMovi)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"select mov.TipoComprobante, mov.subtotal,mov.IvaTotal,mov.condPago,mov.total, DAY( mov.fecha) as dia ,MONTH(mov.fecha) as mes ,YEAR(mov.fecha) as anio,
+                concat(ifnull(per.nombres,''),' ',ifnull(per.apellidos,'')) as cliente ,ifnull(per.NIT,'') AS NIT,ifnull(per.NRC,'') AS NRC, ifnull(per.Giro,'') as Giro,ifnull(per.direccion,'') as Direccion,
+                dm.CantitadSalida,dm.Precio,dm.gravado,
+                p.nombre
+                from detallemovimiento dm
+                inner join Movimientos mov on dm.idMovimiento=mov.idMovimiento
+                inner join producto p on p.idProducto = dm.idProducto
+                inner join personas per on per.idPersonas = mov.idpersona where dm.idMovimiento = '" + idMovi + "' order by iddetalle asc;";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+
+        public static DataTable SQL_PRODUCTOS_MAS_VENDIDOS(String FechaI, String FechaF)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @"select
+                p.codigo,p.nombre as producto ,sum(dm.CantitadSalida) as 'Cantidad',sum(dm.Gravado) as Gravado,dm.fecha , inv.Existencias as 'Ex'
+                from detallemovimiento dm inner join producto p on dm.idProducto = p.idProducto inner join inventario inv on
+                inv.idProducto = p.idProducto group by dm.idProducto having (dm.Fecha >= '" + FechaI + "' && dm.Fecha <= '" + FechaF + "') order by sum(dm.CantitadSalida) desc limit 10;";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+        
+        public static DataTable SQL_CARDEX_PORPRODUCTO(int idProducto)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta =
+                @"select 
+                dm.SubTotal as Gravado,
+                ifnull(dm.CantidadEntrada, '0.00')  as Entradas, 
+                ifnull(dm.CantitadSalida, '0.00') as Salidas, 
+                ifnull(dm.Precio,'0.00') as Precio,
+                ifnull(dm.costo,'0.00') as Costo, 
+                date(dm.Fecha) as fecha,
+                mov.Transaccion, 
+                mov.numComprobante as Correlativo , 
+                p.nombre as producto , 
+                p.codigo
+                from 
+                detallemovimiento dm 
+                inner join producto p on dm.idProducto = p.idProducto 
+                inner join Movimientos mov on mov.idMovimiento = dm.idMovimiento
+                where 
+                (p.idProducto='"+idProducto+@"' and mov.Transaccion = 'Venta' 
+                or 
+                p.idProducto='"+idProducto+"' and mov.Transaccion = 'Compra') and mov.estado = 'CANCELADO'";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+
+        public static DataTable DEVOLUCIONES_CON_DETALLES_POR_MOVIMIENTO_COMPRAS(string idMov)
+        {
+            DataTable Resultado = new DataTable();
+            String Consulta;
+            DataManager.CLS.DBOperacion oConsulta = new DataManager.CLS.DBOperacion();
+
+            try
+            {
+                Consulta = @" SELECT d.iddevolucion as 'iddevolucion',
+                                d.iddetalle as 'idd',
+                                d.idmovimiento as 'idm',
+                                d.Fecha as 'fecha_dev',
+                                p.nombre as 'Producto_Dev',
+                                d.Costo as 'Costo_Dev',
+                                d.cSalida as 'cSalida',
+                                d.Gravado as 'Gravado_DEV',
+                                d.IVA as 'IVA_DEV',
+                                d.Subtotal as 'Subtotal_DEV' 
+
+                                from devoluciones d 
+                                inner join detallemovimiento dm on d.iddetalle = dm.iddetalle 
+                                inner join movimientos m on d.idmovimiento = m.idmovimiento 
+                                inner join producto p on dm.idproducto = p.idproducto 
+                                where m.idmovimiento = '"+ idMov +"';";
+
+                Resultado = oConsulta.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+
+            return Resultado;
+        }
+
+
+        /*
+
+         
+         */
+
     }
+
+   
 }

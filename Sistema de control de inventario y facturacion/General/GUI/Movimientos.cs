@@ -335,7 +335,37 @@ namespace General.GUI
                 }
                 else if (e.ColumnIndex == 13)
                 {
-                    MessageBox.Show("Se ha seleccinado la opcion de IMPRIMIR");
+                    //  MessageBox.Show("Se ha seleccinado la opcion de IMPRIMIR");
+                    String ESTADO = dtgMovimiento.CurrentRow.Cells["estado"].Value.ToString();
+                    String TIPODOC = dtgMovimiento.CurrentRow.Cells["tipoComprobante"].Value.ToString();
+                    int ID = Convert.ToInt16(dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value);
+
+                    if (ESTADO.Equals("Cancelado"))
+                    {
+                        if (TIPODOC.Equals("Factura consumidor final"))
+                        {
+                            //CONSUMIDOR FINAL
+                            Reportes.GUI.VPFacturas_Consumidor_Final f = new Reportes.GUI.VPFacturas_Consumidor_Final();
+                            //f.MdiParent = this;
+                            f.ID1 = ID;
+                            // f.TipoFactura = "CONSUMIDORFINAL";
+                            f.ShowDialog();
+                        }
+                        else
+                        {
+                            //CREDITOS FISCALESR
+                            Reportes.GUI.VP_Factura_CREDITOFISCAL f = new Reportes.GUI.VP_Factura_CREDITOFISCAL();
+
+                            f.ID1 = ID;
+                            f.ShowDialog();
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No es posible imprimir una factura que ha sido anulada o esta en estado pendiente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
                 }
             }
         }

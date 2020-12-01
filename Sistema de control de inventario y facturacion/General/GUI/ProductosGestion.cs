@@ -149,5 +149,32 @@ namespace General.GUI
                 txbFiltro.Focus();
             }
         }
+
+        private void dtgProductos_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgProductos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == 10)
+                {
+                    //Kardex
+                    try
+                    {
+                        int IDPRODUCTO = Convert.ToInt32(dtgProductos.CurrentRow.Cells["idproducto"].Value.ToString());
+
+                        Reportes.GUI.VPCARDEX_X_PRODUCTO f = new Reportes.GUI.VPCARDEX_X_PRODUCTO();
+                        f.ID1 = IDPRODUCTO;
+                        f.ShowDialog();
+                    }
+                    catch
+                    {
+                    }
+                }
+            }
+        }
     }
 }

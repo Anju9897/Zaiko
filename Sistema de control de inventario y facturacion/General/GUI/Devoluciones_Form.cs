@@ -35,7 +35,7 @@ namespace General.GUI
         {
             try
             {
-                _DATOS_DEVOLUCIONES.DataSource = CacheManager.CLS.Cache.DEVOLUCIONES_CON_DETALLES_POR_MOVIMIENTO(tsMovimiento.Text);
+                _DATOS_DEVOLUCIONES.DataSource = CacheManager.CLS.Cache.DEVOLUCIONES_CON_DETALLES_POR_MOVIMIENTO_COMPRAS(tsMovimiento.Text);
                 dtgDevoluciones.AutoGenerateColumns = false;
                 dtgDevoluciones.DataSource = _DATOS_DEVOLUCIONES;
 

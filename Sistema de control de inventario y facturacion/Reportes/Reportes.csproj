@@ -48,6 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAT\dtsCardexProducto.cs">
+      <DependentUpon>dtsCardexProducto.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAT\dtsCardexProducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsCardexProducto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAT\dtsCompras.cs">
       <DependentUpon>dtsCompras.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -65,6 +74,33 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dtsCotizacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsFacturaConsumidorFinal.cs">
+      <DependentUpon>dtsFacturaConsumidorFinal.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAT\dtsFacturaConsumidorFinal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsFacturaConsumidorFinal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsFACTURA_CREDITO_FISCAL.cs">
+      <DependentUpon>dtsFACTURA_CREDITO_FISCAL.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAT\dtsFACTURA_CREDITO_FISCAL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsFACTURA_CREDITO_FISCAL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\dtsProductosMasVendidos.cs">
+      <DependentUpon>dtsProductosMasVendidos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAT\dtsProductosMasVendidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsProductosMasVendidos.xsd</DependentUpon>
     </Compile>
     <Compile Include="DAT\dtsVentaConsumidorFinal.cs">
       <DependentUpon>dtsVentaConsumidorFinal.xsd</DependentUpon>
@@ -84,11 +120,47 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtsVentaCreditoFiscal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GUI\VistaPreviaConsumidorFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VistaPreviaConsumidorFinal.Designer.cs">
+      <DependentUpon>VistaPreviaConsumidorFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VistaPreviaCreditoFidscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VistaPreviaCreditoFidscal.Designer.cs">
+      <DependentUpon>VistaPreviaCreditoFidscal.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\VistaPreviaReporteCompras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\VistaPreviaReporteCompras.Designer.cs">
       <DependentUpon>VistaPreviaReporteCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VPCARDEX_X_PRODUCTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VPCARDEX_X_PRODUCTO.Designer.cs">
+      <DependentUpon>VPCARDEX_X_PRODUCTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VPFacturas_Consumidor_Final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VPFacturas_Consumidor_Final.Designer.cs">
+      <DependentUpon>VPFacturas_Consumidor_Final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VPProductosMasVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VPProductosMasVendidos.Designer.cs">
+      <DependentUpon>VPProductosMasVendidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VP_Factura_CREDITOFISCAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VP_Factura_CREDITOFISCAL.Designer.cs">
+      <DependentUpon>VP_Factura_CREDITOFISCAL.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\VRCotizacion.cs">
       <SubType>Form</SubType>
@@ -112,6 +184,30 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteCotizacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\ReporteFactura_ConsumidorFinal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteFactura_ConsumidorFinal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\ReporteFactura_CREDITO_FISCAL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteFactura_CREDITO_FISCAL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\ReporteProductosMasVendidos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProductosMasVendidos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\Reporte_Cardex_Prodicto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte_Cardex_Prodicto.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="REP\VentaConsumidorFinal.cs">
@@ -141,6 +237,17 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DAT\dtsCardexProducto.xsc">
+      <DependentUpon>dtsCardexProducto.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsCardexProducto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsCardexProducto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsCardexProducto.xss">
+      <DependentUpon>dtsCardexProducto.xsd</DependentUpon>
+    </None>
     <None Include="DAT\dtsCompras.xsc">
       <DependentUpon>dtsCompras.xsd</DependentUpon>
     </None>
@@ -162,6 +269,39 @@
     </None>
     <None Include="DAT\dtsCotizacion.xss">
       <DependentUpon>dtsCotizacion.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsFacturaConsumidorFinal.xsc">
+      <DependentUpon>dtsFacturaConsumidorFinal.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsFacturaConsumidorFinal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsFacturaConsumidorFinal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsFacturaConsumidorFinal.xss">
+      <DependentUpon>dtsFacturaConsumidorFinal.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsFACTURA_CREDITO_FISCAL.xsc">
+      <DependentUpon>dtsFACTURA_CREDITO_FISCAL.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsFACTURA_CREDITO_FISCAL.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsFACTURA_CREDITO_FISCAL.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsFACTURA_CREDITO_FISCAL.xss">
+      <DependentUpon>dtsFACTURA_CREDITO_FISCAL.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsProductosMasVendidos.xsc">
+      <DependentUpon>dtsProductosMasVendidos.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\dtsProductosMasVendidos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsProductosMasVendidos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\dtsProductosMasVendidos.xss">
+      <DependentUpon>dtsProductosMasVendidos.xsd</DependentUpon>
     </None>
     <None Include="DAT\dtsVentaConsumidorFinal.xsc">
       <DependentUpon>dtsVentaConsumidorFinal.xsd</DependentUpon>
@@ -187,8 +327,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\VistaPreviaConsumidorFinal.resx">
+      <DependentUpon>VistaPreviaConsumidorFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VistaPreviaCreditoFidscal.resx">
+      <DependentUpon>VistaPreviaCreditoFidscal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\VistaPreviaReporteCompras.resx">
       <DependentUpon>VistaPreviaReporteCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VPCARDEX_X_PRODUCTO.resx">
+      <DependentUpon>VPCARDEX_X_PRODUCTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VPFacturas_Consumidor_Final.resx">
+      <DependentUpon>VPFacturas_Consumidor_Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VPProductosMasVendidos.resx">
+      <DependentUpon>VPProductosMasVendidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VP_Factura_CREDITOFISCAL.resx">
+      <DependentUpon>VP_Factura_CREDITOFISCAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\VRCotizacion.resx">
       <DependentUpon>VRCotizacion.cs</DependentUpon>
@@ -204,6 +362,22 @@
     <EmbeddedResource Include="REP\ReporteCotizacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteCotizacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteFactura_ConsumidorFinal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteFactura_ConsumidorFinal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteFactura_CREDITO_FISCAL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteFactura_CREDITO_FISCAL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ReporteProductosMasVendidos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProductosMasVendidos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\Reporte_Cardex_Prodicto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte_Cardex_Prodicto.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REP\VentaConsumidorFinal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -81,6 +81,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.btnCancelar);
             this.splitContainer1.Panel1.Controls.Add(this.btnVistaPrevia);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -167,7 +168,8 @@
             this.cbbTipoReporte.FormattingEnabled = true;
             this.cbbTipoReporte.Items.AddRange(new object[] {
             "Venta",
-            "Compra"});
+            "Compra",
+            "Productos mas Vendidos"});
             this.cbbTipoReporte.Location = new System.Drawing.Point(22, 176);
             this.cbbTipoReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTipoReporte.Name = "cbbTipoReporte";

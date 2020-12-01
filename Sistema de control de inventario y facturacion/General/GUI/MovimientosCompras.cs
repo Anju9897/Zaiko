@@ -193,7 +193,15 @@ namespace General.GUI
             {
                 if (e.ColumnIndex == 12)
                 {
-                    MessageBox.Show("ESTA ES LA OPCION DE DEVOLUCION SOBRE COMPRAS ACTIVADA");
+                    try
+                    {
+                        Devoluciones_Compras f = new Devoluciones_Compras();
+                        f.lblIDDEVCOMPRAS.Text = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
+                        f.ShowDialog();
+                    }
+                    catch
+                    {
+                    }
                 }
             }
         }

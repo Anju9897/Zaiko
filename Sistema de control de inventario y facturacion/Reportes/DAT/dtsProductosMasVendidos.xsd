@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsProductosMasVendidos" targetNamespace="http://tempuri.org/dtsProductosMasVendidos.xsd" xmlns:mstns="http://tempuri.org/dtsProductosMasVendidos.xsd" xmlns="http://tempuri.org/dtsProductosMasVendidos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsProductosMasVendidos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsProductosMasVendidos" msprop:Generator_UserDSName="dtsProductosMasVendidos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ProductosMasVendidos" msprop:Generator_TableClassName="ProductosMasVendidosDataTable" msprop:Generator_TableVarName="tableProductosMasVendidos" msprop:Generator_TablePropName="ProductosMasVendidos" msprop:Generator_RowDeletingName="ProductosMasVendidosRowDeleting" msprop:Generator_RowChangingName="ProductosMasVendidosRowChanging" msprop:Generator_RowEvHandlerName="ProductosMasVendidosRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductosMasVendidosRowDeleted" msprop:Generator_UserTableName="ProductosMasVendidos" msprop:Generator_RowChangedName="ProductosMasVendidosRowChanged" msprop:Generator_RowEvArgName="ProductosMasVendidosRowChangeEvent" msprop:Generator_RowClassName="ProductosMasVendidosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="producto" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnproducto" msprop:Generator_ColumnPropNameInRow="producto" msprop:Generator_ColumnPropNameInTable="productoColumn" msprop:Generator_UserColumnName="producto" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Gravado" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnGravado" msprop:Generator_ColumnPropNameInRow="Gravado" msprop:Generator_ColumnPropNameInTable="GravadoColumn" msprop:Generator_UserColumnName="Gravado" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:string" minOccurs="0" />
+              <xs:element name="Ex" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnEx" msprop:Generator_ColumnPropNameInRow="Ex" msprop:Generator_ColumnPropNameInTable="ExColumn" msprop:Generator_UserColumnName="Ex" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
