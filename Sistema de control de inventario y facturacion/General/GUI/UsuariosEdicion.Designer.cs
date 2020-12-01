@@ -44,6 +44,7 @@
             this.lblIDUsuario = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblEmpleado = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(38, 87);
+            this.lblUsuario.Location = new System.Drawing.Point(131, 88);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(63, 20);
             this.lblUsuario.TabIndex = 1;
@@ -72,7 +73,7 @@
             // txbUsuario
             // 
             this.txbUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbUsuario.Location = new System.Drawing.Point(42, 114);
+            this.txbUsuario.Location = new System.Drawing.Point(135, 110);
             this.txbUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(130, 26);
@@ -190,12 +191,23 @@
             // 
             this.lblEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.lblEmpleado.Enabled = false;
+            this.lblEmpleado.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpleado.FormattingEnabled = true;
-            this.lblEmpleado.Location = new System.Drawing.Point(203, 5);
+            this.lblEmpleado.Location = new System.Drawing.Point(42, 105);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(10, 24);
+            this.lblEmpleado.Size = new System.Drawing.Size(53, 31);
             this.lblEmpleado.TabIndex = 32;
-            this.lblEmpleado.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 20);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "ID";
             // 
             // UsuariosEdicion
             // 
@@ -204,6 +216,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(321, 422);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.lblIDUsuario);
             this.Controls.Add(this.btnAceptar);
@@ -247,5 +260,6 @@
         public System.Windows.Forms.Label lblIDUsuario;
         private System.Windows.Forms.ErrorProvider Notificador;
         public System.Windows.Forms.ComboBox lblEmpleado;
+        private System.Windows.Forms.Label label2;
     }
 }

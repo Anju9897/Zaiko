@@ -61,13 +61,19 @@ namespace General.GUI
 
                     if (lblIDUsuario.Text.Length > 0)
                     {
-                        oUsuario.Actualizar();
+                        if (oUsuario.Actualizar())
+                        {
+                            Close();
+                        }
                     }
                     else
                     {
-                        oUsuario.Guardar();
+                        if (oUsuario.Guardar())
+                        {
+                            Close();
+                        }
                     }
-                    Close();
+                    
                 }else{
                     Notificador.SetError(txbContra,"Las contraseñas no coinciden");
                     Notificador.SetError(txbContra2,"Las contraseñas no coinciden");

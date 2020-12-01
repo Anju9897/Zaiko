@@ -132,7 +132,7 @@ namespace General.GUI
 
         private void btnDefault_Click(object sender, EventArgs e)
         {
-            txbIDCliente.Text = "1";
+            txbIDCliente.Text = "12";
             txbCliente.Text = "CLIENTES VARIOS";
             txbDUI.Text = "N/A";
             txbNIT.Text = "N/A";
@@ -149,7 +149,26 @@ namespace General.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (cbbEstado.SelectedIndex == 0)
+            {
+                crearCliente();
+            }
+            if (cbbEstado.SelectedIndex == 1)
+            {
+                if (!txbNFactura.Text.ToUpper().Equals("PENDIENTE".ToUpper())) 
+                {
+                    crearCliente();
+                }
+                else
+                {
+                    MessageBox.Show("No se pueden concluir a CANCELADO porque el numero de factura esta en PENDIENTE, debe de tener un numero factura","ERROR ESTADO",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+            }
 
+        }
+
+        private void crearCliente()
+        {
             if (validarCampos())
             {
                 CLS.Movimiento oMovimiento = new CLS.Movimiento();
@@ -195,7 +214,6 @@ namespace General.GUI
 
                 }
             }
-            
         }
 
         private void cbbFactura_SelectedIndexChanged(object sender, EventArgs e)
