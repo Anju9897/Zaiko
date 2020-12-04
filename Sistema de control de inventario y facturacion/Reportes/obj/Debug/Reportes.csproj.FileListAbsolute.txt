@@ -149,3 +149,22 @@ C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventari
 C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VP_Factura_CREDITOFISCAL.resources
 C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VPProductosMasVendidos.resources
 C:\Users\Klary\OneDrive\Documentos\GIT\IDS\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VPCARDEX_X_PRODUCTO.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\bin\Debug\Reportes.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\bin\Debug\Reportes.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VistaPreviaConsumidorFinal.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VistaPreviaCreditoFidscal.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.Compras.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VPCARDEX_X_PRODUCTO.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VPFacturas_Consumidor_Final.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VPProductosMasVendidos.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.VP_Factura_CREDITOFISCAL.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.GUI.Cotizaciones.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.Properties.Resources.resources
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.csproj.GenerateResource.Cache
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.dll
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Reportes\obj\Debug\Reportes.pdb

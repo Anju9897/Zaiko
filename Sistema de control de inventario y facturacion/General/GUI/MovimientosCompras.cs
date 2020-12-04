@@ -149,11 +149,20 @@ namespace General.GUI
 
         private void transaccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DetalleMovimientoCompras f = new DetalleMovimientoCompras();
-            f.lblIDMov.Text = dtgMovimiento.CurrentRow.Cells["IDMovimiento"].Value.ToString();
-            f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
-            f.ShowDialog();
-            Cargar();
+            try
+            {
+                DetalleMovimientoCompras f = new DetalleMovimientoCompras();
+                f.lblIDMov.Text = dtgMovimiento.CurrentRow.Cells["IDMovimiento"].Value.ToString();
+                f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
+                f.ShowDialog();
+                Cargar();
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+
         }
 
         private void dtgMovimiento_KeyDown(object sender, KeyEventArgs e)
