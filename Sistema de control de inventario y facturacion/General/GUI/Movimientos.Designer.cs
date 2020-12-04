@@ -463,6 +463,7 @@
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(40)))), ((int)(((byte)(36)))));
+            this.toolStrip1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnEliminar,
@@ -488,8 +489,8 @@
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(94, 25);
-            this.btnEliminar.Text = "Anular";
+            this.btnEliminar.Size = new System.Drawing.Size(125, 25);
+            this.btnEliminar.Text = "Anular (X)";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // toolStripSeparator1
@@ -523,7 +524,7 @@
             this.btnEditarProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarProductos.Image")));
             this.btnEditarProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditarProductos.Name = "btnEditarProductos";
-            this.btnEditarProductos.Size = new System.Drawing.Size(200, 25);
+            this.btnEditarProductos.Size = new System.Drawing.Size(225, 25);
             this.btnEditarProductos.Text = "Editar Movimientos";
             this.btnEditarProductos.Click += new System.EventHandler(this.transaccionToolStripMenuItem_Click);
             // 
@@ -540,8 +541,8 @@
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(102, 25);
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Size = new System.Drawing.Size(150, 25);
+            this.btnAgregar.Text = "Agregar (A)";
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txbFiltro

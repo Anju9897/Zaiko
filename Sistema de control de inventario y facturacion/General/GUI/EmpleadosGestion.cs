@@ -160,6 +160,14 @@ namespace General.GUI
             {
                 txbFiltro.Focus();
             }
+            if (e.KeyData == Keys.X)
+            {
+                btnEliminiar_Click(sender, e);
+            }
+            if (e.KeyData == Keys.A)
+            {
+                btnAgregar_Click(sender, e);
+            }
         }
 
 

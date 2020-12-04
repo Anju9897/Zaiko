@@ -96,28 +96,6 @@ namespace General.GUI
             catch
             {
             }
-
-            /*CLS.Inventario oInventario = new CLS.Inventario();
-            Double cantidad = 0.00;
-            Double inventario = 0.00;
-            Double aux = 0.00;
-            try
-            {
-
-                cantidad = Convert.ToDouble(txbCantidad.Text);
-                inventario = Convert.ToDouble(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["Existencias"].Value);
-                aux = inventario + cantidad;
-                oInventario.IdProducto = txbIDProducto.Text;
-                oInventario.Existencias = Convert.ToString(aux);
-                oInventario.Actualizar_Existencias();
-
-                Cargar();
-            }
-            catch
-            {
-
-                throw;
-            }*/
         }
 
         private void CargarDetalle()
@@ -201,6 +179,7 @@ namespace General.GUI
             {
                 if (!existeDetalle(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["idproducto"].Value.ToString()))
                 {
+                    MessageBox.Show("Instrucciones:\n1. Ingregar la cantidad en el espacio espeficiado.\n2. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.", "Informacion Para agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SetDefault();
                     txbCantidad.Focus();
                 }
@@ -293,6 +272,18 @@ namespace General.GUI
             if (e.KeyData == Keys.F1)
             {
                 txbBuscar.Focus();
+            }
+            if (e.KeyData == Keys.A)
+            {
+                toolStripButton2_Click(sender, e);
+            }
+            if (e.KeyData == Keys.X)
+            {
+                btnEliminar_Click(sender, e);
+            }
+            if (e.KeyData == Keys.F2)
+            {
+                toolStripButton3_Click(sender, e);
             }
         }
 

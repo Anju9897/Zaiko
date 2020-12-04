@@ -70,7 +70,7 @@ namespace General.GUI
         private void dtgDetallesCompras_DoubleClick(object sender, EventArgs e)
         {
             DataGridViewRow Row = dtgDetallesCompras.CurrentRow;
-
+            MessageBox.Show("Instrucciones:\n1. Ingregar la cantidad en el espacio espeficiado.\n2. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.", "Informacion Para agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             foreach (DataGridViewRow row2 in dtgDevoluciones.Rows)
             {
@@ -298,7 +298,7 @@ namespace General.GUI
 
         private void dtgDevoluciones_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.F1)
+            if (e.KeyData == Keys.F2)
             {
                 btnFinDev_Click(sender, e);
             }
@@ -315,6 +315,22 @@ namespace General.GUI
         private void Devoluciones_Compras_FormClosing(object sender, FormClosingEventArgs e)
         {
             
+        }
+
+        private void dtgDetallesCompras_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F2)
+            {
+                btnFinDev_Click(sender, e);
+            }
+            if (e.KeyData == Keys.E)
+            {
+                btnEditarDev_Click(sender, e);
+            }
+            if (e.KeyData == Keys.X)
+            {
+                btnEliminarDev_Click(sender, e);
+            }
         }
     }
 }

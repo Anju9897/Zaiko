@@ -181,7 +181,7 @@ namespace General.GUI
                 {
                     if (!existeDetalle(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["idproducto"].Value.ToString()))
                     {
-
+                        MessageBox.Show("Instrucciones:\n1. Ingregar la cantidad en el espacio espeficiado.\n2. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.","Informacion Para agregar",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         SetDefault();
                         txbCantidad.Focus();
                     }
@@ -467,16 +467,24 @@ namespace General.GUI
 
         private void dtgDetalle_DoubleClick(object sender, EventArgs e)
         {
-            int RowIndex = dtgDetalle.CurrentRow.Index;
-            txbIDProducto.Text = dtgDetalle.Rows[RowIndex].Cells["idp"].Value.ToString();
-            lblIDDetalle.Text = dtgDetalle.Rows[RowIndex].Cells["iddetalle"].Value.ToString();
-            txbProducto.Text = dtgDetalle.Rows[RowIndex].Cells["producto"].Value.ToString();
-            txbPrecio.Text = dtgDetalle.Rows[RowIndex].Cells["precio"].Value.ToString();
-            lblUnidad.Text = dtgDetalle.Rows[RowIndex].Cells["unidades"].Value.ToString();
-            txbIVA.Text = dtgDetalle.Rows[RowIndex].Cells["montoiva"].Value.ToString();
-            txbSubtotal.Text = dtgDetalle.Rows[RowIndex].Cells["gravado"].Value.ToString();
-            txbCantidad.Text = dtgDetalle.Rows[RowIndex].Cells["cantitadsalida"].Value.ToString();
-            txbCantidad.Focus();
+            try
+            {
+                int RowIndex = dtgDetalle.CurrentRow.Index;
+                txbIDProducto.Text = dtgDetalle.Rows[RowIndex].Cells["idp"].Value.ToString();
+                lblIDDetalle.Text = dtgDetalle.Rows[RowIndex].Cells["iddetalle"].Value.ToString();
+                txbProducto.Text = dtgDetalle.Rows[RowIndex].Cells["producto"].Value.ToString();
+                txbPrecio.Text = dtgDetalle.Rows[RowIndex].Cells["precio"].Value.ToString();
+                lblUnidad.Text = dtgDetalle.Rows[RowIndex].Cells["unidades"].Value.ToString();
+                txbIVA.Text = dtgDetalle.Rows[RowIndex].Cells["montoiva"].Value.ToString();
+                txbSubtotal.Text = dtgDetalle.Rows[RowIndex].Cells["gravado"].Value.ToString();
+                txbCantidad.Text = dtgDetalle.Rows[RowIndex].Cells["cantitadsalida"].Value.ToString();
+                txbCantidad.Focus();
+            }
+            catch
+            {
+
+            }
+
         }
 
         private void txbSubtotal_TextChanged(object sender, EventArgs e)
@@ -507,6 +515,10 @@ namespace General.GUI
             if (e.KeyData == Keys.F3)
             {
                 btnConfirmar_Click(sender, e);
+            }
+            if (e.KeyData == Keys.X)
+            {
+                toolStripButton2_Click(sender, e);
             }
         }
 

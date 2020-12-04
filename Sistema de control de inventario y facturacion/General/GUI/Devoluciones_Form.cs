@@ -66,7 +66,7 @@ namespace General.GUI
         {
             DataGridViewRow Row = dtgDetalles.CurrentRow;
 
-
+            MessageBox.Show("Instrucciones:\n1. Ingregar la cantidad en el espacio espeficiado.\n2. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.", "Informacion Para agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             foreach (DataGridViewRow row2 in dtgDevoluciones.Rows)
             {
                 if (row2.Cells["idd"].Value.ToString().Equals(Row.Cells["iddetalle"].Value.ToString()))

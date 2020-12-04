@@ -72,69 +72,71 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(938, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1190, 28);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnEliminarCliente
             // 
             this.btnEliminarCliente.BackColor = System.Drawing.Color.Maroon;
+            this.btnEliminarCliente.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarCliente.ForeColor = System.Drawing.Color.White;
             this.btnEliminarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarCliente.Image")));
             this.btnEliminarCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminarCliente.Name = "btnEliminarCliente";
-            this.btnEliminarCliente.Size = new System.Drawing.Size(137, 24);
-            this.btnEliminarCliente.Text = "Eliminar Cliente";
+            this.btnEliminarCliente.Size = new System.Drawing.Size(185, 25);
+            this.btnEliminarCliente.Text = "Eliminar Cliente (X)";
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
             // 
             // btnModificarCliente
             // 
             this.btnModificarCliente.BackColor = System.Drawing.Color.Maroon;
-            this.btnModificarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCliente.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarCliente.ForeColor = System.Drawing.Color.White;
             this.btnModificarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnModificarCliente.Image")));
             this.btnModificarCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModificarCliente.Name = "btnModificarCliente";
-            this.btnModificarCliente.Size = new System.Drawing.Size(160, 24);
-            this.btnModificarCliente.Text = "Modificar Cliente";
+            this.btnModificarCliente.Size = new System.Drawing.Size(203, 25);
+            this.btnModificarCliente.Text = "Modificar Cliente (E)";
             this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
             // 
             // btnAgregarCLiente
             // 
             this.btnAgregarCLiente.BackColor = System.Drawing.Color.Maroon;
-            this.btnAgregarCLiente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCLiente.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCLiente.ForeColor = System.Drawing.Color.White;
             this.btnAgregarCLiente.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarCLiente.Image")));
             this.btnAgregarCLiente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregarCLiente.Name = "btnAgregarCLiente";
-            this.btnAgregarCLiente.Size = new System.Drawing.Size(150, 24);
-            this.btnAgregarCLiente.Text = "Agregar Cliente";
+            this.btnAgregarCLiente.Size = new System.Drawing.Size(196, 25);
+            this.btnAgregarCLiente.Text = "Agregar Cliente (A)";
             this.btnAgregarCLiente.Click += new System.EventHandler(this.btnAgregarCLiente_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
             // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.BackColor = System.Drawing.Color.Maroon;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
             this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
             this.btnSeleccionar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(120, 24);
-            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(164, 25);
+            this.btnSeleccionar.Text = "Seleccionar (F2)";
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // txbFiltro
@@ -143,7 +145,7 @@
             this.txbFiltro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFiltro.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbFiltro.Name = "txbFiltro";
-            this.txbFiltro.Size = new System.Drawing.Size(200, 27);
+            this.txbFiltro.Size = new System.Drawing.Size(200, 28);
             this.txbFiltro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbFiltro_KeyDown);
             // 
             // toolStripLabel1
@@ -153,8 +155,8 @@
             this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabel1.Image")));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(67, 24);
-            this.toolStripLabel1.Text = "Filtrar";
+            this.toolStripLabel1.Size = new System.Drawing.Size(96, 25);
+            this.toolStripLabel1.Text = "Filtrar (F1)";
             // 
             // dtgClientes
             // 
@@ -175,16 +177,17 @@
             this.Direccion,
             this.Categoria});
             this.dtgClientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgClientes.Location = new System.Drawing.Point(0, 27);
+            this.dtgClientes.Location = new System.Drawing.Point(0, 28);
             this.dtgClientes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtgClientes.Name = "dtgClientes";
             this.dtgClientes.ReadOnly = true;
             this.dtgClientes.RowHeadersVisible = false;
             this.dtgClientes.RowTemplate.Height = 24;
             this.dtgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgClientes.Size = new System.Drawing.Size(938, 552);
+            this.dtgClientes.Size = new System.Drawing.Size(1190, 591);
             this.dtgClientes.TabIndex = 1;
             this.dtgClientes.DoubleClick += new System.EventHandler(this.dtgClientes_DoubleClick);
+            this.dtgClientes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgClientes_KeyDown);
             // 
             // idpersonas
             // 
@@ -262,9 +265,9 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblRegistros});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 554);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 594);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(938, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1190, 25);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -278,7 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 579);
+            this.ClientSize = new System.Drawing.Size(1190, 619);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dtgClientes);
             this.Controls.Add(this.toolStrip1);

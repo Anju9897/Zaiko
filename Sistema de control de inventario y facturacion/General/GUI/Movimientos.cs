@@ -211,6 +211,14 @@ namespace General.GUI
             {
                 txbFiltro.Focus();
             }
+            if (e.KeyData == Keys.X)
+            {
+                btnEliminar_Click(sender, e);
+            }
+            if (e.KeyData == Keys.A)
+            {
+                btnAgregar_Click(sender, e);
+            }
         }
 
         private void cbbTransaccion_SelectedIndexChanged(object sender, EventArgs e)

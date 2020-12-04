@@ -112,5 +112,46 @@ namespace General.GUI
             f.ShowDialog();
             Cargar();
         }
+
+        private void dtgClientes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.X)
+            {
+                btnEliminarCliente_Click(sender, e);
+            }
+            if (e.KeyData == Keys.A)
+            {
+                btnAgregarCLiente_Click(sender, e);
+            }
+            if (e.KeyData == Keys.E)
+            {
+                btnModificarCliente_Click(sender, e);
+            }
+            if (e.KeyData == Keys.F1)
+            {
+                txbFiltro.Focus();
+            }
+            if (e.KeyData == Keys.F2)
+            {
+                btnSeleccionar_Click(sender, e);
+            }
+        }
+
+        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("","Aviso Eliminar Persona",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CLS.Personas oPersonas = new CLS.Personas();
+                    oPersonas.IDPersonas = dtgClientes.CurrentRow.Cells["idpersonas"].Value.ToString();
+                    oPersonas.Eliminar();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

@@ -253,8 +253,8 @@
             this.btnEliminiar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminiar.Image")));
             this.btnEliminiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminiar.Name = "btnEliminiar";
-            this.btnEliminiar.Size = new System.Drawing.Size(91, 28);
-            this.btnEliminiar.Text = "Eliminar";
+            this.btnEliminiar.Size = new System.Drawing.Size(114, 28);
+            this.btnEliminiar.Text = "Eliminar (X)";
             this.btnEliminiar.Click += new System.EventHandler(this.btnEliminiar_Click);
             // 
             // toolStripSeparator3
@@ -285,8 +285,8 @@
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(98, 28);
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Size = new System.Drawing.Size(123, 28);
+            this.btnAgregar.Text = "Agregar (A)";
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // toolStripSeparator1
@@ -311,8 +311,8 @@
             this.lblFiltro.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblFiltro.Image = ((System.Drawing.Image)(resources.GetObject("lblFiltro.Image")));
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(71, 28);
-            this.lblFiltro.Text = "Filtrar";
+            this.lblFiltro.Size = new System.Drawing.Size(100, 28);
+            this.lblFiltro.Text = "Filtrar (F1)";
             // 
             // toolStrip1
             // 
