@@ -40,7 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txbCliente = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txbNIT = new System.Windows.Forms.TextBox();
@@ -187,16 +187,16 @@
             this.txbCliente.Size = new System.Drawing.Size(199, 28);
             this.txbCliente.TabIndex = 8;
             // 
-            // label5
+            // lblNombre
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(524, 90);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 21);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Cliente";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(524, 90);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(69, 21);
+            this.lblNombre.TabIndex = 20;
+            this.lblNombre.Text = "Cliente";
             // 
             // label6
             // 
@@ -628,7 +628,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txbNIT);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txbCliente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -659,7 +659,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -701,5 +700,6 @@
         private System.Windows.Forms.Label txtPropietario;
         private System.Windows.Forms.Label txtBanco;
         public System.Windows.Forms.Button btnTarjeta;
+        public System.Windows.Forms.Label lblNombre;
     }
 }

@@ -66,15 +66,12 @@ namespace General.GUI
             }
         }
 
-
-
         //Eventos y metodos creados por VS
         public MovimientosCompras()
         {
             InitializeComponent();
             Cargar();
         }
-
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
@@ -85,6 +82,8 @@ namespace General.GUI
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ClienteInfo f = new ClienteInfo();
+            f.Text = "Proveedor";
+            f.lblNombre.Text = "Proveedor";
             f.cbbTransaccion.Enabled = false;
             f.btnDefault.Enabled = false;
             f.btnDefault.Visible = false;
@@ -110,7 +109,8 @@ namespace General.GUI
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClienteInfo f = new ClienteInfo();
-
+            f.Text = "Proveedor";
+            f.lblNombre.Text = "Proveedor";
             f.txbIDMov.Text = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
             f.txbIDCliente.Text = dtgMovimiento.CurrentRow.Cells["IDPERSONA"].Value.ToString();
             f.txbCliente.Text = dtgMovimiento.CurrentRow.Cells["cliente"].Value.ToString();

@@ -19,3 +19,6 @@ C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inve
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Zaiko\obj\Release\Zaiko.csproj.GenerateResource.Cache
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Zaiko\obj\Release\Zaiko.exe
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\ZAIKO\Sistema de control de inventario y facturacion\Zaiko\obj\Release\Zaiko.pdb
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Release\Zaiko.exe.config
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Release\Zaiko.exe
+C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Release\Zaiko.pdb
