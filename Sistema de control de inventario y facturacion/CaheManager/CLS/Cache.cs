@@ -462,7 +462,7 @@ namespace CacheManager.CLS
                             inner join movimientos mov on mov.idMovimiento = dm.idMovimiento
 							inner join producto p on p.idProducto=dm.idProducto
 							inner join unidades u on u.idunidad = p.idunidad 
-                            where  mov.TipoComprobante= 'Cotizacion' and dm.idMovimiento = '"+idmov+"'    order by iddetalle asc ;";
+                            where  mov.Transaccion= 'Cotizacion' and dm.idMovimiento = '"+idmov+"'    order by iddetalle asc ;";
                 Resultado = oConsulta.Consultar(Consulta);
             }
             catch

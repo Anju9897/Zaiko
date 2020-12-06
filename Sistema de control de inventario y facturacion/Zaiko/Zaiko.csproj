@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\AppManager.cs" />
-    <Compile Include="GUI\Datosempresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Datosempresa.Designer.cs">
-      <DependentUpon>Datosempresa.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,12 +60,6 @@
     <Compile Include="GUI\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\PruebaConector.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\PruebaConector.Designer.cs">
-      <DependentUpon>PruebaConector.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,17 +68,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\Datosempresa.resx">
-      <DependentUpon>Datosempresa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PruebaConector.resx">
-      <DependentUpon>PruebaConector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>

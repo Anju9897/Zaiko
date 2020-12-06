@@ -24,13 +24,22 @@ namespace Reportes.GUI
 
         private void btnVistaPrevia_Click(object sender, EventArgs e)
         {
-            REP.ReporteCotizacion oReporte = new REP.ReporteCotizacion();
-            _SaveConsulta = CacheManager.CLS.Cache.CotizacionConsulta(txbNCotizacion.Text);
-            oReporte.SetDataSource(_SaveConsulta);
-            crvCotizacion.ReportSource = oReporte;
+            try
+            {
+                REP.ReporteCotizacion oReporte = new REP.ReporteCotizacion();
+                _SaveConsulta = CacheManager.CLS.Cache.CotizacionConsulta(txbNCotizacion.Text);
+                oReporte.SetDataSource(_SaveConsulta);
+                crvCotizacion.ReportSource = oReporte;
 
-           oReporte.SetParameterValue("pEncargado", txbEncargado.Text);
-            Show();
+                oReporte.SetParameterValue("pEncargado", txbEncargado.Text);
+                Show();
+            }
+            catch
+            {
+                
+                throw;
+            }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

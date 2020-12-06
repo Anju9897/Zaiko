@@ -33,8 +33,6 @@ namespace Zaiko.GUI
 
         private void pruebaDeConectorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PruebaConector f = new PruebaConector();
-            f.ShowDialog();
         }
 
         private void Principal_Load(object sender, EventArgs e)

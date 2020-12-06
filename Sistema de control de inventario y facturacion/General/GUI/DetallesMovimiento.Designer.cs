@@ -93,8 +93,6 @@
             this.gravado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -237,8 +235,6 @@
             this.toolStripStatusLabel1,
             this.lblIVAsuma,
             this.toolStripStatusLabel2,
-            this.toolStripStatusLabel4,
-            this.toolStripStatusLabel3,
             this.lblsubtotalSuma});
             this.statusStrip1.Location = new System.Drawing.Point(0, 714);
             this.statusStrip1.Name = "statusStrip1";
@@ -248,34 +244,36 @@
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(148, 23);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(173, 23);
             this.toolStripStatusLabel1.Text = "IVA Acumulado:";
             // 
             // lblIVAsuma
             // 
-            this.lblIVAsuma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIVAsuma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIVAsuma.ForeColor = System.Drawing.Color.White;
             this.lblIVAsuma.Name = "lblIVAsuma";
-            this.lblIVAsuma.Size = new System.Drawing.Size(49, 23);
+            this.lblIVAsuma.Size = new System.Drawing.Size(48, 23);
             this.lblIVAsuma.Text = "0.00";
             // 
             // toolStripStatusLabel2
             // 
+            this.toolStripStatusLabel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.White;
             this.toolStripStatusLabel2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel2.Image")));
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(207, 23);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(240, 23);
             this.toolStripStatusLabel2.Text = "Subtotal Acumulado:";
             this.toolStripStatusLabel2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // lblsubtotalSuma
             // 
-            this.lblsubtotalSuma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsubtotalSuma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsubtotalSuma.ForeColor = System.Drawing.Color.White;
             this.lblsubtotalSuma.Name = "lblsubtotalSuma";
-            this.lblsubtotalSuma.Size = new System.Drawing.Size(49, 23);
+            this.lblsubtotalSuma.Size = new System.Drawing.Size(48, 23);
             this.lblsubtotalSuma.Text = "0.00";
             // 
             // splitContainer1
@@ -776,22 +774,6 @@
             this.subtotal.ReadOnly = true;
             this.subtotal.Visible = false;
             // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel3.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(49, 23);
-            this.toolStripStatusLabel3.Text = "0.00";
-            // 
-            // toolStripStatusLabel4
-            // 
-            this.toolStripStatusLabel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel4.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(49, 23);
-            this.toolStripStatusLabel4.Text = "0.00";
-            // 
             // DetallesMovimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -889,7 +871,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gravado;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoiva;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
     }
 }

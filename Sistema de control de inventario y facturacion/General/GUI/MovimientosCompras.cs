@@ -19,7 +19,6 @@ namespace General.GUI
             {
                 _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_MOVIMIENTOS_COMPRAS();
                 FiltrarLocalmente();
-                FiltrarPorFecha();
             }
             catch
             {
@@ -76,7 +75,6 @@ namespace General.GUI
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             FiltrarPorFecha();
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -149,13 +147,17 @@ namespace General.GUI
 
         private void transaccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DialogResult respuesta = MessageBox.Show("Instrucciones:\n1. El producto que desee dar doble click sobre el nombre \n2. Ingregar la cantidad en el espacio espeficiado.\n3. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.", "Informacion Para agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
-                DetalleMovimientoCompras f = new DetalleMovimientoCompras();
-                f.lblIDMov.Text = dtgMovimiento.CurrentRow.Cells["IDMovimiento"].Value.ToString();
-                f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
-                f.ShowDialog();
-                Cargar();
+                if (respuesta == DialogResult.OK)
+                {
+                    DetalleMovimientoCompras f = new DetalleMovimientoCompras();
+                    f.lblIDMov.Text = dtgMovimiento.CurrentRow.Cells["IDMovimiento"].Value.ToString();
+                    f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipodocumento"].Value.ToString();
+                    f.ShowDialog();
+                    Cargar();
+                }
             }
             catch (Exception)
             {
@@ -231,7 +233,11 @@ namespace General.GUI
                         }
                         else
                         {
-                            f.ShowDialog();
+                            DialogResult respuesta = MessageBox.Show("Instrucciones:\n1. El producto que desee dar doble click sobre el nombre \n2. Ingregar la cantidad en el espacio espeficiado.\n3. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.", "Informacion Para agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (respuesta == DialogResult.OK)
+                            {
+                                f.ShowDialog();
+                            }
                         }
                     }
                     catch

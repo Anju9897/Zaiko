@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Reportes;
 
 namespace General.GUI
 {
@@ -20,7 +21,7 @@ namespace General.GUI
             {
                 _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_MOVIMIENTOS(cbbTransaccion.Text);
                 FiltrarLocalmente();
-                FiltrarPorFecha();
+                FiltrarPorComprobante();
 
             }
             catch
@@ -96,13 +97,22 @@ namespace General.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ClienteInfo f = new ClienteInfo();
-            ClienteInfo.tipoDoc = "";
-            ClienteInfo.subtotal = 0.00;
-            ClienteInfo.iva = 0.00;
-            ClienteInfo.total = 0.00;
-            f.ShowDialog();
-            Cargar();
+            try
+            {
+                ClienteInfo f = new ClienteInfo();
+                ClienteInfo.tipoDoc = "";
+                ClienteInfo.subtotal = 0.00;
+                ClienteInfo.iva = 0.00;
+                ClienteInfo.total = 0.00;
+                f.ShowDialog();
+                Cargar();
+                FiltrarPorFecha();
+            }
+            catch
+            {
+                
+            }
+            
         }
 
         private void txbFiltro_TextChanged(object sender, EventArgs e)
@@ -114,45 +124,54 @@ namespace General.GUI
         {
             if (!dtgMovimiento.CurrentRow.Cells["estado"].Value.ToString().Equals("Anulado"))
             {
-
-                ClienteInfo f = new ClienteInfo();
-
-                f.txbIDMov.Text = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
-                f.txbIDCliente.Text = dtgMovimiento.CurrentRow.Cells["IDPERSONA"].Value.ToString();
-                f.txbCliente.Text = dtgMovimiento.CurrentRow.Cells["cliente"].Value.ToString();
-                f.dtpFecha.Text = dtgMovimiento.CurrentRow.Cells["fecha"].Value.ToString();
-                f.cbbEstado.Text = dtgMovimiento.CurrentRow.Cells["estado"].Value.ToString();
-                f.cbbFactura.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
-                f.txbNFactura.Text = dtgMovimiento.CurrentRow.Cells["numcomprobante"].Value.ToString();
-
-                f.cbbTransaccion.Text = dtgMovimiento.CurrentRow.Cells["Transaccion"].Value.ToString(); ;
-                f.lblSubtotal.Text = dtgMovimiento.CurrentRow.Cells["subtotal"].Value.ToString();
-                f.lblIVA.Text = dtgMovimiento.CurrentRow.Cells["ivatotal"].Value.ToString();
-                f.lblTotal.Text = dtgMovimiento.CurrentRow.Cells["total"].Value.ToString();
-                ClienteInfo.tipoDoc = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
-                ClienteInfo.subtotal = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["subtotal"].Value);
-                ClienteInfo.iva = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["ivatotal"].Value);
-                ClienteInfo.total = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["total"].Value);
-
-                if (dtgMovimiento.CurrentRow.Cells["condpago"].Value.ToString().Equals("TARJETA DE CREDITO"))
+                try
                 {
-                    f.cbbCondPago.SelectedIndex = 1;
-                    f.lblBanco.Text = dtgMovimiento.CurrentRow.Cells["banco"].Value.ToString();
-                    f.lblPropietario.Text = dtgMovimiento.CurrentRow.Cells["propietariocuenta"].Value.ToString();
-                    f.lblCuenta.Text = dtgMovimiento.CurrentRow.Cells["ncuenta"].Value.ToString();
+                    ClienteInfo f = new ClienteInfo();
+
+                    f.txbIDMov.Text = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
+                    f.txbIDCliente.Text = dtgMovimiento.CurrentRow.Cells["IDPERSONA"].Value.ToString();
+                    f.txbCliente.Text = dtgMovimiento.CurrentRow.Cells["cliente"].Value.ToString();
+                    f.dtpFecha.Text = dtgMovimiento.CurrentRow.Cells["fecha"].Value.ToString();
+                    f.cbbEstado.Text = dtgMovimiento.CurrentRow.Cells["estado"].Value.ToString();
+                    f.cbbFactura.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
+                    f.txbNFactura.Text = dtgMovimiento.CurrentRow.Cells["numcomprobante"].Value.ToString();
+
+                    f.cbbTransaccion.Text = dtgMovimiento.CurrentRow.Cells["Transaccion"].Value.ToString(); ;
+                    f.lblSubtotal.Text = dtgMovimiento.CurrentRow.Cells["subtotal"].Value.ToString();
+                    f.lblIVA.Text = dtgMovimiento.CurrentRow.Cells["ivatotal"].Value.ToString();
+                    f.lblTotal.Text = dtgMovimiento.CurrentRow.Cells["total"].Value.ToString();
+                    ClienteInfo.tipoDoc = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
+                    ClienteInfo.subtotal = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["subtotal"].Value);
+                    ClienteInfo.iva = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["ivatotal"].Value);
+                    ClienteInfo.total = Convert.ToDouble(dtgMovimiento.CurrentRow.Cells["total"].Value);
+
+                    if (dtgMovimiento.CurrentRow.Cells["condpago"].Value.ToString().Equals("TARJETA DE CREDITO"))
+                    {
+                        f.cbbCondPago.SelectedIndex = 1;
+                        f.lblBanco.Text = dtgMovimiento.CurrentRow.Cells["banco"].Value.ToString();
+                        f.lblPropietario.Text = dtgMovimiento.CurrentRow.Cells["propietariocuenta"].Value.ToString();
+                        f.lblCuenta.Text = dtgMovimiento.CurrentRow.Cells["ncuenta"].Value.ToString();
+                    }
+                    else if (dtgMovimiento.CurrentRow.Cells["condpago"].Value.ToString().Equals("EFECTIVO"))
+                    {
+                        f.cbbCondPago.SelectedIndex = 0;
+                    }
+
+                    f.ShowDialog();
+                    Cargar();
+                    FiltrarPorFecha();
+
+                    ClienteInfo.tipoDoc = "";
+                    ClienteInfo.subtotal = 0.00;
+                    ClienteInfo.iva = 0.00;
+                    ClienteInfo.total = 0.00;
                 }
-                else if (dtgMovimiento.CurrentRow.Cells["condpago"].Value.ToString().Equals("EFECTIVO"))
+
+                catch
                 {
-                    f.cbbCondPago.SelectedIndex = 0;
+
                 }
 
-                f.ShowDialog();
-                Cargar();
-
-                ClienteInfo.tipoDoc = "";
-                ClienteInfo.subtotal = 0.00;
-                ClienteInfo.iva = 0.00;
-                ClienteInfo.total = 0.00;
             }
             else
             {
@@ -166,16 +185,22 @@ namespace General.GUI
 
         private void transaccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DialogResult respuesta = MessageBox.Show("Instrucciones:\n1. El producto que desee dar doble click sobre el nombre \n2. Ingregar la cantidad en el espacio espeficiado.\n3. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.", "Informacion Para agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (!dtgMovimiento.CurrentRow.Cells["estado"].Value.ToString().Equals("Anulado"))
             {
                 try
                 {
-                    DetallesMovimiento f = new DetallesMovimiento();
-                    f.lblIDMov.Text = dtgMovimiento.CurrentRow.Cells["IDMovimiento"].Value.ToString();
-                    f.lblTransaccion.Text = dtgMovimiento.CurrentRow.Cells["Transaccion"].Value.ToString();
-                    f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
-                    f.ShowDialog();
-                    Cargar();
+                    if (respuesta == DialogResult.OK)
+                    {
+                        DetallesMovimiento f = new DetallesMovimiento();
+                        f.lblIDMov.Text = dtgMovimiento.CurrentRow.Cells["IDMovimiento"].Value.ToString();
+                        f.lblTransaccion.Text = dtgMovimiento.CurrentRow.Cells["Transaccion"].Value.ToString();
+                        f.lblComprobante.Text = dtgMovimiento.CurrentRow.Cells["tipocomprobante"].Value.ToString();
+                        f.ShowDialog();
+                        cbbComprobante.SelectedIndex = cbbComprobante.SelectedIndex;
+                        Cargar();
+                        FiltrarPorFecha();
+                    }
                 }
                 catch (Exception)
                 {
@@ -197,6 +222,7 @@ namespace General.GUI
                     f.txbCantidad.Enabled = false;
                     f.ShowDialog();
                     Cargar();
+                    FiltrarPorFecha();
                 }
                 catch (Exception)
                 {
@@ -300,14 +326,17 @@ namespace General.GUI
 
         private void dtgMovimiento_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            
             if (e.RowIndex >= 0)
             {
                 if (e.ColumnIndex == 12)
                 {
                     if (!dtgMovimiento.CurrentRow.Cells["estado"].Value.ToString().Equals("Anulado"))
                     {
+                        
                         try
                         {
+
                             String idmovimiento = dtgMovimiento.CurrentRow.Cells["idmovimiento"].Value.ToString();
                             String idmovDev = obtenerIDMovimientoDevolucion(idmovimiento);
                             Devoluciones f = new Devoluciones();
@@ -327,7 +356,11 @@ namespace General.GUI
                             }
                             else
                             {
-                                f.ShowDialog();
+                                DialogResult respuesta = MessageBox.Show("Instrucciones:\n1. El producto que desee dar doble click sobre el nombre \n2. Ingregar la cantidad en el espacio espeficiado.\n3. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.", "Informacion Para agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (respuesta == DialogResult.OK)
+                                {
+                                    f.ShowDialog();
+                                }
                             }
 
                         }

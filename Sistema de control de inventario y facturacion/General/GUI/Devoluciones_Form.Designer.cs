@@ -160,6 +160,7 @@
             this.dtgDetalles.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgDetalles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgDetalles.Location = new System.Drawing.Point(0, 28);
+            this.dtgDetalles.MultiSelect = false;
             this.dtgDetalles.Name = "dtgDetalles";
             this.dtgDetalles.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -640,6 +641,7 @@
             this.dtgDevoluciones.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtgDevoluciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgDevoluciones.Location = new System.Drawing.Point(0, 0);
+            this.dtgDevoluciones.MultiSelect = false;
             this.dtgDevoluciones.Name = "dtgDevoluciones";
             this.dtgDevoluciones.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

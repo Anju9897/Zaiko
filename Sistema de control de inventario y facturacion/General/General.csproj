@@ -118,12 +118,6 @@
     <Compile Include="GUI\GestionUnidades.Designer.cs">
       <DependentUpon>GestionUnidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\InfoClienteCompra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\InfoClienteCompra.Designer.cs">
-      <DependentUpon>InfoClienteCompra.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\MarcaEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,9 +228,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GestionUnidades.resx">
       <DependentUpon>GestionUnidades.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\InfoClienteCompra.resx">
-      <DependentUpon>InfoClienteCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MarcaEdicion.resx">
       <DependentUpon>MarcaEdicion.cs</DependentUpon>

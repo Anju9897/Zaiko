@@ -118,3 +118,12 @@ C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de in
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\SessionManager\obj\Debug\SessionManager.csprojResolveAssemblyReference.cache
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\SessionManager\obj\Debug\SessionManager.dll
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\SessionManager\obj\Debug\SessionManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\SessionManager\bin\Debug\SessionManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\SessionManager\bin\Debug\SessionManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\SessionManager\bin\Debug\CaheManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\SessionManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\SessionManager\bin\Debug\CaheManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\SessionManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\SessionManager\obj\Debug\SessionManager.csprojResolveAssemblyReference.cache
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\SessionManager\obj\Debug\SessionManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\SessionManager\obj\Debug\SessionManager.pdb

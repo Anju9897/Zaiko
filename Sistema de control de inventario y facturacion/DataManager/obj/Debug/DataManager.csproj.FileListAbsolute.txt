@@ -58,3 +58,7 @@ C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de in
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\DataManager\obj\Debug\DataManager.pdb

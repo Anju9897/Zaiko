@@ -296,6 +296,7 @@
             this.ncuenta});
             this.dtgMovimiento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgMovimiento.Location = new System.Drawing.Point(0, 28);
+            this.dtgMovimiento.MultiSelect = false;
             this.dtgMovimiento.Name = "dtgMovimiento";
             this.dtgMovimiento.ReadOnly = true;
             this.dtgMovimiento.RowHeadersVisible = false;

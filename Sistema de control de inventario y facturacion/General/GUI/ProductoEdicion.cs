@@ -139,7 +139,6 @@ namespace General.GUI
             InitializeComponent();
             CargarCategorias();
             CargarUnidades();
-            CacheManager.CLS.Comandos.CrearCarpeta("Productos");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

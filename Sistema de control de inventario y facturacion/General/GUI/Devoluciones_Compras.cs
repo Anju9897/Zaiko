@@ -70,7 +70,6 @@ namespace General.GUI
         private void dtgDetallesCompras_DoubleClick(object sender, EventArgs e)
         {
             DataGridViewRow Row = dtgDetallesCompras.CurrentRow;
-            MessageBox.Show("Instrucciones:\n1. Ingregar la cantidad en el espacio espeficiado.\n2. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.", "Informacion Para agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             foreach (DataGridViewRow row2 in dtgDevoluciones.Rows)
             {

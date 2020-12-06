@@ -59,7 +59,6 @@ namespace General.GUI
         public MarcaEdicion()
         {
             InitializeComponent();
-            CacheManager.CLS.Comandos.CrearCarpeta("Marcas");
         }
 
         private void btnExaminar_Click(object sender, EventArgs e)

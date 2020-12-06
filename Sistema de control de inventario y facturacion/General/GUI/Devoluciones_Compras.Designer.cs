@@ -115,8 +115,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(964, 669);
-            this.splitContainer1.SplitterDistance = 243;
+            this.splitContainer1.Size = new System.Drawing.Size(1195, 662);
+            this.splitContainer1.SplitterDistance = 240;
             this.splitContainer1.TabIndex = 0;
             // 
             // dtgDetallesCompras
@@ -158,7 +158,7 @@
             this.dtgDetallesCompras.RowHeadersVisible = false;
             this.dtgDetallesCompras.RowTemplate.Height = 24;
             this.dtgDetallesCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDetallesCompras.Size = new System.Drawing.Size(964, 215);
+            this.dtgDetallesCompras.Size = new System.Drawing.Size(1195, 212);
             this.dtgDetallesCompras.TabIndex = 1;
             this.dtgDetallesCompras.DoubleClick += new System.EventHandler(this.dtgDetallesCompras_DoubleClick);
             this.dtgDetallesCompras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgDetallesCompras_KeyDown);
@@ -270,7 +270,7 @@
             this.btnEditarDev});
             this.botones.Location = new System.Drawing.Point(0, 0);
             this.botones.Name = "botones";
-            this.botones.Size = new System.Drawing.Size(964, 28);
+            this.botones.Size = new System.Drawing.Size(1195, 28);
             this.botones.TabIndex = 0;
             this.botones.Text = "toolStrip1";
             // 
@@ -373,8 +373,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dtgDevoluciones);
-            this.splitContainer2.Size = new System.Drawing.Size(964, 422);
-            this.splitContainer2.SplitterDistance = 139;
+            this.splitContainer2.Size = new System.Drawing.Size(1195, 418);
+            this.splitContainer2.SplitterDistance = 137;
             this.splitContainer2.TabIndex = 0;
             // 
             // lblIDDevolucion
@@ -599,7 +599,7 @@
             this.dtgDevoluciones.RowHeadersVisible = false;
             this.dtgDevoluciones.RowTemplate.Height = 24;
             this.dtgDevoluciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDevoluciones.Size = new System.Drawing.Size(964, 279);
+            this.dtgDevoluciones.Size = new System.Drawing.Size(1195, 277);
             this.dtgDevoluciones.TabIndex = 2;
             this.dtgDevoluciones.DoubleClick += new System.EventHandler(this.dtgDevoluciones_DoubleClick);
             this.dtgDevoluciones.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgDevoluciones_KeyDown);
@@ -683,7 +683,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 669);
+            this.ClientSize = new System.Drawing.Size(1195, 662);
             this.Controls.Add(this.splitContainer1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

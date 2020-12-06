@@ -181,7 +181,6 @@ namespace General.GUI
                 {
                     if (!existeDetalle(dtgProductos.Rows[dtgProductos.CurrentRow.Index].Cells["idproducto"].Value.ToString()))
                     {
-                        MessageBox.Show("Instrucciones:\n1. Ingregar la cantidad en el espacio espeficiado.\n2. Al Ingresar toda la cantidad, precionar ENTER para agregar la informacion al cuadro de abajo.","Informacion Para agregar",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         SetDefault();
                         txbCantidad.Focus();
                     }
@@ -281,7 +280,7 @@ namespace General.GUI
             {
                 txbBuscar.Focus();
             }
-            if (e.KeyData == Keys.F3)
+            if (e.KeyData == Keys.F2)
             {
                 btnConfirmar_Click(sender, e);
             }
@@ -512,7 +511,7 @@ namespace General.GUI
             {
                 txbBuscar.Focus();
             }
-            if (e.KeyData == Keys.F3)
+            if (e.KeyData == Keys.F2)
             {
                 btnConfirmar_Click(sender, e);
             }
