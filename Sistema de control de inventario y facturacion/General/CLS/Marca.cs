@@ -34,7 +34,7 @@ namespace General.CLS
             try
             {
                 Sentencia = @"Insert into Marca(mnombre) Values(";
-                Sentencia += "'" + Nombre + "';";
+                Sentencia += "'" + Nombre + "');";
                 if (Operacion.Insertar(Sentencia) > 0)
                 {
                     MessageBox.Show("Marca Insertado con Éxito", "Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -62,8 +62,8 @@ namespace General.CLS
             DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
             try
             {
-                Sentencia = @"Update Marca set";
-                Sentencia += "mnombre= '" + Nombre + "'";
+                Sentencia = @"Update Marca set ";
+                Sentencia += "mnombre= '" + Nombre + "' ";
                 Sentencia += @"Where idmarca= '" + IDMarca + "';";
 
                 if (Operacion.Actualizar(Sentencia) > 0)
@@ -93,7 +93,7 @@ namespace General.CLS
             DataManager.CLS.DBOperacion Operacion = new DataManager.CLS.DBOperacion();
             try
             {
-                Sentencia = @"Delete from Marca";
+                Sentencia = @"Delete from Marca ";
                 Sentencia += @"Where idmarca= '" + IDMarca + "';";
 
                 if (Operacion.Eliminar(Sentencia) > 0)

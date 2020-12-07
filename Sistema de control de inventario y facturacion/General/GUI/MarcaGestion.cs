@@ -13,6 +13,7 @@ namespace General.GUI
     public partial class MarcaGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
+        SessionManager.CLS.Sesion _Instancia = SessionManager.CLS.Sesion.Instancia;
         private void Cargar()
         {
             try
@@ -70,6 +71,7 @@ namespace General.GUI
         private void btnEditar_Click(object sender, EventArgs e)
         {
             MarcaEdicion f = new MarcaEdicion();
+            f.txbIDMarca.Text = dtgMarcas.CurrentRow.Cells["idmarca"].Value.ToString();
             f.txbNombre.Text = dtgMarcas.CurrentRow.Cells["mnombre"].Value.ToString();
             f.ShowDialog();
         }
@@ -89,6 +91,26 @@ namespace General.GUI
             catch
             {
                 
+            }
+        }
+
+        private void txbFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            Cargar();
+            if (txbFiltrar.Text.Length > 0)
+            {
+                FiltrarLocalmente();
+            }
+            
+        }
+
+        private void MarcaGestion_Load(object sender, EventArgs e)
+        {
+            if (_Instancia.Informacion.Rol.ToUpper().Equals("CAJERO".ToUpper()))
+            {
+                btnAgregar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
             }
         }
     }

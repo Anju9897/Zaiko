@@ -13,7 +13,7 @@ namespace General.GUI
     public partial class EmpleadosGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
-
+        SessionManager.CLS.Sesion _SESION = SessionManager.CLS.Sesion.Instancia;
         private void Cargar()
         {
             try

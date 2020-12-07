@@ -41,13 +41,18 @@ namespace General.GUI
 
                     if (txbIDMarca.Text.Length > 0)
                     {
-                        oMarca.Actualizar();
+                        if (oMarca.Actualizar())
+                        {
+                            Close();
+                        }
                     }
                     else
                     {
-                        oMarca.Guardar();
+                        if (oMarca.Guardar())
+                        {
+                            Close();
+                        }
                     }
-                    Close();
                 }
             }
             catch

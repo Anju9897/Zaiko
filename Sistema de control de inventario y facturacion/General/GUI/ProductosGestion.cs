@@ -32,7 +32,7 @@ namespace General.GUI
             {
                 if (txbFiltro.TextLength > 0)
                 {
-                    _DATOS.Filter = @"Nombre LIKE '%" + txbFiltro.Text + "%' OR Descripcion LIKE '%" + txbFiltro.Text + "%'";
+                    _DATOS.Filter = @"Nombre LIKE '%" + txbFiltro.Text + "%' OR Descripcion LIKE '%" + txbFiltro.Text + "%' OR Codigo LIKE '%"+ txbFiltro.Text +"%'";
                 }
                 else
                 {
@@ -186,6 +186,16 @@ namespace General.GUI
                     {
                     }
                 }
+            }
+        }
+
+        private void ProductosGestion_Load(object sender, EventArgs e)
+        {
+            if (_Instancia.Informacion.Rol.ToUpper().Equals("CAJERO".ToUpper()))
+            {
+                btnAgregar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
             }
         }
     }

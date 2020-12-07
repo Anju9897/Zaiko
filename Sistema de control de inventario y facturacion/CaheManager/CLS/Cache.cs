@@ -731,12 +731,6 @@ namespace CacheManager.CLS
             return Resultado;
         }
 
-
-        /*
-
-         
-         */
-
     }
 
    
