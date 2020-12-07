@@ -368,7 +368,7 @@
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(94, 25);
+            this.btnEliminar.Size = new System.Drawing.Size(150, 25);
             this.btnEliminar.Text = "Eliminar (X)";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 

@@ -334,12 +334,12 @@ C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de in
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.csproj.GenerateResource.Cache
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.exe
 C:\Users\Anju9\OneDrive\Escritorio\Proyecto Final\Zaiko\Sistema de control de inventario y facturacion\Zaiko\obj\Debug\Zaiko.pdb
-C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\Zaiko.exe
-C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\General.dll
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\Zaiko.exe.config
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\Zaiko.exe
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\Zaiko.pdb
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\CaheManager.dll
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\DataManager.dll
+C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\General.dll
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\Reportes.dll
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\SessionManager.dll
 C:\Users\Anju9\OneDrive\Documentos\Repositorios\Zaiko\Zaiko\Sistema de control de inventario y facturacion\Zaiko\bin\Debug\CaheManager.pdb

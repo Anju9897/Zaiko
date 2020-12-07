@@ -389,7 +389,7 @@ namespace Reportes.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VentasConsumidorFinalRow AddVentasConsumidorFinalRow(string Registro, string Fecha, decimal Total, float Estado) {
+            public VentasConsumidorFinalRow AddVentasConsumidorFinalRow(string Registro, System.DateTime Fecha, decimal Total, float Estado) {
                 VentasConsumidorFinalRow rowVentasConsumidorFinalRow = ((VentasConsumidorFinalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Registro,
@@ -429,7 +429,7 @@ namespace Reportes.DAT {
             private void InitClass() {
                 this.columnRegistro = new global::System.Data.DataColumn("Registro", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRegistro);
-                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
                 this.columnTotal = new global::System.Data.DataColumn("Total", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotal);
@@ -597,10 +597,10 @@ namespace Reportes.DAT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Fecha {
+            public System.DateTime Fecha {
                 get {
                     try {
-                        return ((string)(this[this.tableVentasConsumidorFinal.FechaColumn]));
+                        return ((global::System.DateTime)(this[this.tableVentasConsumidorFinal.FechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'VentasConsumidorFinal\' es DBNull.", e);
